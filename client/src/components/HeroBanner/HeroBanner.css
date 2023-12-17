@@ -1,0 +1,13 @@
+.hero-banner {
+  background-color: #bababa;
+  /* background-image:url('https://skymavis.com/_app/immutable/assets/axie-concept-f5e52a79.png'); */
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size: cover;
+}
+
+/* @media screen and (max-width: 768px) {
+  .hero-banner {
+    background-image: url('https://skymavis.com/_app/immutable/assets/ImageBackgroundJobDetailMobile-2dbabf27.png');
+  }
+} */

@@ -1,0 +1,6 @@
+
+@media screen and (max-width:400px){
+    .phone-code {
+        justify-content: space-around;
+    }
+}

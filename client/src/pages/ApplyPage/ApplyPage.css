@@ -1,0 +1,29 @@
+.hero-banner {
+  background-image: url(https://skymavis.com/_app/immutable/assets/axie-concept-f5e52a79.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 150%;
+  padding: 4rem 0;
+}
+#coverLetter {
+  resize: none;
+}
+
+@media all and (max-width: 920px) {
+  .hero-banner {
+    background-size: 120%;
+    padding: 2rem 0;
+  }
+  h1 {
+    font-size: 1.75rem;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .hero-banner {
+    padding: 1.5rem 0;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
