@@ -4,7 +4,6 @@ import ReactPaginate from "react-paginate";
 import { CareersContext } from "../../../Context/CareersContext";
 import UserItem from "./UserItem/UserItem";
 import { motion } from "framer-motion";
-;
 const CandidatesPage = () => {
   const [itemOffset, setItemOffset] = useState(0);
   const itemsPerPage = 5;
@@ -26,8 +25,9 @@ const CandidatesPage = () => {
   console.log("day la user : ", user);
   const endOffset = itemOffset + itemsPerPage;
   console.log(`Loading items from ${itemOffset} to ${endOffset}`);
-  const currentuserss = user?.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(user?.length / itemsPerPage);
+  const [sortedArray, setSortedArray] = useState(user?.slice());
+  const currentuserss = sortedArray?.slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(sortedArray?.length / itemsPerPage);
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % user.length;
     console.log(
@@ -35,9 +35,9 @@ const CandidatesPage = () => {
     );
     setItemOffset(newOffset);
   };
-  const [sortedArray, setSortedArray] = useState(currentuserss?.slice());
+
   useEffect(() => {
-    const newArray = [...(currentuserss ? currentuserss : "")];
+    const newArray = [...(user ? user : "")];
     newArray.sort((a, b) => b?.username.localeCompare(a?.username));
     if (sort2 == "Z - A") {
       setSortedArray(newArray);
@@ -46,12 +46,12 @@ const CandidatesPage = () => {
       setSortedArray(newArray.reverse());
       console.log(sortedArray);
     } else if (sort2 == "Sort Name") {
-      setSortedArray([...currentuserss]);
+      setSortedArray([...user]);
     }
   }, [sort2]);
   useEffect(() => {
-    setSortedArray([...currentuserss?.slice()]);
-  }, [currentuserss?.length]);
+    setSortedArray([...user?.slice()]);
+  }, [user?.length]);
   console.log("day la sortarray : ", sortedArray);
   return (
     <motion.div
@@ -65,7 +65,9 @@ const CandidatesPage = () => {
         <div className="">
           <div className="flex items-center justify-between pb-2 bg-white dark:bg-gray-900  ">
             <div>
-              <p className="text-xl lg:text-2xl text-neutral-500 font-semibold">Employees</p>
+              <p className="text-xl lg:text-2xl text-neutral-500 font-semibold">
+                Employees
+              </p>
             </div>
             {check ? (
               <button
@@ -150,7 +152,7 @@ const CandidatesPage = () => {
                 </tr>
               </thead>
               <tbody>
-                {sortedArray?.map((item) => {
+                {currentuserss?.map((item) => {
                   return <UserItem key={item._id} employee={item} />;
                 })}
               </tbody>

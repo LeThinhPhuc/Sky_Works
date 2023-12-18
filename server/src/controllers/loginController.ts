@@ -40,6 +40,7 @@ const loginUser = async (req:any, res:any) => {
   return res.json({
     isAuthenticated: true,
     accessToken: token,
+    email: existingUser.email
   });
 };
 

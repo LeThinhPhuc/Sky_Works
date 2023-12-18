@@ -11,7 +11,7 @@ const ModalEmail = (props) => {
   const [fromEmail, setFromEmail] = useState("");
   const [message, setMessage] = useState("");
   const [file, setFile] = useState("");
-  const [link, setLink] = useState("");
+  const [link, setLink] = useState('');
   const [field, setField] = useState(true);
 
   const { isShowModalSendTest, isShow, isNextStep, dataMail } = props;
@@ -33,6 +33,8 @@ const ModalEmail = (props) => {
       lastName != ""
     ) {
       setField(true);
+      isNextStep(true);
+
       emailjs
         .send(
           "service_5wgh36p",
@@ -50,7 +52,7 @@ const ModalEmail = (props) => {
         .then(
           (result) => {
             console.log(result.text);
-            isNextStep(true);
+            // isNextStep(true);
             // Reset lại các trường form sau khi gửi email
 
             // setToEmail('');
@@ -88,13 +90,19 @@ const ModalEmail = (props) => {
       const storageRef = ref(storage, `fileTest/${file[0].name}`);
       uploadBytes(storageRef, file[0], metadata).then((snapshot) => {
         getDownloadURL(ref(storage, `fileTest/${file[0].name}`)).then((url) => {
+          console.log("url la : ", url)
           setLink(url);
         });
       });
+      
       setFile({});
     }
   }, [file]);
-
+  
+  useEffect(() => {
+    console.log("Link la : ", link);
+  }, [link]);
+  
   return (
     <div
       id="small-modal"

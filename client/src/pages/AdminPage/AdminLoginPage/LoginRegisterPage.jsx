@@ -30,7 +30,6 @@ const LoginRegisterPage = () => {
         type: 'LOGIN',
         payload: loginResponse?.data,
       });
-
       navigate("/admin");
       
     } catch (error) {

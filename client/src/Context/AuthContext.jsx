@@ -7,7 +7,7 @@ const initialState = {
   accessToken: localStorage.getItem("accessToken") || null,
   isAuthenticated: !!localStorage.getItem("accessToken") && true,
   role: null,
-  username: null,
+  username: null
 };
 
 const authReducer = (state, action) => {
@@ -15,6 +15,7 @@ const authReducer = (state, action) => {
   switch (type) {
     case 'LOGIN': {
       localStorage.setItem("accessToken", payload.accessToken);
+      localStorage.setItem("emailAdmin",payload.email)
       return {
         ...state,
         ...payload,
@@ -35,7 +36,7 @@ const authReducer = (state, action) => {
 const AuthState = ({children}) => {
   const [state, dispatch] = useReducer(authReducer, initialState);
   const token = localStorage.getItem('accessToken');
-
+  const emailAdmin = localStorage.getItem('emailAdmin');
   const verifyToken = () => {
     try {
       const decoded = jwt_decode(token);
@@ -60,6 +61,7 @@ const AuthState = ({children}) => {
       value={{
         state,
         dispatch,
+        emailAdmin
       }}
     >
       {children}

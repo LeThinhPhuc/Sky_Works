@@ -8,6 +8,7 @@ import StatusProcess from "../StatusProcess";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBoxArchive, faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { CareersContext } from "../../../../Context/CareersContext";
+import { AuthContext } from "../../../../Context/AuthContext";
 import "./style.css";
 const initialValues = {
   teamLead: "",
@@ -20,6 +21,7 @@ const CandidatesDetail = () => {
   const param = useParams();
   const { id } = param;
   const { employee, setEmploysData } = useContext(CareersContext);
+  const {emailAdmin} = useContext(AuthContext)
   const [employForm, setEmployForm] = useState(initialValues);
   const employData = employee.find((item) => item._id == id);
   const [select1, setSelect1] = useState(employData?.teamLead);
@@ -31,7 +33,8 @@ const CandidatesDetail = () => {
   );
   const [sal, setSal] = useState(f.format(employData?.salary));
   console.log(employData);
-
+  console.log("email Candidate : ",employData.personal.email);
+  console.log("email Admin : ", emailAdmin)
   var randomColor = Math.floor(Math.random() * 16777215).toString(16);
   const handleDelete = async (id) => {
     try {

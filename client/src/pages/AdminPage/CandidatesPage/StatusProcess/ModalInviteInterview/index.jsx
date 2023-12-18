@@ -30,6 +30,8 @@ const ModalInviteInterview = (props) => {
       lastName != ""
     ) {
       setField(true);
+      isNextStep(true);
+
       emailjs
         .send(
           "service_5wgh36p",
@@ -46,7 +48,7 @@ const ModalInviteInterview = (props) => {
         .then(
           (result) => {
             console.log(result.text);
-            isNextStep(true);
+            // isNextStep(true);
 
             setFromName("");
             setFromEmail("");
