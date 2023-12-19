@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import emailjs from "emailjs-com";
 import { storage } from "../../../../../services/firebase";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 import { faDeleteLeft } from "@fortawesome/free-solid-svg-icons";
-
+import { AuthContext } from "../../../../../Context/AuthContext";
 const ModalEmail = (props) => {
   // Khởi tạo state cho các trường form
-
+  const { emailAdmin } = useContext(AuthContext);
   const [fromName, setFromName] = useState("");
   const [fromEmail, setFromEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -28,31 +28,30 @@ const ModalEmail = (props) => {
       link != "" &&
       email != "" &&
       fromName != "" &&
-      fromEmail != "" &&
-      message != "" &&
+      message   != "" &&
       lastName != ""
     ) {
       setField(true);
-      isNextStep(true);
+      // isNextStep(true);
 
       emailjs
         .send(
-          "service_5wgh36p",
-          "template_ev9ul6c",
+          "service_2qr30nr",
+          "template_annctfm",
           {
             to_name: lastName,
-            to_email: email,
             from_name: fromName,
             message: message,
             link: link,
-            from_email: fromEmail,
+            to_email: email,
+            from_email: emailAdmin,
           },
-          "nOpouuUmwx8KVUufV"
+          "ZhPDrbfPlvjsGZzBK"
         )
         .then(
           (result) => {
             console.log(result.text);
-            // isNextStep(true);
+            isNextStep(true);
             // Reset lại các trường form sau khi gửi email
 
             // setToEmail('');
@@ -151,7 +150,7 @@ const ModalEmail = (props) => {
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
               ></input>
             </div>
-            <div>
+            {/* <div>
               <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                 HR's email
               </label>
@@ -162,7 +161,7 @@ const ModalEmail = (props) => {
                 required
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
               ></input>
-            </div>
+            </div> */}
             <div>
               <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                 Message

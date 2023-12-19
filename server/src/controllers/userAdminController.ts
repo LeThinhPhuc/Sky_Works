@@ -55,6 +55,29 @@ const fetchUser = async (req: any, res: any) => {
   }
 };
 
+const fetchUserByEmail = async (req:any, res:any) =>{
+  const { email } = req.params
+
+  try{
+    const existUser = await UserAdmin.findOne({ email });
+
+    if(!existUser){
+      return res.status(400).json({
+        message: "User not exists",
+      });
+    }
+    res.json({
+      message: 'Success Get User',
+      data: existUser,
+    })
+
+  }catch(error: any){
+    res.status(400).json({
+      message: error.toString(),
+    });
+  }
+}
+
 // API register a user
 const registerUser = async (req:any, res:any) => {
   const { username, password, email, role } = req.body;
@@ -170,4 +193,4 @@ const deleteUser = async (req: any, res: any) => {
   }
 };
 
-export default { fetchAllUser, fetchUser, registerUser, updateIn4User, deleteUser };
+export default { fetchAllUser, fetchUser, fetchUserByEmail, registerUser, updateIn4User, deleteUser };
