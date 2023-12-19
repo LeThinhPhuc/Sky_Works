@@ -121,21 +121,23 @@ const JobForm = (props) => {
   return (
     <motion.div
       id="#editor-container"
-      className="h-full w-full mx-auto"
+      className="dark:bg-slate-700 dark:text-white dark:border-white  h-full w-full mx-auto"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ delay: 0.05, duration: 0.35 }}
     >
-      <div className="job-form w-full h-full mx-auto">
+      <div className="dark:bg-slate-700 dark:text-white dark:border-white  job-form w-full h-full mx-auto">
         <form
-          className="w-full flex flex-col gap-6 h-full bg-white px-4 md:px-6 py-4 mx-auto"
+          className="dark:bg-slate-700 dark:text-white dark:border-white  w-full flex flex-col gap-6 h-full bg-white px-4 md:px-6 py-4 mx-auto"
           onSubmit={handleSubmitJob}
         >
-          <div className="w-full flex flex-row flex-wrap">
-            <div className="w-full flex flex-col grow-0 sm:grow gap-2">
-              <h4 className="text-sm font-medium">Job Title</h4>
-              <div className="flex grow font-light text-xs md:text-sm">
+          <div className="dark:bg-slate-700 dark:text-white dark:border-white  w-full flex flex-row flex-wrap">
+            <div className="dark:bg-slate-700 dark:text-white dark:border-white  w-full flex flex-col grow-0 sm:grow gap-2">
+              <h4 className="dark:bg-slate-700 dark:text-white dark:border-white  text-sm font-medium">
+                Job Title
+              </h4>
+              <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex grow font-light text-xs md:text-sm">
                 <input
                   type="tittle"
                   text={jobTitle}
@@ -152,10 +154,12 @@ const JobForm = (props) => {
             </div>
           </div>
 
-          <div className="w-full flex flex-row flex-wrap gap-6 md:gap-12 items-start">
-            <div className="flex flex-col gap-2">
-              <h4 className="text-sm font-medium">Job Available</h4>
-              <div className="flex flex-row font-light text-xs md:text-sm">
+          <div className="dark:bg-slate-700 dark:text-white dark:border-white  w-full flex flex-row flex-wrap gap-6 md:gap-12 items-start">
+            <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex flex-col gap-2">
+              <h4 className="dark:bg-slate-700 dark:text-white dark:border-white  text-sm font-medium">
+                Job Available
+              </h4>
+              <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex flex-row font-light text-xs md:text-sm">
                 <SwitchButton
                   isAvailable={available}
                   handleSwitch={() => setAvailable(!available)}
@@ -163,35 +167,43 @@ const JobForm = (props) => {
                 />
               </div>
             </div>
-            <div className="flex flex-col gap-2">
-              <h4 className="text-sm font-medium">Working Time</h4>
-              <div className="flex flex-row font-light text-xs md:text-sm gap-5">
+            <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex flex-col gap-2">
+              <h4 className="dark:bg-slate-700 dark:text-white dark:border-white  text-sm font-medium">
+                Working Time
+              </h4>
+              <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex flex-row font-light text-xs md:text-sm gap-5">
                 <div>
                   <input
-                    className="outline-none focus:outline-none bg-gray-300 hover:bg-gray-300 cursor-pointer ring-transparent checked:ring-transparent transition-all duration-200 checked:bg-[#00bbff] checked:hover:checked:bg-[#00bbff]"
+                    className="dark:bg-slate-700 dark:text-white dark:border-white  outline-none focus:outline-none bg-gray-300 hover:bg-gray-300 cursor-pointer ring-transparent checked:ring-transparent transition-all duration-200 checked:bg-[#00bbff] checked:hover:checked:bg-[#00bbff]"
                     type="radio"
                     value="Full-time"
                     checked={workingTime === "Full-time"}
                     onChange={onRadioChange}
                   />
-                  <span className="pl-2">Full-Time</span>
+                  <span className="dark:bg-slate-700 dark:text-white dark:border-white  pl-2">
+                    Full-Time
+                  </span>
                 </div>
                 <div>
                   <input
-                    className="outline-none focus:outline-none bg-gray-300hover:bg-gray-300 cursor-pointer ring-transparent checked:ring-transparent transition-all duration-200 checked:bg-[#00bbff] checked:hover:checked:bg-[#00bbff]"
+                    className="dark:bg-slate-700 dark:text-white dark:border-white  outline-none focus:outline-none bg-gray-300hover:bg-gray-300 cursor-pointer ring-transparent checked:ring-transparent transition-all duration-200 checked:bg-[#00bbff] checked:hover:checked:bg-[#00bbff]"
                     type="radio"
                     value="Part-time"
                     checked={workingTime === "Part-time"}
                     onChange={onRadioChange}
                   />
-                  <span className="pl-2">Part-Time</span>
+                  <span className="dark:bg-slate-700 dark:text-white dark:border-white  pl-2">
+                    Part-Time
+                  </span>
                 </div>
               </div>
             </div>
           </div>
 
-          <div className="w-full h-full flex flex-col gap-2 grow">
-            <h4 className="text-sm font-medium">Job Detail</h4>
+          <div className="dark:bg-slate-700 dark:text-white dark:border-white  w-full h-full flex flex-col gap-2 grow">
+            <h4 className="dark:bg-slate-700 dark:text-white dark:border-white  text-sm font-medium">
+              Job Detail
+            </h4>
             <QuillEditor
               value={jobContent}
               placeholder={"Write description and requirement of jobs..."}
@@ -199,9 +211,11 @@ const JobForm = (props) => {
             />
           </div>
 
-          <div className="w-full flex flex-row flex-wrap lg:flex-nowrap gap-6 lg:gap-10">
-            <div className="w-full md:w-[48%] flex flex-col gap-2 text-xs md:text-sm">
-              <h4 className="text-sm font-medium">Job title tag</h4>
+          <div className="dark:bg-slate-700 dark:text-white dark:border-white  w-full flex flex-row flex-wrap lg:flex-nowrap gap-6 lg:gap-10">
+            <div className="dark:bg-slate-700 dark:text-white dark:border-white  w-full md:w-[48%] flex flex-col gap-2 text-xs md:text-sm">
+              <h4 className="dark:bg-slate-700 dark:text-white dark:border-white  text-sm font-medium">
+                Job title tag
+              </h4>
               <MultiSelect
                 options={jobTags}
                 value={jobTag}
@@ -209,8 +223,10 @@ const JobForm = (props) => {
                 labelledBy="Select"
               />
             </div>
-            <div className="w-full md:w-[48%] flex flex-col gap-2 text-xs md:text-sm">
-              <h4 className="text-sm font-medium">Working type tag</h4>
+            <div className="dark:bg-slate-700 dark:text-white dark:border-white  w-full md:w-[48%] flex flex-col gap-2 text-xs md:text-sm">
+              <h4 className="dark:bg-slate-700 dark:text-white dark:border-white  text-sm font-medium">
+                Working type tag
+              </h4>
               <MultiSelect
                 options={workingTypes}
                 value={workingType}
@@ -218,9 +234,11 @@ const JobForm = (props) => {
                 labelledBy="Select"
               />
             </div>
-            <div className="w-full md:w-[48%] flex flex-col gap-2 text-xs md:text-sm">
-              <h4 className="text-sm font-medium">Job Location</h4>
-              <div className="relative grow font-light text-xs md:text-sm">
+            <div className="dark:bg-slate-700 dark:text-white dark:border-white  w-full md:w-[48%] flex flex-col gap-2 text-xs md:text-sm">
+              <h4 className="dark:bg-slate-700 dark:text-white dark:border-white  text-sm font-medium">
+                Job Location
+              </h4>
+              <div className="dark:bg-slate-700 dark:text-white dark:border-white  relative grow font-light text-xs md:text-sm">
                 <input
                   type="location"
                   text={location}
@@ -236,17 +254,17 @@ const JobForm = (props) => {
               </div>
             </div>
           </div>
-          <div className="w-full flex flex-row mx-auto gap-4 justify-center">
+          <div className="dark:bg-slate-700 dark:text-white dark:border-white  w-full flex flex-row mx-auto gap-4 justify-center">
             <button
               type="button"
-              className="min-w-fit w-fit text-[#0fafda] border-[#0fafda] border-2 focus:ring-0 focus:outline-none focus:ring-transparent dark:focus:ring-transparent hover:border-rose-500 hover:text-rose-500 font-medium rounded-3xl text-base px-5 py-3 text-center transition-all duration-300"
+              className="dark:bg-slate-700 dark:text-white dark:border-white  min-w-fit w-fit text-[#0fafda] border-[#0fafda] border-2 focus:ring-0 focus:outline-none focus:ring-transparent dark:focus:ring-transparent hover:border-rose-500 hover:text-rose-500 font-medium rounded-3xl text-base px-5 py-3 text-center transition-all duration-300"
               onClick={() => navigate("/admin/jobs")}
             >
               Cancel
             </button>
             <button
               type="submit"
-              className="min-w-fit w-fit text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-0 focus:outline-none focus:ring-transparent dark:focus:ring-transparent font-medium rounded-3xl text-base px-5 py-3 text-center"
+              className="dark:bg-slate-700 dark:text-white dark:border-white  min-w-fit w-fit text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-0 focus:outline-none focus:ring-transparent dark:focus:ring-transparent font-medium rounded-3xl text-base px-5 py-3 text-center"
             >
               {jobId ? "Update job" : "Save job"}
             </button>

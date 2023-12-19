@@ -9,7 +9,7 @@ const ModalInviteInterview = (props) => {
   const [message, setMessage] = useState("");
 
   const [field, setField] = useState(true);
- const {emailAdmin} = useContext(AuthContext)
+  const { emailAdmin } = useContext(AuthContext);
   const {
     isShowModalInviteInterview,
     isShow,
@@ -17,17 +17,11 @@ const ModalInviteInterview = (props) => {
     isJobOffer,
     dataMail,
   } = props;
-  const {email,lastName
-  }  = dataMail?.personal??{}
+  const { email, lastName } = dataMail?.personal ?? {};
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (
-      toEmail != "" &&
-      fromName != "" &&
-      message != "" &&
-      lastName != ""
-    ) {
+    if (toEmail != "" && fromName != "" && message != "" && lastName != "") {
       setField(true);
       // isNextStep(true);
 
@@ -150,14 +144,14 @@ const ModalInviteInterview = (props) => {
             {field ? (
               ""
             ) : (
-              <div className="flex justify-center">
-                <p className="mb-2 m- text-sm font-medium text-red-500 dark:text-white">
+              <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex justify-center">
+                <p className="dark:bg-slate-700 dark:text-white dark:border-white  mb-2 m- text-sm font-medium text-red-500 dark:text-white">
                   Please fill out all fields{" "}
                 </p>
               </div>
             )}
 
-            <div class="flex justify-between">
+            <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex   justify-between">
               <button
                 onClick={handleSubmit}
                 type="submit"

@@ -56,14 +56,14 @@ const Jobs = () => {
       transition={{ delay: 0.05, duration: 0.35 }}
     >
       {jobsData.length > 0 ? (
-        <div className="mt-20 mb-8 px-10 min-[900px]:px-14">
-          <div className="">
-            <div className="flex text-xs sm:text-sm min-[900px]:text-base flex-col min-[900px]:flex-row justify-center gap-4">
-              <div className="relative w-2/3 mx-auto min-[900px]:mx-0 min-[900px]:w-full">
-                <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+        <div className="dark:bg-slate-700 dark:text-white dark:border-white  mt-20 mb-8 px-10 min-[900px]:px-14">
+          <div className="dark:bg-slate-700 dark:text-white dark:border-white  ">
+            <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex text-xs sm:text-sm min-[900px]:text-base flex-col min-[900px]:flex-row justify-center gap-4">
+              <div className="dark:bg-slate-700 dark:text-white dark:border-white  relative w-2/3 mx-auto min-[900px]:mx-0 min-[900px]:w-full">
+                <div className="dark:bg-slate-700 dark:text-white dark:border-white  absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                   <svg
                     aria-hidden="true"
-                    className="w-5 h-5 text-gray-500 dark:text-gray-400"
+                    className="dark:bg-slate-700 dark:text-white dark:border-white  w-5 h-5 text-gray-500 dark:text-gray-400"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -82,7 +82,7 @@ const Jobs = () => {
                   onChange={handleChangeKey}
                   type="search"
                   id="default-search"
-                  className=" block w-full py-[0.75rem] min-[900px]:py-4 px-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="dark:bg-slate-700 dark:text-white dark:border-white   block w-full py-[0.75rem] min-[900px]:py-4 px-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Search..."
                   required
                 />
@@ -92,7 +92,7 @@ const Jobs = () => {
                 value={select1}
                 onChange={handleChangeSelect1}
                 id="countries"
-                className="w-2/3 min-[900px]:w-full py-[0.75rem] min-[900px]:max-w-[160px] min-[900px]:max-w-full mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="dark:bg-slate-700 dark:text-white dark:border-white  w-2/3 min-[900px]:w-full py-[0.75rem] min-[900px]:max-w-[160px] min-[900px]:max-w-full mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               >
                 <option selected value="">
                   Location
@@ -105,7 +105,7 @@ const Jobs = () => {
                 value={select2}
                 onChange={handleChangeSelect2}
                 id="countries"
-                className="w-2/3 min-[900px]:w-full py-[0.75rem] min-[900px]:max-w-[160px] min-[900px]:max-w-full mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="dark:bg-slate-700 dark:text-white dark:border-white  w-2/3 min-[900px]:w-full py-[0.75rem] min-[900px]:max-w-[160px] min-[900px]:max-w-full mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               >
                 <option selected value="">
                   Department
@@ -121,10 +121,10 @@ const Jobs = () => {
                 <option value="Legal">Legal</option>
                 <option value="Product">Product</option>
               </select>
-              <div className="flex justify-center">
+              <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex justify-center">
                 <button
                   onClick={handleReset}
-                  className="text-blue-500 text-sm font-medium whitespace-nowrap"
+                  className="dark:bg-slate-700 dark:text-white dark:border-white  text-blue-500 text-sm font-medium whitespace-nowrap"
                 >
                   Reset Filter
                 </button>
@@ -132,8 +132,8 @@ const Jobs = () => {
             </div>
           </div>
 
-          <div className=" pt-8">
-            <div className=" text-3xl font-semibold pb-7 ">
+          <div className="dark:bg-slate-700 dark:text-white dark:border-white   pt-8">
+            <div className="dark:bg-slate-700 dark:text-white dark:border-white   text-3xl font-semibold pb-7 ">
               {/* {jobsData.length} total position */}
               {show.length} total positions
             </div>
@@ -144,11 +144,11 @@ const Jobs = () => {
               ) : (
                 show.slice(0, visibleCount).map((item, idx) => {
                   return (
-                    // <Link to={`/careers/${item._id}`} key={idx} className="cursor-pointer flex p-6 drop-shadow-[0px_8px_30px_#DEE6F1] border-t first:border-b-[#C5CEE0] last:border-b hover:border-transparent hover:border-0 hover:rounded-2xl hover:shadow-[0px_8px_30px_#DEE6F1] transition-all duration-200">
+                    // <Link to={`/careers/${item._id}`} key={idx} className="dark:bg-slate-700 dark:text-white dark:border-white  cursor-pointer flex p-6 drop-shadow-[0px_8px_30px_#DEE6F1] border-t first:border-b-[#C5CEE0] last:border-b hover:border-transparent hover:border-0 hover:rounded-2xl hover:shadow-[0px_8px_30px_#DEE6F1] transition-all duration-200">
                     <Link
                       to={`/admin/update-job/${item._id}`}
                       key={idx}
-                      className="cursor-pointer flex p-6 drop-shadow-[0px_8px_30px_#DEE6F1] border-t first:border-b-[#C5CEE0] last:border-b hover:border-transparent hover:border-0 hover:rounded-2xl hover:shadow-[0px_8px_30px_#DEE6F1] transition-all duration-200"
+                      className="dark:bg-slate-700 dark:text-white dark:border-white  cursor-pointer flex p-6 drop-shadow-[0px_8px_30px_#DEE6F1] border-t first:border-b-[#C5CEE0] last:border-b hover:border-transparent hover:border-0 hover:rounded-2xl hover:shadow-[0px_8px_30px_#DEE6F1] transition-all duration-200"
                     >
                       <CardItem
                         id={item._id}
@@ -163,10 +163,10 @@ const Jobs = () => {
             </div>
           </div>
           {visibleCount < jobsData.length && (
-            <div className="flex items-center justify-center svelte-1jp7mce">
+            <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex items-center justify-center svelte-1jp7mce">
               <button
                 onClick={showMore}
-                className="text-[#4C98FF] cursor-pointer text-center font-semibold mt-[28px] text-base svelte-1jp7mce"
+                className="dark:bg-slate-700 dark:text-white dark:border-white  text-[#4C98FF] cursor-pointer text-center font-semibold mt-[28px] text-base svelte-1jp7mce"
               >
                 Show more
               </button>

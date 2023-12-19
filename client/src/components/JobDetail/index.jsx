@@ -22,17 +22,17 @@ function JobDetail() {
       transition={{ delay: 0.15, duration: 0.5 }}
     >
       {jobsData ? (
-        <main className="flex-1 flex justify-center flex-col w-full items-center relative">
+        <main className="dark:bg-slate-700 dark:text-white dark:border-white  flex-1 flex justify-center flex-col w-full items-center relative">
           <header
-            className="md:bg-[url('https://skymavis.com/_app/immutable/assets/axie-concept-f5e52a79.png')] 
+            className="dark:bg-slate-700 dark:text-white dark:border-white  md:bg-[url('https://skymavis.com/_app/immutable/assets/axie-concept-f5e52a79.png')] 
           max-md:bg-[url('https://skymavis.com/_app/immutable/assets/ImageBackgroundJobDetailMobile-2dbabf27.png')]          
           page-header flex flex-col items-center text-center p-[34px_28px_60px] md:p-[55px_28px_75px] xl:p-[55px_28px_75px] bg-no-repeat bg-cover bg-center transition-all w-full"
           >
-            <div className=" 	flex gap-2">
+            <div className="dark:bg-slate-700 dark:text-white dark:border-white   	flex gap-2">
               {joblist2?.tags.map((tag, idx) => {
                 return (
                   <p
-                  key={idx}
+                    key={idx}
                     className={`${
                       idx === 0
                         ? "bg-sky-500 text-white"
@@ -44,19 +44,21 @@ function JobDetail() {
                 );
               })}
             </div>
-            <div className="text-3xl xl:text-4xl xl:leading-normal font-bold mb-5 mt-5 max-w-[75%] md:max-w-[60%] lg:max-w-[50%] xl:max-w-[40%] 2xl:max-w-[35%]">
+            <div className="dark:bg-slate-700 dark:text-white dark:border-white  text-3xl xl:text-4xl xl:leading-normal font-bold mb-5 mt-5 max-w-[75%] md:max-w-[60%] lg:max-w-[50%] xl:max-w-[40%] 2xl:max-w-[35%]">
               {joblist2?.title}
             </div>
             {joblist2?.location}
           </header>
-          <div className="flex flex-col text-left  max-w-[856px] p-5 xl:p-0">
-            <div className="text-[#1D273D] detail-job pt-10 xl:pt-[79px] ">
+          <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex flex-col text-left  max-w-[856px] p-5 xl:p-0">
+            <div className="dark:bg-slate-700 dark:text-white dark:border-white  text-[#1D273D] detail-job pt-10 xl:pt-[79px] ">
               {parse(joblist2?.content || "")}
             </div>
             {/* Benefits */}
             <div>
-              <h1 className="text-2xl font-medium mt-3 mb-2">Benefits</h1>
-              <p className="flex gap-x-2 my-5">
+              <h1 className="dark:bg-slate-700 dark:text-white dark:border-white  text-2xl font-medium mt-3 mb-2">
+                Benefits
+              </h1>
+              <p className="dark:bg-slate-700 dark:text-white dark:border-white  flex gap-x-2 my-5">
                 <img
                   title=""
                   alt=""
@@ -66,7 +68,7 @@ function JobDetail() {
                 that is making a positive impact and changing people’s lives
                 globally
               </p>
-              <p className="flex gap-x-2 my-5">
+              <p className="dark:bg-slate-700 dark:text-white dark:border-white  flex gap-x-2 my-5">
                 <img
                   title=""
                   alt=""
@@ -75,7 +77,7 @@ function JobDetail() {
                 A fast-paced, active, and fun working environment where
                 everything revolves around games and cute beings
               </p>
-              <p className="flex gap-x-2 my-5">
+              <p className="dark:bg-slate-700 dark:text-white dark:border-white  flex gap-x-2 my-5">
                 <img
                   title=""
                   alt=""
@@ -84,7 +86,7 @@ function JobDetail() {
                 A competitive salary package that fits your skills, experiences,
                 and contributions
               </p>
-              <p className="flex gap-x-2 my-5">
+              <p className="dark:bg-slate-700 dark:text-white dark:border-white  flex gap-x-2 my-5">
                 <img
                   title=""
                   alt=""
@@ -92,7 +94,7 @@ function JobDetail() {
                 />
                 Freedom, autonomy & ownership around your work
               </p>
-              <p className="flex gap-x-2 my-5">
+              <p className="dark:bg-slate-700 dark:text-white dark:border-white  flex gap-x-2 my-5">
                 <img
                   title=""
                   alt=""
@@ -100,7 +102,7 @@ function JobDetail() {
                 />
                 Contribute to making revolutionary games
               </p>
-              <p className="flex gap-x-2 my-5">
+              <p className="dark:bg-slate-700 dark:text-white dark:border-white  flex gap-x-2 my-5">
                 <img
                   title=""
                   alt=""
@@ -109,7 +111,7 @@ function JobDetail() {
                 Acquire new and unique skills as we usher in a new era of
                 digital ownership
               </p>
-              <p className="flex gap-x-2 mt-5">
+              <p className="dark:bg-slate-700 dark:text-white dark:border-white  flex gap-x-2 mt-5">
                 <img
                   title=""
                   alt=""
@@ -121,7 +123,7 @@ function JobDetail() {
             </div>
           </div>
           <Link to={`/careers/${param.id}/apply`}>
-            <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold rounded-full mb-[50px] mt-[30px] py-[5px] px-[54px]">
+            <button className="dark:bg-slate-700 dark:text-white dark:border-white  bg-blue-500 hover:bg-blue-400 text-white font-bold rounded-full mb-[50px] mt-[30px] py-[5px] px-[54px]">
               Apply
             </button>
           </Link>

@@ -1,29 +1,50 @@
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 const Sidebar = () => {
+  const [theme, setTheme] = useState(null);
+  useEffect(() => {
+    if (theme === "dark") {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [theme]);
+
+  useEffect(() => {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  }, []);
+
+  const handleThemeSwitch = () => {
+    setTheme(theme === "dark" ? "light" : "dark");
+  };
   return (
-    <main className="ml-2 flex flex-col justify-between h-[100vh] w-[200px] font-medium border-r-[1.5px]">
+    <main className="dark:bg-slate-700 dark:text-white dark:border-white  pl-2 flex flex-col justify-between h-[100vh] w-[200px] font-medium border-r-[1.5px]">
       <div>
-        <div className="flex justify-between items-center border-b-[1.5px] h-[70px]">
+        <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex justify-between items-center border-b-[1.5px] h-[70px]">
           <img
             width="130"
             src="https://drive.google.com/u/0/uc?id=1JaIDwaSWsJ8oVqt0iufGk1PQAyIgMp16&export=download"
           ></img>
-          
         </div>
 
-        <div className="pl-1 text-sm text-slate-500">
-          <p className="text-[12px] pt-2">General</p>
+        <div className="dark:bg-slate-700 dark:text-white dark:border-white  pl-1 text-sm text-slate-500">
+          <p className="dark:bg-slate-700 dark:text-white dark:border-white  text-[12px] pt-2">
+            General
+          </p>
 
           <Link to={"/admin"}>
-            <div className="flex py-2 cursor-pointer hover:bg-gray-200">
+            <div className="dark:bg-slate-700 dark:text-white dark:border-white pl-1 flex py-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-800">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-5 h-5"
+                className=" dark:text-white dark:border-white  w-5 h-5"
               >
                 <path
                   strokeLinecap="round"
@@ -31,18 +52,20 @@ const Sidebar = () => {
                   d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
                 />
               </svg>
-              <p className=" pl-1">Overview</p>
+              <p className=" dark:text-white dark:border-white   pl-1">
+                Overview
+              </p>
             </div>
           </Link>
           <Link to="/admin/create-job">
-            <div className=" flex py-2 cursor-pointer hover:bg-gray-200">
+            <div className="dark:bg-slate-700 dark:text-white dark:border-white  pl-1  flex py-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-800">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-5 h-5"
+                className=" dark:text-white dark:border-white  w-5 h-5"
               >
                 <path
                   strokeLinecap="round"
@@ -51,18 +74,20 @@ const Sidebar = () => {
                 />
               </svg>
 
-              <p className=" pl-1">Create Job</p>
+              <p className=" dark:text-white dark:border-white   pl-1">
+                Create Job
+              </p>
             </div>
           </Link>
           <Link to={"/admin/employee"}>
-            <div className=" flex py-2 cursor-grab hover:bg-gray-200">
+            <div className="dark:bg-slate-700 dark:text-white dark:border-white  pl-1  flex py-2 cursor-grab hover:bg-gray-200 dark:hover:bg-slate-800">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-5 h-5"
+                className=" dark:text-white dark:border-white  w-5 h-5"
               >
                 <path
                   strokeLinecap="round"
@@ -71,18 +96,20 @@ const Sidebar = () => {
                 />
               </svg>
 
-              <p className=" pl-1">Employees</p>
+              <p className=" dark:text-white dark:border-white   pl-1">
+                Employees
+              </p>
             </div>
           </Link>
           <Link to={"/admin/jobs"}>
-            <div className=" flex py-2 cursor-pointer hover:bg-gray-200">
+            <div className="dark:bg-slate-700 dark:text-white dark:border-white pl-1   flex py-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-800">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-5 h-5"
+                className=" dark:text-white dark:border-white  w-5 h-5"
               >
                 <path
                   strokeLinecap="round"
@@ -91,19 +118,19 @@ const Sidebar = () => {
                 />
               </svg>
 
-              <p className=" pl-1">Jobs</p>
+              <p className=" dark:text-white dark:border-white   pl-1">Jobs</p>
             </div>
           </Link>
 
           <Link to={"/admin/candidates"}>
-            <div className=" flex py-2 cursor-pointer hover:bg-gray-200">
+            <div className="dark:bg-slate-700 dark:text-white dark:border-white  pl-1  flex py-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-800">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-5 h-5"
+                className=" dark:text-white dark:border-white  w-5 h-5"
               >
                 <path
                   strokeLinecap="round"
@@ -112,20 +139,24 @@ const Sidebar = () => {
                 />
               </svg>
 
-              <p className=" pl-1">Candidates</p>
+              <p className=" dark:text-white dark:border-white   pl-1">
+                Candidates
+              </p>
             </div>
           </Link>
 
-          <p className="w-[180px] border-b-[1.5px]"></p>
-          <p className="text-[12px] pt-2">Support</p>
-          <div className=" flex py-2 cursor-pointer hover:bg-gray-200">
+          <p className="dark:bg-slate-700 dark:text-white dark:border-white  w-[180px] border-b-[1.5px]"></p>
+          <p className="dark:bg-slate-700 dark:text-white dark:border-white  text-[12px] pt-2 ">
+            Support
+          </p>
+          <div className="dark:bg-slate-700 dark:text-white dark:border-white  pl-1  flex py-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-800">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-5 h-5"
+              className=" dark:text-white dark:border-white  w-5 h-5 "
             >
               <path
                 strokeLinecap="round"
@@ -139,16 +170,18 @@ const Sidebar = () => {
               />
             </svg>
 
-            <p className=" pl-1">Settings</p>
+            <p className=" dark:text-white dark:border-white   pl-1 ">
+              Settings
+            </p>
           </div>
-          <div className=" flex py-2 cursor-pointer hover:bg-gray-200">
+          <div className=" dark:text-white dark:border-white pl-1   flex py-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-800">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-5 h-5"
+              className=" dark:text-white dark:border-white  w-5 h-5 "
             >
               <path
                 strokeLinecap="round"
@@ -157,48 +190,56 @@ const Sidebar = () => {
               />
             </svg>
 
-            <p className=" pl-1 cursor-grab">Help Center</p>
+            <p className=" dark:text-white dark:border-white   pl-1 cursor-grab">
+              Help Center
+            </p>
           </div>
         </div>
       </div>
-      <div className="mb-4">
-        <div className="pl-2 text-sm text-slate-500">
-          <p className="text-[12px] py-2">Appearance</p>
+      <div className="dark:bg-slate-700 dark:text-white dark:border-white  mb-4">
+        <div className="dark:bg-slate-700 dark:text-white dark:border-white  pl-2 text-sm text-slate-500">
+          <p className="dark:bg-slate-700 dark:text-white dark:border-white  text-[12px] py-2">
+            Appearance
+          </p>
         </div>
 
-        <div className="flex justify-center ">
-          <div className="w-3/4 h-6 bg-slate-200 rounded-sm flex items-center p-[1px]">
-            <div className="w-1/2 h-5  bg-white rounded-sm flex justify-center items-center ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-3 h-3 stroke-slate-400"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
-                />
-              </svg>
+        <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex justify-center ">
+          <div className="dark:bg-slate-600 dark:text-white dark:border-white  w-3/4 h-6 bg-slate-200 rounded-sm flex items-center p-[1px]">
+            <div className="dark:bg-slate-700 dark:text-white dark:border-white  w-1/2 h-5  bg-white rounded-sm flex justify-center items-center ">
+              <button onClick={handleThemeSwitch}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="dark:bg-slate-700 dark:text-white dark:border-white  w-4 h-4 stroke-slate-400"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"
+                  />
+                </svg>
+              </button>
             </div>
-            <div className="w-1/2 h-5 rounded-sm flex justify-center items-center p-[1px] ">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="w-4 h-4 stroke-slate-400"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
-                />
-              </svg>
+            <div className="dark:bg-slate-900 dark:text-white dark:border-white  w-1/2 h-5 rounded-sm flex justify-center items-center p-[1px] ">
+              <button onClick={handleThemeSwitch}>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="dark:bg-slate-900 dark:text-white dark:border-white  w-4 h-4 stroke-slate-400"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
         </div>

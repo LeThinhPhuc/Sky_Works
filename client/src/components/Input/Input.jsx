@@ -11,7 +11,7 @@ const Input = (props) => {
   };
 
   return (
-    <div className="relative grow font-light text-xs md:text-sm">
+    <div className="dark:bg-slate-700 dark:text-white dark:border-white  relative grow font-light text-xs md:text-sm">
       <input
         type={type}
         id={inputName}

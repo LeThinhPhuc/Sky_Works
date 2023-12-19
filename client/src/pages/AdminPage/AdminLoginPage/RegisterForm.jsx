@@ -54,12 +54,20 @@ const RegisterForm = () => {
 
   return (
     <form
-      className="flex flex-col px-5 gap-5 w-11/12 place-items-center"
+      className="dark:bg-slate-700 dark:text-white dark:border-white  flex flex-col px-5 gap-5 w-11/12 place-items-center"
       onSubmit={handleSubmit}
     >
-      {error && <div className="error-message">{error}</div>}
-      {success && <div className="error-message">{success}</div>}
-      <div className="flex justify-start place-items-center px-5 w-11/12 h-10 bg-[#f0f0f0] rounded-full">
+      {error && (
+        <div className="dark:bg-slate-700 dark:text-white dark:border-white  error-message">
+          {error}
+        </div>
+      )}
+      {success && (
+        <div className="dark:bg-slate-700 dark:text-white dark:border-white  error-message">
+          {success}
+        </div>
+      )}
+      <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex justify-start place-items-center px-5 w-11/12 h-10 bg-[#f0f0f0] rounded-full">
         {/* <label htmlFor="username">Username:</label> */}
         <input
           type="username"
@@ -68,11 +76,11 @@ const RegisterForm = () => {
           value={inForUser?.username}
           onChange={onChangeHandler}
           placeholder="New Username"
-          className="w-full bg-transparent border-none ml-3"
+          className="dark:bg-slate-700 dark:text-white dark:border-white  w-full bg-transparent border-none ml-3"
           required
         />
       </div>
-      <div className="flex justify-start place-items-center px-5 w-11/12 h-10 bg-[#f0f0f0] rounded-full">
+      <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex justify-start place-items-center px-5 w-11/12 h-10 bg-[#f0f0f0] rounded-full">
         {/* <label htmlFor="email">E-mail:</label> */}
         <input
           type="email"
@@ -81,11 +89,11 @@ const RegisterForm = () => {
           value={inForUser?.email}
           onChange={onChangeHandler}
           placeholder="Enter Your E-mail"
-          className="w-full bg-transparent border-none"
+          className="dark:bg-slate-700 dark:text-white dark:border-white  w-full bg-transparent border-none"
           required
         />
       </div>
-      <div className="flex justify-start place-items-center px-5 w-11/12 h-10 bg-[#f0f0f0] rounded-full">
+      <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex justify-start place-items-center px-5 w-11/12 h-10 bg-[#f0f0f0] rounded-full">
         {/* <label htmlFor="password">Password:</label> */}
         <input
           type="password"
@@ -94,11 +102,11 @@ const RegisterForm = () => {
           value={inForUser?.password}
           onChange={onChangeHandler}
           placeholder="Enter Your Password"
-          className="w-full bg-transparent border-none"
+          className="dark:bg-slate-700 dark:text-white dark:border-white  w-full bg-transparent border-none"
           required
         />
       </div>
-      <div className="flex justify-start place-items-center px-5 w-11/12 h-10 bg-[#f0f0f0] rounded-full">
+      <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex justify-start place-items-center px-5 w-11/12 h-10 bg-[#f0f0f0] rounded-full">
         {/* <label htmlFor="confirmPassword">Confirm Password:</label> */}
         <input
           type="password"
@@ -107,12 +115,12 @@ const RegisterForm = () => {
           value={confirmPassword}
           onChange={handleConfirmPasswordChange}
           placeholder="Confirm Password"
-          className="w-full bg-transparent border-none"
+          className="dark:bg-slate-700 dark:text-white dark:border-white  w-full bg-transparent border-none"
           required
         />
       </div>
       <button
-        className="
+        className="dark:bg-slate-700 dark:text-white dark:border-white  
           flex py-3 px-16 mt-8
           place-content-center place-items-center place-self-center 
           font-semibold text-white bg-gradient-to-r from-[#72afd3] to-[#37ecba] rounded-full

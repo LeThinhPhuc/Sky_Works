@@ -13,19 +13,19 @@ const SearchAndInforAdmin = () => {
   };
 
   return (
-    <section className="h-[70px] flex flex-row items-center min-w-[600px] border-b-slate-300 border-b-[1px]">
-      <form className="w-3/4 pl-3 ">
+    <section className="dark:bg-slate-700 dark:text-white dark:border-white  h-[70px] flex flex-row items-center min-w-[600px] border-b-slate-300 border-b-[1px]">
+      <form className="dark:bg-slate-700 dark:text-white dark:border-white  w-3/4 pl-3 ">
         <label
           htmlFor="default-search"
-          className="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white "
+          className="dark:bg-slate-700 dark:text-white dark:border-white  mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white "
         >
           Search
         </label>
-        <div className="relative">
-          <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+        <div className="dark:bg-slate-700 dark:text-white dark:border-white  relative">
+          <div className="dark:bg-slate-700 dark:text-white dark:border-white  absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
             <svg
               aria-hidden="true"
-              className="w-5 h-5 text-gray-500 dark:text-gray-400"
+              className="dark:bg-slate-700 dark:text-white dark:border-white  w-5 h-5 text-gray-500 dark:text-gray-400"
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
@@ -42,7 +42,7 @@ const SearchAndInforAdmin = () => {
           <input
             type="search"
             id="default-search"
-            className="block w-full p-4 pl-10 text-sm border-none text-gray-900   rounded-lg  focus:ring-white focus:outline-none h-1"
+            className="dark:bg-slate-700 dark:text-white dark:border-white  block w-full p-4 pl-10 text-sm border-none text-gray-900   rounded-lg  focus:ring-white focus:outline-none h-1"
             placeholder="Search something..."
             required
           ></input>
@@ -51,7 +51,7 @@ const SearchAndInforAdmin = () => {
 
       <button
         type="button"
-        className="mr-3 ml-2 relative inline-flex items-center p-3 text-sm font-medium text-center text-white rounded-full"
+        className="dark:bg-slate-700 dark:text-white dark:border-white  mr-3 ml-2 relative inline-flex items-center p-3 text-sm font-medium text-center text-white rounded-full"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -59,7 +59,7 @@ const SearchAndInforAdmin = () => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6 stroke-slate-500"
+          className="dark:bg-slate-700 dark:text-white dark:border-white  w-6 h-6 stroke-slate-500"
         >
           <path
             strokeLinecap="round"
@@ -68,27 +68,31 @@ const SearchAndInforAdmin = () => {
           />
         </svg>
 
-        <span className="sr-only">Notifications</span>
-        <div className="absolute inline-flex items-center justify-center w-2 h-2 text-xs font-bold text-white bg-red-500  rounded-full top-2 right-2 dark:border-gray-900"></div>
+        <span className="dark:bg-slate-700 dark:text-white dark:border-white  sr-only">
+          Notifications
+        </span>
+        <div className="dark:bg-slate-700 dark:text-white dark:border-white  absolute inline-flex items-center justify-center w-2 h-2 text-xs font-bold text-white bg-red-500  rounded-full top-2 right-2 dark:border-gray-900"></div>
       </button>
-      <div className="h-8 w-0 border-r-[1.5px]"></div>
-      <div className="flex flex-row justify-between content-center items-center h-full">
-        <div className="flex items-center space-x-4 pl-5 min-w-[250px]">
+      <div className="dark:bg-slate-700 dark:text-white dark:border-white  h-8 w-0 border-r-[1.5px]"></div>
+      <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex flex-row justify-between content-center items-center h-full">
+        <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex items-center space-x-4 pl-5 min-w-[250px]">
           <img
-            className="w-9 h-9 rounded-full object-cover"
+            className="dark:bg-slate-700 dark:text-white dark:border-white  w-9 h-9 rounded-full object-cover"
             src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg/330px-Mark_Zuckerberg_F8_2019_Keynote_%2832830578717%29_%28cropped%29.jpg"
             alt=""
           ></img>
-          <div className="text-sm dark:text-white">
-            <div className="font-semibold pb-1">{username?.toUpperCase()}</div>
-            <div className="text-xs text-gray-500 dark:text-gray-400">
+          <div className="dark:bg-slate-700 dark:text-white dark:border-white  text-sm dark:text-white">
+            <div className="dark:bg-slate-700 dark:text-white dark:border-white  font-semibold pb-1">
+              {username?.toUpperCase()}
+            </div>
+            <div className="dark:bg-slate-700 dark:text-white dark:border-white  text-xs text-gray-500 dark:text-gray-400">
               {role ? role : ""}
             </div>
           </div>
         </div>
         <button onClick={handleLogout}>
           <FontAwesomeIcon
-            className="text-3xl hover:text-red-600 pr-5"
+            className="dark:bg-slate-700 dark:text-white dark:border-white  text-3xl hover:text-red-600 pr-5"
             icon={faRightFromBracket}
           />
         </button>

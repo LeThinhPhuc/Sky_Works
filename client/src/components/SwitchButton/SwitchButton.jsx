@@ -2,13 +2,13 @@ import React from "react";
 import "./SwitchButton.css";
 
 const SwitchButton = (props) => {
-  const { isAvailable, handleSwitch, switchValue} = props;
+  const { isAvailable, handleSwitch, switchValue } = props;
   return (
     <>
       <input
         checked={isAvailable}
         onChange={handleSwitch}
-        className="react-switch-checkbox"
+        className="dark:bg-slate-700 dark:text-white dark:border-white  react-switch-checkbox"
         id={`react-switch-new`}
         type="checkbox"
       />

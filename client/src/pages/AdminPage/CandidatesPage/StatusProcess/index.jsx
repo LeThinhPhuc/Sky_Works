@@ -66,7 +66,7 @@ const StatusProcess = (props) => {
   };
   console.log(data);
   const updateDataBack = async () => {
-    setIsLoadingBack(true)
+    setIsLoadingBack(true);
     const dataUpdate = {
       ...data,
       timeLine: [...stepStatus.slice(0, -1)],
@@ -77,7 +77,7 @@ const StatusProcess = (props) => {
     setStepStatus(
       updateResponse.data.newData.find((item) => item._id == data._id).timeLine
     );
-  setIsLoadingBack(false)
+    setIsLoadingBack(false);
   };
 
   const updateReject = async () => {
@@ -140,10 +140,13 @@ const StatusProcess = (props) => {
       <div
         className={` mx-4 relative overflow-x-auto border-[1.5px] rounded-lg min-w-[30%] min-h-[10%]`}
       >
-        <table className="w-full  text-sm text-center text-gray-500 dark:text-gray-400">
-          <thead className="text-xs text-gray-900  bg-gray-300 border-b-[1.5px] dark:bg-gray-700 dark:text-gray-400">
+        <table className="dark:bg-slate-700 dark:text-white dark:border-white  w-full  text-sm text-center text-gray-500 dark:text-gray-400">
+          <thead className="dark:bg-slate-700 dark:text-white dark:border-white  text-xs text-gray-900  bg-gray-300 border-b-[1.5px] dark:bg-gray-700 dark:text-gray-400">
             <tr>
-              <th scope="col" className="px-3 py-3 text-sm font-semibold">
+              <th
+                scope="col"
+                className="dark:bg-slate-700 dark:text-white dark:border-white  px-3 py-3 text-sm font-semibold"
+              >
                 Manage Applicant Statuses
               </th>
             </tr>
@@ -154,7 +157,7 @@ const StatusProcess = (props) => {
           {renderData.map((item) =>
             true ? (
               <li class="relative mb-10 sm:mb-2">
-                <div class="flex items-center">
+                <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex   items-center">
                   <div
                     class={`relative z-10 flex items-center justify-center w-6 h-6 ${
                       item.idProcess > stepStatus.length - 1
@@ -207,7 +210,11 @@ const StatusProcess = (props) => {
                       <div class=" sm:flex w-full bg-blue-100 h-0.5 dark:bg-gray-700 "></div>
                     )
                   ) : (
-                    <div class={`sm:flex w-full bg-blue-400 h-0.5 dark:bg-gray-700 ${isLoadingBack? "animate-ping":""} `}></div>
+                    <div
+                      class={`sm:flex w-full bg-blue-400 h-0.5 dark:bg-gray-700 ${
+                        isLoadingBack ? "animate-ping" : ""
+                      } `}
+                    ></div>
                   )}
                 </div>
                 <div class="mt-3 sm:pr-8">
@@ -255,7 +262,7 @@ const StatusProcess = (props) => {
             )
           )}
         </ol>
-        <div class="flex justify-end absolute bottom-[1px] right-1">
+        <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex   justify-end absolute bottom-[1px] right-1">
           <button
             onClick={handleBtnUndo}
             class=" z-[150] flex flex-col items-center bg-blue-50 hover:bg-blue-300  text-gray-900 font-bold text-xs mr-5 rounded-lg mt-3 w-[60px] h-[60px]"
