@@ -14,13 +14,13 @@ const UserItem = (props) => {
   return (
     <tr
       onClick={onclick}
-      className="dark:bg-slate-700 dark:text-white dark:border-white  border-b-[1.5px] dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600"
+      className="border-b-[1.5px] dark:bg-gray-600 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 py-2"
     >
       {/* <Link to={`/candidates/${_id}/edit`}> */}
 
       <th
         scope="row"
-        className="dark:bg-slate-700 dark:text-white dark:border-white  flex items-center px-6 py-1 text-gray-900 whitespace-nowrap dark:text-white"
+        className="flex items-center px-6 py-1 text-gray-900 whitespace-nowrap dark:text-white"
       >
         <div
           className={`w-12 h-12 flex justify-center items-center rounded-full text-xl text-white uppercase`}
@@ -36,9 +36,7 @@ const UserItem = (props) => {
         </div>
         {/* cho-nay-chua-hieu-tai-sao-sai */}
 
-        <div className="dark:bg-slate-700 dark:text-white dark:border-white  text-xs font-semibold pl-3">
-          {employee?.username}
-        </div>
+        <div className="text-xs font-semibold pl-3">{employee?.username}</div>
       </th>
       <td class="px-6 py-4 text-xs">{employee?.email}</td>
       <td class="px-6 py-4">

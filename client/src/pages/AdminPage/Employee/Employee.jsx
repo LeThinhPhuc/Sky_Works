@@ -63,7 +63,7 @@ const CandidatesPage = () => {
     >
       <section className="dark:bg-slate-700 dark:text-white dark:border-white  px-4 py-2">
         <div className="dark:bg-slate-700 dark:text-white dark:border-white  ">
-          <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex items-center justify-between pb-2 bg-white dark:bg-gray-900  ">
+          <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex items-center justify-between pb-2 bg-white   ">
             <div>
               <p className="dark:bg-slate-700 dark:text-white dark:border-white  text-xl lg:text-2xl text-neutral-500 font-semibold">
                 Employees
@@ -73,7 +73,7 @@ const CandidatesPage = () => {
               <button
                 onClick={() => setCheck(false)}
                 type="button"
-                className="dark:bg-slate-700 dark:text-white dark:border-white  flex  text-slate-500 bg-white border border-gray-200 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-xs px-3 py-1 mr-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
+                className="dark:bg-slate-700 dark:text-white dark:border-white  flex  text-slate-500 bg-white border border-gray-200 focus:outline-none  focus:ring-4 focus:ring-gray-200 font-medium rounded-lg text-xs px-3 py-1 mr-2 mb-2  dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +99,7 @@ const CandidatesPage = () => {
                   <div className="dark:bg-slate-700 dark:text-white dark:border-white   absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                     <svg
                       aria-hidden="true"
-                      className="dark:bg-slate-700 dark:text-white dark:border-white  w-5 h-5 text-gray-500 dark:text-gray-400"
+                      className="dark:bg-slate-700 dark:text-white dark:border-white  w-5 h-5 text-gray-500 "
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -118,7 +118,7 @@ const CandidatesPage = () => {
                     onChange={handleChangeVal}
                     type="search"
                     id="default-search"
-                    className="dark:bg-slate-700 dark:text-white dark:border-white   block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    className="dark:bg-slate-700 dark:text-white dark:border-white   block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500"
                     placeholder="Search..."
                     required
                   />
@@ -127,7 +127,7 @@ const CandidatesPage = () => {
                   value={sort2}
                   onChange={handleSort2}
                   id="countries"
-                  className="dark:bg-slate-700 dark:text-white dark:border-white  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 "
+                  className="dark:bg-slate-700 dark:text-white dark:border-white  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2  dark:placeholder-gray-400  dark:focus:ring-blue-500 dark:focus:border-blue-500 "
                 >
                   <option selected value="Sort Name">
                     Sort Name
@@ -139,19 +139,13 @@ const CandidatesPage = () => {
             )}
           </div>
           <div className="dark:bg-slate-700 dark:text-white dark:border-white  relative m-auto overflow-x-auto border-[1.5px] rounded-lg w-[80%]">
-            <table className="dark:bg-slate-700 dark:text-white dark:border-white  w-full   text-sm text-center text-gray-500 dark:text-gray-400">
-              <thead className="dark:bg-slate-700 dark:text-white dark:border-white  text-xs text-gray-500  bg-gray-100 border-b-[1.5px] dark:bg-gray-700 dark:text-gray-400">
+            <table className="dark:bg-slate-700 dark:text-white dark:border-white  w-full   text-sm text-center text-gray-500 ">
+              <thead className="dark:bg-slate-700 dark:text-white dark:border-white  text-xs text-gray-500  bg-gray-100 border-b-[1.5px] ">
                 <tr>
-                  <th
-                    scope="col"
-                    className="dark:bg-slate-700 dark:text-white dark:border-white  px-3 py-3 font-semibold"
-                  >
+                  <th scope="col" className="  px-3 py-3 font-semibold">
                     Username
                   </th>
-                  <th
-                    scope="col"
-                    className="dark:bg-slate-700 dark:text-white dark:border-white  px-3 py-3 font-semibold"
-                  >
+                  <th scope="col" className="  px-3 py-3 font-semibold">
                     Email
                   </th>
                   <th scope="col" class="px-3 py-3 font-semibold">
@@ -169,15 +163,15 @@ const CandidatesPage = () => {
               className="dark:bg-slate-700 dark:text-white dark:border-white  flex items-center justify-between py-2 pt-1 pl-2"
               aria-label="Table navigation"
             >
-              <span className="dark:bg-slate-700 dark:text-white dark:border-white  text-xs font-normal text-gray-500 dark:text-gray-400">
+              <span className="dark:bg-slate-700 dark:text-white dark:border-white  text-xs font-normal text-gray-500 ">
                 Showing{" "}
-                <span className="dark:bg-slate-700 dark:text-white dark:border-white  font-semibold text-gray-900 dark:text-white">
+                <span className="dark:bg-slate-700 dark:text-white dark:border-white  font-semibold text-gray-900 d">
                   {endOffset >= user?.length
                     ? `${itemOffset + 1}-${user?.length}`
                     : `${itemOffset + 1}-${endOffset}`}
                 </span>{" "}
                 of{" "}
-                <span className="dark:bg-slate-700 dark:text-white dark:border-white  font-semibold text-gray-900 dark:text-white">
+                <span className="dark:bg-slate-700 dark:text-white dark:border-white  font-semibold text-gray-900 ">
                   {user?.length}
                 </span>
               </span>
