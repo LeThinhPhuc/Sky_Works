@@ -84,7 +84,7 @@ const BarChart =()=> {
   const getValueData = () =>{
 const array = Array(12).fill(0);
 
-    for(let i=0;i<employee.length;i++){
+    for(let i=0;i<employee?.length;i++){
       let tmp=employee[i].dob.slice(5,7)
       console.log("thang : ", tmp)
       if(tmp=="01"){

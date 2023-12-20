@@ -26,7 +26,7 @@ const DoughnutChart = () =>{
   const {employee}=useContext(CareersContext)
 const array = Array(8).fill(0);
 
-  for(let i=0;i<employee.length;i++){
+  for(let i=0;i<employee?.length;i++){
     if(employee[i]?.teamLead=="Art"){
       array[0]++
     }else if(employee[i]?.teamLead=="Engineer"){
