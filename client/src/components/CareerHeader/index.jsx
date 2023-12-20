@@ -28,15 +28,19 @@ function CareerHeader() {
               Products
             </a>
           </li>
-          <li className="dark:bg-slate-800 dark:text-white dark:border-white  cursor-pointer h-full grid place-items-center font-semibold hover:text-blue-500 transition-all svelte-15jlsr3">
-            <a
-              className="dark:bg-slate-800 dark:text-white dark:border-white  p-[20px]"
-              href="/team"
-              rel="noreferrer"
-            >
-              Team
-            </a>
-          </li>
+          <Link to="/about">
+            {" "}
+            <li className="dark:bg-slate-800 dark:text-white dark:border-white  cursor-pointer h-full grid place-items-center font-semibold hover:text-blue-500 transition-all svelte-15jlsr3">
+              <a
+                className="dark:bg-slate-800 dark:text-white dark:border-white  p-[20px]"
+                href="/about"
+                rel="noreferrer"
+              >
+                Team
+              </a>
+            </li>{" "}
+          </Link>
+
           <li className="dark:bg-slate-800 dark:text-white dark:border-white  cursor-pointer h-full grid place-items-center font-semibold hover:text-blue-500 transition-all svelte-15jlsr3">
             <a
               className="dark:bg-slate-800 dark:text-white dark:border-white  p-[20px]"

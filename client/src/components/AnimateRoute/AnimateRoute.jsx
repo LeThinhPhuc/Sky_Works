@@ -17,6 +17,7 @@ import LoginRegisterPage from "../../pages/AdminPage/AdminLoginPage/LoginRegiste
 import WarningPage from "../../pages/AdminPage/WarningPage/WarningPage";
 import Employee from "../../pages/AdminPage/Employee/Employee";
 import EmployeeDetail from "../../pages/AdminPage/Employee/EmployeeDetail/EmployeeDetail";
+import AboutUs from "../../pages/AboutUs";
 // Check Role
 import PrivateRoute from "../../PrivateRoute/PrivateRoute";
 import RoleContentJob from "../../PrivateRoute/RoleContentJob";
@@ -27,7 +28,7 @@ import { AnimatePresence } from "framer-motion";
 
 // create the motion transition page for Route
 const AnimateRoute = () => {
-  const location = useLocation(); 
+  const location = useLocation();
 
   return (
     <AnimatePresence mode="wait" initial={false}>
@@ -80,6 +81,7 @@ const AnimateRoute = () => {
             element={<UpdateJobPage />}
           />
           <Route exact path="/admin/warning" element={<WarningPage />} />
+          <Route exact path="/about" element={<AboutUs />} />
         </Route>
       </Routes>
     </AnimatePresence>
