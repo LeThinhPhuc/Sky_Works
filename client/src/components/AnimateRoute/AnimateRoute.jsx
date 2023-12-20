@@ -17,7 +17,7 @@ import LoginRegisterPage from "../../pages/AdminPage/AdminLoginPage/LoginRegiste
 import WarningPage from "../../pages/AdminPage/WarningPage/WarningPage";
 import Employee from "../../pages/AdminPage/Employee/Employee";
 import EmployeeDetail from "../../pages/AdminPage/Employee/EmployeeDetail/EmployeeDetail";
-import AboutUs from "../../pages/AboutUs";
+import AboutUs from "../../pages/AboutUsPage";
 // Check Role
 import PrivateRoute from "../../PrivateRoute/PrivateRoute";
 import RoleContentJob from "../../PrivateRoute/RoleContentJob";
@@ -39,6 +39,7 @@ const AnimateRoute = () => {
         <Route exact path="/careers/:id/apply" element={<ApplyPage />} />
         <Route path="*" element={<PageNotFound />} />
         <Route exact path="/admin/login" element={<LoginRegisterPage />} />
+        <Route exact path="/about" element={<AboutUs />} />
         <Route
           exact
           path="/admin"
@@ -81,7 +82,6 @@ const AnimateRoute = () => {
             element={<UpdateJobPage />}
           />
           <Route exact path="/admin/warning" element={<WarningPage />} />
-          <Route exact path="/about" element={<AboutUs />} />
         </Route>
       </Routes>
     </AnimatePresence>

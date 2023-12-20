@@ -28,7 +28,7 @@ function CareerHeader() {
               Products
             </a>
           </li>
-          <Link to="/about">
+          <Link to={"/about"}>
             {" "}
             <li className="dark:bg-slate-800 dark:text-white dark:border-white  cursor-pointer h-full grid place-items-center font-semibold hover:text-blue-500 transition-all svelte-15jlsr3">
               <a
