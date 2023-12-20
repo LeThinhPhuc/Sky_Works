@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useContext } from "react";
+// import DoughnutChart from "../DoughnutChart";
 import DoughnutChart from "../DoughnutChart";
 import axios from "axios";
 import ReactPaginate from "react-paginate";

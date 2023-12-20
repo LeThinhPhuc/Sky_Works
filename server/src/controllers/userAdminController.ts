@@ -59,7 +59,7 @@ const fetchUserByEmail = async (req:any, res:any) =>{
   const { email } = req.params
 
   try{
-    const existUser = await UserAdmin.findOne({ email });
+    const existUser = await UserAdmin.findOne({ email }).select('-password');;
 
     if(!existUser){
       return res.status(400).json({
@@ -142,13 +142,14 @@ const updateIn4User = async (req: any, res: any) => {
       });
     }
     // Mã hoá password
-    const { username, email, role } = req.body
+    const { username, email, role, password } = req.body
     // const salt = await bcrypt.genSalt(10);
     // const hashedPassword = await bcrypt.hash(password, salt);
-
+    const salt = await bcrypt.genSalt(10);
+    const hashedPassword = await bcrypt.hash(password, salt);
     const user = {
       username,
-      // password: hashedPassword,
+      password: hashedPassword,
       email,
       role,
       

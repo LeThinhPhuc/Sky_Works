@@ -39,15 +39,15 @@ const Jobs = () => {
     ?.filter((item) => {
       return item?.title?.toLowerCase()?.includes(key.toLowerCase());
     })
-    .filter(
+
+    ?.filter(
       (item) =>
         (select1 === "" ||
-          item.location.toLowerCase().includes(select1.toLowerCase()) ||
-          item.tags[1].toLowerCase().includes(select1.toLowerCase())) &&
+          item?.location.toLowerCase().includes(select1.toLowerCase()) ||
+          (item?.tags[1] && typeof item.tags[1] === 'string' && item?.tags[1].toLowerCase().includes(select1.toLowerCase()))) &&
         (select2 === "" ||
-          item.tags[0].toLowerCase().includes(select2.toLowerCase()))
-    );
-
+          (item?.tags[0] && typeof item.tags[0] === 'string' && item?.tags[0].toLowerCase().includes(select2.toLowerCase()))
+    ));
   return (
     <motion.div
       initial={{ opacity: 0 }}

@@ -33,8 +33,8 @@ const CandidatesDetail = () => {
   );
   const [sal, setSal] = useState(f.format(employData?.salary));
   console.log(employData);
-  console.log("email Candidate : ", employData.personal.email);
-  console.log("email Admin : ", emailAdmin);
+  console.log("email Candidate : ",employData?.personal?.email);
+  console.log("email Admin : ", emailAdmin)
   var randomColor = Math.floor(Math.random() * 16777215).toString(16);
   const handleDelete = async (id) => {
     try {
@@ -115,7 +115,7 @@ const CandidatesDetail = () => {
 
   console.log(
     "avatar",
-    (employData?.personal.lastName + " " + employData?.personal.firstName)
+    (employData?.personal?.lastName + " " + employData?.personal?.firstName)
       ?.split(" ")
       .reduce((acc, cur) => (acc += cur[0]), "")
   );

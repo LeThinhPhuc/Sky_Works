@@ -80,7 +80,7 @@ const CandidatesPage = () => {
     const newArray = [...(employee ? employee : "")];
     // console.log(newArray)
     newArray.sort((a, b) =>
-      b?.personal.lastName.localeCompare(a?.personal?.lastName)
+      b?.personal?.lastName.localeCompare(a?.personal?.lastName)
     );
     // console.log("day la newArray", newArray);
 
@@ -279,19 +279,17 @@ const CandidatesPage = () => {
                   currentEmployeess
                     .filter((item) => {
                       return (
-                        (item.personal.lastName + " " + item.personal.firstName)
-                          .toLowerCase()
-                          .includes(val.toLowerCase()) &&
-                        (select1 === "" ||
-                          item?.teamLead
-                            ?.toLowerCase()
-                            .includes(select1?.toLowerCase())) &&
-                        (select2 === "" || item?.isReject
-                          ? statusList[8]
-                          : statusList[item?.timeLine.length - 1]
-                              .toLowerCase()
-                              .includes(select2?.toLowerCase()))
-                      );
+                        item?.personal?.lastName +
+                        " " +
+                        item?.personal?.firstName
+                      )
+                        .toLowerCase()
+                        .includes(val.toLowerCase())
+                        &&
+                        (select1 === "" || item?.teamLead?.toLowerCase().includes(select1?.toLowerCase()))
+                        &&
+                        (select2 === "" || item?.isReject?statusList[8]:statusList[item?.timeLine.length-1].toLowerCase().includes(select2?.toLowerCase()))
+
                     })
                     ?.map((item) => {
                       return <EmployItem key={item._id} employee={item} />;

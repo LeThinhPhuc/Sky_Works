@@ -8,8 +8,10 @@ const Content = () => {
   const [select1, setSelect1] = useState("");
   const [select2, setSelect2] = useState("");
   const { jobsData } = useContext(CareersContext);
-
-  // console.log(jobsData);
+  var newArr = jobsData.filter(function(element) {
+    return element?.available;
+});
+  // console.log(newArr);
   const handleChangeKey = (e) => {
     setKey(e.target.value);
   };
@@ -33,27 +35,27 @@ const Content = () => {
     setVisibleCount(visibleCount + 4); // Tăng số lượng phần tử hiển thị lên 5
   };
 
-  let show = jobsData
-    ?.filter((item) => {
-      return item.title.toLowerCase().includes(key.toLowerCase());
-    })
-    .filter(
-      (item) =>
-        (select1 === "" ||
-          item.location.toLowerCase().includes(select1.toLowerCase()) ||
-          item.tags[1].toLowerCase().includes(select1.toLowerCase())) &&
-        (select2 === "" ||
-          item.tags[0].toLowerCase().includes(select2.toLowerCase()))
-    );
+  let show = newArr
+  ?.filter((item) => {
+    return item.title.toLowerCase().includes(key.toLowerCase());
+  })
+  ?.filter(
+    (item) =>
+      (select1 === "" ||
+        item?.location.toLowerCase().includes(select1.toLowerCase()) ||
+        (item?.tags[1] && typeof item.tags[1] === 'string' && item?.tags[1].toLowerCase().includes(select1.toLowerCase()))) &&
+      (select2 === "" ||
+        (item?.tags[0] && typeof item.tags[0] === 'string' && item?.tags[0].toLowerCase().includes(select2.toLowerCase()))
+  ));
 
   return (
     <div>
-      {jobsData.length > 0 ? (
-        <div className="dark:bg-slate-800 dark:text-white dark:border-white  mx-auto mt-20 mb-8 px-8 md:px-12 lg:w-3/4 xl:w-2/3">
-          <div className="dark:bg-slate-800 dark:text-white dark:border-white  ">
-            <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex text-xs sm:text-sm md:text-base flex-col sm:flex-row justify-center gap-4 lg:gap-8">
-              <div className="dark:bg-slate-800 dark:text-white dark:border-white  relative w-2/3 mx-auto sm:mx-0 sm:w-full lg:max-w-[60%]">
-                <div className="dark:bg-slate-800 dark:text-white dark:border-white  absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+      {newArr.length > 0 ? (
+        <div className="mx-auto mt-20 mb-8 px-8 md:px-12 lg:w-3/4 xl:w-2/3">
+          <div className="">
+            <div className="flex text-xs sm:text-sm md:text-base flex-col sm:flex-row justify-center gap-4 lg:gap-8">
+              <div className="relative w-2/3 mx-auto sm:mx-0 sm:w-full lg:max-w-[60%]">
+                <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                   <svg
                     aria-hidden="true"
                     className="dark:bg-slate-800 dark:text-white dark:border-white  w-5 h-5 text-gray-500 dark:text-gray-400"
@@ -125,9 +127,9 @@ const Content = () => {
             </div>
           </div>
 
-          <div className="dark:bg-slate-800 dark:text-white dark:border-white   pt-8">
-            <div className="dark:bg-slate-800 dark:text-white dark:border-white  text-2xl md:text-3xl font-semibold pb-5 md:pb-7 ">
-              {/* {jobsData.length} total position */}
+          <div className=" pt-8">
+            <div className="text-2xl md:text-3xl font-semibold pb-5 md:pb-7 ">
+              {/* {newArr.length} total position */}
               {show.length} total positions
             </div>
 
@@ -154,8 +156,8 @@ const Content = () => {
               )}
             </div>
           </div>
-          {visibleCount < jobsData.length && (
-            <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex items-center justify-center svelte-1jp7mce">
+          {visibleCount < newArr.length && (
+            <div className="flex items-center justify-center svelte-1jp7mce">
               <button
                 onClick={showMore}
                 className="dark:bg-slate-800 dark:text-white dark:border-white  text-[#4C98FF] cursor-pointer text-center font-semibold mt-[28px] text-base svelte-1jp7mce"

@@ -5,18 +5,22 @@ const router = express.Router();
 
 
 //MiddleWares
-router.use(authMdw.authMdw, authMdw.adminMdw)
+// router.use(authMdw.authMdw, authMdw.adminMdw)
 
 // API Get ALl User Admin
-router.get("/", userAdminController.fetchAllUser)
+router.get("/", authMdw.authMdw, authMdw.adminMdw,userAdminController.fetchAllUser)
+
+//API Get User By Email
+router.get("/:email", userAdminController.fetchUserByEmail)
 
 //API Get User
-router.get("/:id", userAdminController.fetchUser);
+router.get("/:id",authMdw.authMdw, authMdw.adminMdw, userAdminController.fetchUser);
+
 
 //API Update Information User
 router.put("/:id", userAdminController.updateIn4User);
 
 //API Delete User Admin
-router.delete("/:id", userAdminController.deleteUser);
+router.delete("/:id",authMdw.authMdw, authMdw.adminMdw, userAdminController.deleteUser);
 
 export default router;
