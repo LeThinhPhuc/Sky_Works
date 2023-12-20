@@ -120,6 +120,8 @@ const Jobs = () => {
 
                 <option value="Legal">Legal</option>
                 <option value="Product">Product</option>
+                <option value="Tester">Tester</option>
+
               </select>
               <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex justify-center">
                 <button
