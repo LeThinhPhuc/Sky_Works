@@ -49,14 +49,14 @@ const Content = () => {
   return (
     <div>
       {jobsData.length > 0 ? (
-        <div className="dark:bg-slate-700 dark:text-white dark:border-white  mx-auto mt-20 mb-8 px-8 md:px-12 lg:w-3/4 xl:w-2/3">
-          <div className="dark:bg-slate-700 dark:text-white dark:border-white  ">
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex text-xs sm:text-sm md:text-base flex-col sm:flex-row justify-center gap-4 lg:gap-8">
-              <div className="dark:bg-slate-700 dark:text-white dark:border-white  relative w-2/3 mx-auto sm:mx-0 sm:w-full lg:max-w-[60%]">
-                <div className="dark:bg-slate-700 dark:text-white dark:border-white  absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+        <div className="dark:bg-slate-800 dark:text-white dark:border-white  mx-auto mt-20 mb-8 px-8 md:px-12 lg:w-3/4 xl:w-2/3">
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white  ">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex text-xs sm:text-sm md:text-base flex-col sm:flex-row justify-center gap-4 lg:gap-8">
+              <div className="dark:bg-slate-800 dark:text-white dark:border-white  relative w-2/3 mx-auto sm:mx-0 sm:w-full lg:max-w-[60%]">
+                <div className="dark:bg-slate-800 dark:text-white dark:border-white  absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                   <svg
                     aria-hidden="true"
-                    className="dark:bg-slate-700 dark:text-white dark:border-white  w-5 h-5 text-gray-500 dark:text-gray-400"
+                    className="dark:bg-slate-800 dark:text-white dark:border-white  w-5 h-5 text-gray-500 dark:text-gray-400"
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
@@ -75,7 +75,7 @@ const Content = () => {
                   onChange={handleChangeKey}
                   type="search"
                   id="default-search"
-                  className="dark:bg-slate-700 dark:text-white dark:border-white   block w-full py-[0.75rem] sm:py-4 px-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  className="dark:bg-slate-800 dark:text-white dark:border-white   block w-full py-[0.75rem] sm:py-4 px-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                   placeholder="Search..."
                   required
                 />
@@ -85,7 +85,7 @@ const Content = () => {
                 value={select1}
                 onChange={handleChangeSelect1}
                 id="countries"
-                className="dark:bg-slate-700 dark:text-white dark:border-white  w-2/3 sm:w-full sm:max-w-[160px] py-[0.75rem] md:max-w-full mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  w-2/3 sm:w-full sm:max-w-[160px] py-[0.75rem] md:max-w-full mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               >
                 <option selected value="">
                   Location
@@ -98,7 +98,7 @@ const Content = () => {
                 value={select2}
                 onChange={handleChangeSelect2}
                 id="countries"
-                className="dark:bg-slate-700 dark:text-white dark:border-white  w-2/3 sm:w-full sm:max-w-[160px] py-[0.75rem] md:max-w-full mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  w-2/3 sm:w-full sm:max-w-[160px] py-[0.75rem] md:max-w-full mx-auto bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
               >
                 <option selected value="">
                   Department
@@ -114,10 +114,10 @@ const Content = () => {
                 <option value="Legal">Legal</option>
                 <option value="Product">Product</option>
               </select>
-              <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex justify-center">
+              <div className=" dark:text-white dark:border-white  flex justify-center">
                 <button
                   onClick={handleReset}
-                  className="dark:bg-slate-700 dark:text-white dark:border-white  text-blue-500 text-sm font-medium whitespace-nowrap"
+                  className=" dark:text-white dark:border-white  text-blue-500 text-sm font-medium whitespace-nowrap"
                 >
                   Reset Filter
                 </button>
@@ -125,8 +125,8 @@ const Content = () => {
             </div>
           </div>
 
-          <div className="dark:bg-slate-700 dark:text-white dark:border-white   pt-8">
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  text-2xl md:text-3xl font-semibold pb-5 md:pb-7 ">
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white   pt-8">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  text-2xl md:text-3xl font-semibold pb-5 md:pb-7 ">
               {/* {jobsData.length} total position */}
               {show.length} total positions
             </div>
@@ -140,7 +140,7 @@ const Content = () => {
                     <Link
                       to={`/careers/${item._id}`}
                       key={idx}
-                      className="dark:bg-slate-700 dark:text-white dark:border-white  cursor-pointer flex p-6 drop-shadow-[0px_8px_30px_#DEE6F1] border-t first:border-b-[#C5CEE0] last:border-b hover:border-transparent hover:border-0 hover:rounded-2xl hover:shadow-[0px_8px_30px_#DEE6F1] transition-all duration-200"
+                      className="dark:bg-slate-800 dark:text-white dark:border-white  cursor-pointer flex p-6 drop-shadow-[0px_8px_30px_#DEE6F1] border-t first:border-b-[#C5CEE0] last:border-b hover:border-transparent hover:border-0 hover:rounded-2xl hover:shadow-[0px_8px_30px_#DEE6F1] transition-all duration-200"
                     >
                       <CardItem
                         id={item._id}
@@ -155,10 +155,10 @@ const Content = () => {
             </div>
           </div>
           {visibleCount < jobsData.length && (
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex items-center justify-center svelte-1jp7mce">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex items-center justify-center svelte-1jp7mce">
               <button
                 onClick={showMore}
-                className="dark:bg-slate-700 dark:text-white dark:border-white  text-[#4C98FF] cursor-pointer text-center font-semibold mt-[28px] text-base svelte-1jp7mce"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  text-[#4C98FF] cursor-pointer text-center font-semibold mt-[28px] text-base svelte-1jp7mce"
               >
                 Show more
               </button>

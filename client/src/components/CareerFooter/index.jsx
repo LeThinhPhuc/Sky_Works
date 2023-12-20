@@ -2,131 +2,131 @@ import React from "react";
 
 const CareerFooter = () => {
   return (
-    <footer className="dark:bg-slate-700 dark:text-white dark:border-white  w-full mx-auto bg-slate-800">
-      <div className="dark:bg-slate-700 dark:text-white dark:border-white  grid grid-cols-4 gap-x-10 max-w-7xl mx-auto my-auto pt-20 pb-10">
-        <div className="dark:bg-slate-700 dark:text-white dark:border-white  ml-6">
+    <footer className="dark:bg-slate-800 dark:text-white dark:border-white  w-full mx-auto bg-slate-800">
+      <div className="dark:bg-slate-800 dark:text-white dark:border-white  grid grid-cols-4 gap-x-10 max-w-7xl mx-auto my-auto pt-20 pb-10">
+        <div className="dark:bg-slate-800 dark:text-white dark:border-white  ml-6">
           <a href="/">
             <img
               width="230"
               src="https://drive.google.com/u/0/uc?id=1JaIDwaSWsJ8oVqt0iufGk1PQAyIgMp16&export=download"
-              className="dark:bg-slate-700 dark:text-white dark:border-white  h-10 mr-4"
+              className="dark:bg-slate-800 dark:text-white dark:border-white  h-10 mr-4"
               alt="branding-white"
             />
           </a>
-          <div className="dark:bg-slate-700 dark:text-white dark:border-white  text-sm ml-9 mt-4 text-white dark:text-white-400">
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white  text-sm ml-9 mt-4 text-white dark:text-white-400">
             © 2023 SKY WORK
           </div>
         </div>
-        <div className="dark:bg-slate-700 dark:text-white dark:border-white  text-white ml-20">
-          <h2 className="dark:bg-slate-700 dark:text-white dark:border-white  mb-4 font-semibold uppercase ">
+        <div className="dark:bg-slate-800 dark:text-white dark:border-white  text-white ml-20">
+          <h2 className="dark:bg-slate-800 dark:text-white dark:border-white  mb-4 font-semibold uppercase ">
             Products
           </h2>
-          <ul className="dark:bg-slate-700 dark:text-white dark:border-white  text-sm ">
-            <li className="dark:bg-slate-700 dark:text-white dark:border-white  mb-4">
+          <ul className="dark:bg-slate-800 dark:text-white dark:border-white  text-sm ">
+            <li className="dark:bg-slate-800 dark:text-white dark:border-white  mb-4">
               <a
                 href="https://axieinfinity.com/"
-                className="dark:bg-slate-700 dark:text-white dark:border-white  hover:underline hover:text-blue-500"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  hover:underline hover:text-blue-500"
               >
                 Sky Infinity
               </a>
             </li>
-            <li className="dark:bg-slate-700 dark:text-white dark:border-white  mb-4">
+            <li className="dark:bg-slate-800 dark:text-white dark:border-white  mb-4">
               <a
                 href="https://marketplace.axieinfinity.com/"
-                className="dark:bg-slate-700 dark:text-white dark:border-white  hover:underline hover:text-blue-500"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  hover:underline hover:text-blue-500"
               >
                 Marketplace
               </a>
             </li>
-            <li className="dark:bg-slate-700 dark:text-white dark:border-white  mb-4">
+            <li className="dark:bg-slate-800 dark:text-white dark:border-white  mb-4">
               <a
                 href="https://axieinfinity.com/?download=true"
-                className="dark:bg-slate-700 dark:text-white dark:border-white  hover:underline hover:text-blue-500"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  hover:underline hover:text-blue-500"
               >
                 Hub
               </a>
             </li>
-            <li className="dark:bg-slate-700 dark:text-white dark:border-white  mb-4">
+            <li className="dark:bg-slate-800 dark:text-white dark:border-white  mb-4">
               <a
                 href="https://wallet.roninchain.com/"
-                className="dark:bg-slate-700 dark:text-white dark:border-white  hover:underline hover:text-blue-500"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  hover:underline hover:text-blue-500"
               >
                 Ronin Wallet
               </a>
             </li>
-            <li className="dark:bg-slate-700 dark:text-white dark:border-white  mb-4">
+            <li className="dark:bg-slate-800 dark:text-white dark:border-white  mb-4">
               <a
                 href="https://explorer.roninchain.com/"
-                className="dark:bg-slate-700 dark:text-white dark:border-white  hover:underline hover:text-blue-500"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  hover:underline hover:text-blue-500"
               >
                 Explorer
               </a>
             </li>
-            <li className="dark:bg-slate-700 dark:text-white dark:border-white  mb-4">
+            <li className="dark:bg-slate-800 dark:text-white dark:border-white  mb-4">
               <a
                 href="https://bridge.roninchain.com/"
-                className="dark:bg-slate-700 dark:text-white dark:border-white  hover:underline hover:text-blue-500"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  hover:underline hover:text-blue-500"
               >
                 Bridge
               </a>
             </li>
-            <li className="dark:bg-slate-700 dark:text-white dark:border-white  mb-4">
+            <li className="dark:bg-slate-800 dark:text-white dark:border-white  mb-4">
               <a
                 href="https://stake.axieinfinity.com/"
-                className="dark:bg-slate-700 dark:text-white dark:border-white  hover:underline hover:text-blue-500"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  hover:underline hover:text-blue-500"
               >
                 Staking
               </a>
             </li>
           </ul>
         </div>
-        <div className="dark:bg-slate-700 dark:text-white dark:border-white  text-white ml-20">
-          <h2 className="dark:bg-slate-700 dark:text-white dark:border-white  mb-4 font-semibold uppercase">
+        <div className="dark:bg-slate-800 dark:text-white dark:border-white  text-white ml-20">
+          <h2 className="dark:bg-slate-800 dark:text-white dark:border-white  mb-4 font-semibold uppercase">
             {" "}
             About Sky Work{" "}
           </h2>
-          <ul className="dark:bg-slate-700 dark:text-white dark:border-white  text-sm ">
-            <li className="dark:bg-slate-700 dark:text-white dark:border-white  mb-4">
+          <ul className="dark:bg-slate-800 dark:text-white dark:border-white  text-sm ">
+            <li className="dark:bg-slate-800 dark:text-white dark:border-white  mb-4">
               <a
                 href="/team"
-                className="dark:bg-slate-700 dark:text-white dark:border-white  hover:underline  hover:text-blue-500"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  hover:underline  hover:text-blue-500"
               >
                 Team
               </a>
             </li>
-            <li className="dark:bg-slate-700 dark:text-white dark:border-white  mb-4">
+            <li className="dark:bg-slate-800 dark:text-white dark:border-white  mb-4">
               <a
                 href="https://axie.substack.com/"
-                className="dark:bg-slate-700 dark:text-white dark:border-white  hover:underline  hover:text-blue-500"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  hover:underline  hover:text-blue-500"
               >
                 Blog
               </a>
             </li>
-            <li className="dark:bg-slate-700 dark:text-white dark:border-white  mb-4">
+            <li className="dark:bg-slate-800 dark:text-white dark:border-white  mb-4">
               <a
                 href="/careers"
-                className="dark:bg-slate-700 dark:text-white dark:border-white  hover:underline  hover:text-blue-500"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  hover:underline  hover:text-blue-500"
               >
                 Careers
               </a>
             </li>
-            <li className="dark:bg-slate-700 dark:text-white dark:border-white  mb-4">
+            <li className="dark:bg-slate-800 dark:text-white dark:border-white  mb-4">
               <a
                 href="https://cdn.axieinfinity.com/skymavis/terms-of-use.pdf"
-                className="dark:bg-slate-700 dark:text-white dark:border-white  hover:underline  hover:text-blue-500"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  hover:underline  hover:text-blue-500"
               >
                 Terms of use
               </a>
             </li>
           </ul>
         </div>
-        <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex mt-4 space-x-6 sm:justify-center sm:mt-0 text-white">
+        <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex mt-4 space-x-6 sm:justify-center sm:mt-0 text-white">
           <a
             href="https://www.facebook.com/SkyMavisHQ"
-            className="dark:bg-slate-700 dark:text-white dark:border-white   hover:text-blue-500"
+            className="dark:bg-slate-800 dark:text-white dark:border-white   hover:text-blue-500"
           >
             <svg
-              className="dark:bg-slate-700 dark:text-white dark:border-white  w-8 h-8"
+              className="dark:bg-slate-800 dark:text-white dark:border-white  w-8 h-8"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -137,16 +137,16 @@ const CareerFooter = () => {
                 clipRule="evenodd"
               />
             </svg>
-            <span className="dark:bg-slate-700 dark:text-white dark:border-white  sr-only">
+            <span className="dark:bg-slate-800 dark:text-white dark:border-white  sr-only">
               Facebook page
             </span>
           </a>
           <a
             href="https://www.linkedin.com/company/skymavis/"
-            className="dark:bg-slate-700 dark:text-white dark:border-white   hover:text-blue-500"
+            className="dark:bg-slate-800 dark:text-white dark:border-white   hover:text-blue-500"
           >
             <svg
-              className="dark:bg-slate-700 dark:text-white dark:border-white  w-8 h-8"
+              className="dark:bg-slate-800 dark:text-white dark:border-white  w-8 h-8"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"
@@ -157,23 +157,23 @@ const CareerFooter = () => {
                 clipRule="evenodd"
               />
             </svg>
-            <span className="dark:bg-slate-700 dark:text-white dark:border-white  sr-only">
+            <span className="dark:bg-slate-800 dark:text-white dark:border-white  sr-only">
               Instagram page
             </span>
           </a>
           <a
             href="https://twitter.com/SkyMavisHQ"
-            className="dark:bg-slate-700 dark:text-white dark:border-white  hover:text-blue-500"
+            className="dark:bg-slate-800 dark:text-white dark:border-white  hover:text-blue-500"
           >
             <svg
-              className="dark:bg-slate-700 dark:text-white dark:border-white  w-8 h-8"
+              className="dark:bg-slate-800 dark:text-white dark:border-white  w-8 h-8"
               fill="currentColor"
               viewBox="0 0 24 24"
               aria-hidden="true"
             >
               <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
             </svg>
-            <span className="dark:bg-slate-700 dark:text-white dark:border-white  sr-only">
+            <span className="dark:bg-slate-800 dark:text-white dark:border-white  sr-only">
               Twitter page
             </span>
           </a>

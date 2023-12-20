@@ -75,20 +75,20 @@ const FileInput = (props) => {
     }
   }, [file, formId]);
   return (
-    <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex items-center justify-center w-full">
+    <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex items-center justify-center w-full">
       <label
         forhtml="dropzone-file"
-        className="dark:bg-slate-700 dark:text-white dark:border-white  flex flex-col items-center justify-center w-full h-24 border-[1px] border-gray-300 border-dashed rounded-2xl cursor-pointer bg-white dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
+        className="dark:bg-slate-800 dark:text-white dark:border-white  flex flex-col items-center justify-center w-full h-24 border-[1px] border-gray-300 border-dashed rounded-2xl cursor-pointer bg-white dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600"
       >
-        <div className="dark:bg-slate-700 dark:text-white dark:border-white  w-full mx-auto flex flex-col items-center justify-center px-4 pt-5 pb-6">
+        <div className="dark:bg-slate-800 dark:text-white dark:border-white  w-full mx-auto flex flex-col items-center justify-center px-4 pt-5 pb-6">
           <p
             className={`mb-2 text-center text-sm md:text-base font-light text-sky-400`}
           >
-            <span className="dark:bg-slate-700 dark:text-white dark:border-white  font-normal text-sky-400">
+            <span className="dark:bg-slate-800 dark:text-white dark:border-white  font-normal text-sky-400">
               Upload a file&nbsp;
             </span>
             <br />
-            <span className="dark:bg-slate-700 dark:text-white dark:border-white  text-gray-500 dark:text-gray-400">
+            <span className="dark:bg-slate-800 dark:text-white dark:border-white  text-gray-500 dark:text-gray-400">
               or drag and drop here
             </span>
           </p>
@@ -97,7 +97,7 @@ const FileInput = (props) => {
           id="dropzone-file"
           type="file"
           required={true}
-          className="dark:bg-slate-700 dark:text-white dark:border-white  hidden"
+          className="dark:bg-slate-800 dark:text-white dark:border-white  hidden"
           onChange={onHandleChange}
         />
       </label>

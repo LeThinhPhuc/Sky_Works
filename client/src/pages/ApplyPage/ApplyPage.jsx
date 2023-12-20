@@ -22,19 +22,19 @@ const ApplyPage = () => {
       transition={{ delay: 0.15, duration: 0.5 }}
     >
       {joblist2 ? (
-        <div className="dark:bg-slate-700 dark:text-white dark:border-white  apply-page box-border mx-auto w-full min-h-full flex flex-row flex-wrap align-middle">
+        <div className="dark:bg-slate-800 dark:text-white dark:border-white  apply-page box-border mx-auto w-full min-h-full flex flex-row flex-wrap align-middle">
           <HeroBanner
             key={joblist2.id}
             title={joblist2.title}
             location={joblist2.location}
             tags={joblist2.tags}
           />
-          <div className="dark:bg-slate-700 dark:text-white dark:border-white  bg-transparent md:container px-4 md:px-16 mx-auto py-12 sm::max-w-[90%] lg:max-w-[75%]">
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex flex-row gap-1 items-center text-[#57627B] focus:text-gray-400 hover:text-sky-500">
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white  bg-transparent md:container px-4 md:px-16 mx-auto py-12 sm::max-w-[90%] lg:max-w-[75%]">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex flex-row gap-1 items-center text-[#57627B] focus:text-gray-400 hover:text-sky-500">
               <FontAwesomeIcon icon={faAnglesLeft} size="xs" beat />
               <Link
                 to={`/careers/${param.id}`}
-                className="dark:bg-slate-700 dark:text-white dark:border-white  uppercase text-left font-extrabold text-xs transition duration-150"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  uppercase text-left font-extrabold text-xs transition duration-150"
               >
                 Back to Job Description
               </Link>

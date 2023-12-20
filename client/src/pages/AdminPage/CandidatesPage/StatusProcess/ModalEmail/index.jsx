@@ -190,14 +190,14 @@ const ModalEmail = (props) => {
             {field ? (
               ""
             ) : (
-              <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex justify-center">
-                <p className="dark:bg-slate-700 dark:text-white dark:border-white  mb-2 m- text-sm font-medium text-red-500 dark:text-white">
+              <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex justify-center">
+                <p className="dark:bg-slate-800 dark:text-white dark:border-white  mb-2 m- text-sm font-medium text-red-500 dark:text-white">
                   Please fill out all fields{" "}
                 </p>
               </div>
             )}
 
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex   justify-between">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex   justify-between">
               <button
                 onClick={handleSubmit}
                 type="submit"

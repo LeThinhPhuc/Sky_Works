@@ -8,7 +8,7 @@ const SwitchButton = (props) => {
       <input
         checked={isAvailable}
         onChange={handleSwitch}
-        className="dark:bg-slate-700 dark:text-white dark:border-white  react-switch-checkbox"
+        className="dark:bg-slate-800 dark:text-white dark:border-white  react-switch-checkbox"
         id={`react-switch-new`}
         type="checkbox"
       />

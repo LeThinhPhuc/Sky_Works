@@ -41,16 +41,16 @@ const LoginRegisterPage = () => {
   };
 
   return (
-    <div className="dark:bg-slate-700 dark:text-white dark:border-white  w-screen h-screen bg-gradient-to-r to-[#00c6fb] from-[#005bea] flex place-content-center place-items-center">
+    <div className="dark:bg-slate-800 dark:text-white dark:border-white  w-screen h-screen bg-gradient-to-r to-[#00c6fb] from-[#005bea] flex place-content-center place-items-center">
       {" "}
       {/* PAGE-BACKGROUND */}
       <div
-        className="dark:bg-slate-700 dark:text-white dark:border-white  max-w-sm min-h-[400px] w-3/5 h-3/5 text-gray-800 bg-white rounded-lg flex flex-col justify-between
+        className="dark:bg-slate-800 dark:text-white dark:border-white  max-w-sm min-h-[400px] w-3/5 h-3/5 text-gray-800 bg-white rounded-lg flex flex-col justify-between
       place-items-center pb-6"
       >
         {" "}
         {/* FORM-CONTAINER */}
-        <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex flex-row w-full">
+        <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex flex-row w-full">
           {" "}
           {/* FORM-SWITCHER */}
           <button /* LOGIN-BUTTON */
@@ -75,17 +75,17 @@ const LoginRegisterPage = () => {
           </button>
         </div>
         {loginError && (
-          <div className="dark:bg-slate-700 dark:text-white dark:border-white  error-message">
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white  error-message">
             {loginError}
           </div>
         )}
         {showLogin ? <LoginForm onSubmit={onLoginSubmit} /> : <RegisterForm />}
-        <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex place-content-center place-items-center">
+        <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex place-content-center place-items-center">
           {showLogin ? (
             <div>
               Don't have an account?{" "}
               <button
-                className="dark:bg-slate-700 dark:text-white dark:border-white  text-sky-500 hover:underline"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  text-sky-500 hover:underline"
                 onClick={handleRegisterClick}
               >
                 Register
@@ -95,7 +95,7 @@ const LoginRegisterPage = () => {
             <div>
               Already have an account?{" "}
               <button
-                className="dark:bg-slate-700 dark:text-white dark:border-white  text-sky-500 hover:underline"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  text-sky-500 hover:underline"
                 onClick={handleLoginClick}
               >
                 Log in

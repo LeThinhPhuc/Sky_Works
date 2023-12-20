@@ -22,22 +22,22 @@ const Sidebar = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
   return (
-    <main className="dark:bg-slate-700 dark:text-white dark:border-white  pl-2 flex flex-col justify-between h-[100vh] w-[200px] font-medium border-r-[1.5px]">
+    <main className="dark:bg-slate-800 dark:text-white dark:border-white  pl-2 flex flex-col justify-between h-[100vh] w-[200px] font-medium border-r-[1.5px] sticky ">
       <div>
-        <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex justify-between items-center border-b-[1.5px] h-[70px]">
+        <div className="dark:bg-slate-800  dark:text-white dark:border-white  flex justify-between items-center border-b-[1.5px] h-[70px]">
           <img
             width="130"
             src="https://drive.google.com/u/0/uc?id=1JaIDwaSWsJ8oVqt0iufGk1PQAyIgMp16&export=download"
           ></img>
         </div>
 
-        <div className="dark:bg-slate-700 dark:text-white dark:border-white  pl-1 text-sm text-slate-500">
-          <p className="dark:bg-slate-700 dark:text-white dark:border-white  text-[12px] pt-2">
+        <div className="dark:bg-slate-800 dark:text-white dark:border-white  pl-1 text-sm text-slate-500">
+          <p className="dark:bg-slate-800 dark:text-white dark:border-white  text-[12px] pt-2">
             General
           </p>
 
           <Link to={"/admin"}>
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white pl-1 flex py-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-800">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white pl-1 flex py-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-800">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -58,7 +58,7 @@ const Sidebar = () => {
             </div>
           </Link>
           <Link to="/admin/create-job">
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  pl-1  flex py-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-800">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  pl-1  flex py-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-800">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -80,7 +80,7 @@ const Sidebar = () => {
             </div>
           </Link>
           <Link to={"/admin/employee"}>
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  pl-1  flex py-2 cursor-grab hover:bg-gray-200 dark:hover:bg-slate-800">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  pl-1  flex py-2 cursor-grab hover:bg-gray-200 dark:hover:bg-slate-800">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -102,7 +102,7 @@ const Sidebar = () => {
             </div>
           </Link>
           <Link to={"/admin/jobs"}>
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white pl-1   flex py-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-800">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white pl-1   flex py-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-800">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -123,7 +123,7 @@ const Sidebar = () => {
           </Link>
 
           <Link to={"/admin/candidates"}>
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  pl-1  flex py-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-800">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  pl-1  flex py-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-800">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -145,11 +145,11 @@ const Sidebar = () => {
             </div>
           </Link>
 
-          <p className="dark:bg-slate-700 dark:text-white dark:border-white  w-[180px] border-b-[1.5px]"></p>
-          <p className="dark:bg-slate-700 dark:text-white dark:border-white  text-[12px] pt-2 ">
+          <p className="dark:bg-slate-800 dark:text-white dark:border-white  w-[180px] border-b-[1.5px]"></p>
+          <p className="dark:bg-slate-800 dark:text-white dark:border-white  text-[12px] pt-2 ">
             Support
           </p>
-          <div className="dark:bg-slate-700 dark:text-white dark:border-white  pl-1  flex py-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-800">
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white  pl-1  flex py-2 cursor-pointer hover:bg-gray-200 dark:hover:bg-slate-800">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -196,14 +196,14 @@ const Sidebar = () => {
           </div>
         </div>
       </div>
-      <div className="dark:bg-slate-700 dark:text-white dark:border-white  mb-4">
-        <div className="dark:bg-slate-700 dark:text-white dark:border-white  pl-2 text-sm text-slate-500">
-          <p className="dark:bg-slate-700 dark:text-white dark:border-white  text-[12px] py-2">
+      <div className="dark:bg-slate-800 dark:text-white dark:border-white  mb-4">
+        <div className="dark:bg-slate-800 dark:text-white dark:border-white  pl-2 text-sm text-slate-500">
+          <p className="dark:bg-slate-800 dark:text-white dark:border-white  text-[12px] py-2">
             Appearance
           </p>
         </div>
 
-        <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex justify-center ">
+        <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex justify-center ">
           <div className="dark:bg-slate-600 dark:text-white dark:border-white  w-3/4 h-6 bg-slate-200 rounded-sm flex items-center p-[1px]">
             <div className="dark:bg-slate-700 dark:text-white dark:border-white  w-1/2 h-5  bg-white rounded-sm flex justify-center items-center ">
               <button onClick={handleThemeSwitch}>
@@ -213,7 +213,7 @@ const Sidebar = () => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="dark:bg-slate-700 dark:text-white dark:border-white  w-4 h-4 stroke-slate-400"
+                  className=" dark:text-white dark:border-white  w-4 h-4 stroke-slate-400"
                 >
                   <path
                     strokeLinecap="round"
@@ -223,7 +223,7 @@ const Sidebar = () => {
                 </svg>
               </button>
             </div>
-            <div className="dark:bg-slate-900 dark:text-white dark:border-white  w-1/2 h-5 rounded-sm flex justify-center items-center p-[1px] ">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  w-1/2 h-5 rounded-sm flex justify-center items-center p-[1px] ">
               <button onClick={handleThemeSwitch}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -231,7 +231,7 @@ const Sidebar = () => {
                   viewBox="0 0 24 24"
                   strokeWidth={1.5}
                   stroke="currentColor"
-                  className="dark:bg-slate-900 dark:text-white dark:border-white  w-4 h-4 stroke-slate-400"
+                  className=" dark:text-white dark:border-white  w-4 h-4 stroke-slate-400"
                 >
                   <path
                     strokeLinecap="round"

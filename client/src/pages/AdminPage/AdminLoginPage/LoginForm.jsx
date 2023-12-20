@@ -23,16 +23,16 @@ const LoginForm = (props) => {
 
   return (
     <form
-      className="dark:bg-slate-700 dark:text-white dark:border-white  flex flex-col px-5 py-10 gap-5"
+      className="dark:bg-slate-800 dark:text-white dark:border-white  flex flex-col px-5 py-10 gap-5"
       onSubmit={handleSubmit}
     >
-      <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex flex-row w-50 h-10 bg-[#f0f0f0] rounded-full place-content-start place-items-center px-2 gap-1">
+      <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex flex-row w-50 h-10 bg-[#f0f0f0] rounded-full place-content-start place-items-center px-2 gap-1">
         {/* <label htmlFor="username">Username:</label> */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="gray"
-          className="dark:bg-slate-700 dark:text-white dark:border-white  w-6 h-6"
+          className="dark:bg-slate-800 dark:text-white dark:border-white  w-6 h-6"
         >
           <path
             fillRule="evenodd"
@@ -46,18 +46,18 @@ const LoginForm = (props) => {
           name="username"
           onChange={onChangeHandler}
           placeholder="Your Username"
-          className="dark:bg-slate-700 dark:text-white dark:border-white   bg-transparent ml-3"
+          className="dark:bg-slate-800 dark:text-white dark:border-white   bg-transparent ml-3"
           required
         />
       </div>
 
-      <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex flex-row w-50 h-10 bg-[#f0f0f0] rounded-full place-content-start place-items-center px-2 gap-1">
+      <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex flex-row w-50 h-10 bg-[#f0f0f0] rounded-full place-content-start place-items-center px-2 gap-1">
         {/* <label htmlFor="password">Password:</label> */}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
           fill="gray"
-          className="dark:bg-slate-700 dark:text-white dark:border-white  w-6 h-6"
+          className="dark:bg-slate-800 dark:text-white dark:border-white  w-6 h-6"
         >
           <path
             fillRule="evenodd"
@@ -71,13 +71,13 @@ const LoginForm = (props) => {
           name="password"
           onChange={onChangeHandler}
           placeholder="Your Password"
-          className="dark:bg-slate-700 dark:text-white dark:border-white  bg-transparent border-0 p-0 ml-3"
+          className="dark:bg-slate-800 dark:text-white dark:border-white  bg-transparent border-0 p-0 ml-3"
           required
         />
       </div>
 
       <button
-        className="dark:bg-slate-700 dark:text-white dark:border-white  
+        className="dark:bg-slate-800 dark:text-white dark:border-white  
           flex py-3 px-16 mt-8
           place-content-center place-items-center place-self-center 
           font-semibold text-white bg-gradient-to-r from-[#72afd3] to-[#37ecba] rounded-full

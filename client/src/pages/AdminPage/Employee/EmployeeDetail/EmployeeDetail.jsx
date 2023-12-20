@@ -66,15 +66,15 @@ const EmployeeDetail = () => {
   console.log("so ngay la : ", handleDate(userData?.created_at.slice(0, 10)));
   let name = userData?.username;
   return (
-    <div className="dark:bg-slate-700 dark:text-white dark:border-white  p-2 pl-7 pr-7 items-center">
-      <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex justify-between items-center text-sm border-b pb-3">
-        <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex items-center">
+    <div className="dark:bg-slate-800 dark:text-white dark:border-white  p-2 pl-7 pr-7 items-center">
+      <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex justify-between items-center text-sm border-b pb-3">
+        <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex items-center">
           <FontAwesomeIcon
             onClick={() => {
               navigate("/admin/candidates");
             }}
             icon={faArrowLeft}
-            className="dark:bg-slate-700 dark:text-white dark:border-white  p-2"
+            className="dark:bg-slate-800 dark:text-white dark:border-white  p-2"
           />
           <div
             style={{ backgroundColor: `#${randomColor}` }}
@@ -86,49 +86,49 @@ const EmployeeDetail = () => {
               else return (acc += cur[0]);
             }, "")}
           </div>
-          <h3 className="dark:bg-slate-700 dark:text-white dark:border-white  p-2 font-medium">
+          <h3 className="dark:bg-slate-800 dark:text-white dark:border-white  p-2 font-medium">
             {name}
           </h3>
         </div>
         <div>
           <button
             onClick={() => handleDelete(id)}
-            className="dark:bg-slate-700 dark:text-white dark:border-white  text-[#b91c1c] font-medium bg-[#fff1f2] p-3 rounded-[10px]"
+            className="dark:bg-slate-800 dark:text-white dark:border-white  text-[#b91c1c] font-medium bg-[#fff1f2] p-3 rounded-[10px]"
           >
             <FontAwesomeIcon icon={faTrash} /> {/* Sử dụng icon */}
             Delete
           </button>
         </div>
       </div>
-      <div className="dark:bg-slate-700 dark:text-white dark:border-white   text-xs grid grid-cols-3 ">
-        <div className="dark:bg-slate-700 dark:text-white dark:border-white   w-[80%]">
-          <div className="dark:bg-slate-700 dark:text-white dark:border-white   text-lg font-medium text-gray-400 pb-4 pt-2 ">
+      <div className="dark:bg-slate-800 dark:text-white dark:border-white   text-xs grid grid-cols-3 ">
+        <div className="dark:bg-slate-800 dark:text-white dark:border-white   w-[80%]">
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white   text-lg font-medium text-gray-400 pb-4 pt-2 ">
             USER DETAILS
           </div>
-          <div className="dark:bg-slate-800 dark:text-white dark:border-white  pl-3 text-sm pr-3 pt-2 pb-2 bg-slate-50  rounded-[10px] mb-4 ">
+          <div className="dark:bg-slate-700 dark:text-white dark:border-white  pl-3 text-sm pr-3 pt-2 pb-2 bg-slate-50  rounded-[10px] mb-4 ">
             <div className=" dark:text-white dark:border-white  text-gray-400 pb-1">
               USERNAME
             </div>
             <div>{userData?.username}</div>
           </div>
-          <div className="dark:bg-slate-800 dark:text-white dark:border-white  pl-3 text-sm pr-3 pt-2 pb-2 bg-slate-50  rounded-[10px] mb-4 ">
+          <div className="dark:bg-slate-700 dark:text-white dark:border-white  pl-3 text-sm pr-3 pt-2 pb-2 bg-slate-50  rounded-[10px] mb-4 ">
             <div className=" dark:text-white dark:border-white  text-gray-400 pb-1">
               EMAIL
             </div>
             <div>{userData?.email}</div>
           </div>
-          <div className="dark:bg-slate-800 dark:text-white dark:border-white  relative text-sm  pr-3 pt-2 pb-2 bg-slate-50  rounded-[10px] mb-4 ">
+          <div className="dark:bg-slate-700 dark:text-white dark:border-white  relative text-sm  pr-3 pt-2 pb-2 bg-slate-50  rounded-[10px] mb-4 ">
             <div className=" dark:text-white dark:border-white  text-gray-400 pb-1 pl-3">
               CREATED
             </div>
             <div className=" dark:text-white dark:border-white  pl-3">
               {handleDate(userData?.created_at.slice(0, 10)) + " days"}
             </div>
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  reab absolute ">
-              <div className="dark:bg-slate-700 dark:text-white dark:border-white  button-wrapper">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  reab absolute ">
+              <div className="dark:bg-slate-800 dark:text-white dark:border-white  button-wrapper">
                 <button
                   onClick={onSubmitHandler}
-                  className="dark:bg-slate-800 dark:text-white dark:border-white  p-2 pl-10 pr-10 mr-3 rounded-[10px] bg-black text-white text-base font-bold  "
+                  className="dark:bg-slate-700 dark:text-white dark:border-white  p-2 pl-10 pr-10 mr-3 rounded-[10px] bg-black text-white text-base font-bold  "
                 >
                   SAVE
                 </button>
@@ -144,9 +144,9 @@ const EmployeeDetail = () => {
             </div>
           </div>
         </div>
-        {/* <div className="dark:bg-slate-700 dark:text-white dark:border-white  text-center">hai</div> */}
-        <div className="dark:bg-slate-700 dark:text-white dark:border-white   w-[80%]">
-          <div className="dark:bg-slate-700 dark:text-white dark:border-white   text-lg font-medium text-gray-400 pb-4 pt-2 ">
+        {/* <div className="dark:bg-slate-800 dark:text-white dark:border-white  text-center">hai</div> */}
+        <div className="dark:bg-slate-800 dark:text-white dark:border-white   w-[80%]">
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white   text-lg font-medium text-gray-400 pb-4 pt-2 ">
             ROLE
           </div>
           <select
@@ -163,12 +163,12 @@ const EmployeeDetail = () => {
             <option value="employer">employer</option>
           </select>
         </div>
-        {/* <div className="dark:bg-slate-700 dark:text-white dark:border-white  text-center">ba</div> */}
-        <div className="dark:bg-slate-700 dark:text-white dark:border-white   w-[80%]">
-          <div className="dark:bg-slate-700 dark:text-white dark:border-white   text-lg font-medium text-gray-400 pb-4 pt-2 ">
+        {/* <div className="dark:bg-slate-800 dark:text-white dark:border-white  text-center">ba</div> */}
+        <div className="dark:bg-slate-800 dark:text-white dark:border-white   w-[80%]">
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white   text-lg font-medium text-gray-400 pb-4 pt-2 ">
             ONBOARDING
           </div>
-          <div className="dark:bg-slate-700 dark:text-white dark:border-white  relative max-w-sm mb-3">
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white  relative max-w-sm mb-3">
             <div className=" dark:text-white dark:border-white  absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
               <svg
                 aria-hidden="true"
@@ -192,90 +192,90 @@ const EmployeeDetail = () => {
               datepicker
               datepicker-title="Flowbite datepicker"
               type="date"
-              className="dark:bg-slate-800 dark:text-white dark:border-white text-gray-500 bg-gray-50 border border-none text-white text-sm  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-3.5    dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="dark:bg-slate-700 dark:text-white dark:border-white text-gray-500 bg-gray-50 border border-none text-white text-sm  rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-3.5   dark:focus:ring-blue-500 dark:focus:border-blue-500"
               placeholder="Select date"
             />
           </div>
           <label class="relative inline-flex items-center cursor-pointer">
             <input type="checkbox" value="" class="sr-only peer" />
-            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+            <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
             <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
               Toggle me
             </span>
           </label>
 
-          <div className="dark:bg-slate-700 dark:text-white dark:border-white    text-xs font-medium text-gray-400 pb-4 pt-4 ">
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white    text-xs font-medium text-gray-400 pb-4 pt-4 ">
             Onboarding Scripts
           </div>
 
-          <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex-container pt-3 pb-3  border-b">
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex-container pt-3 pb-3  border-b">
             <label class="relative inline-flex items-center cursor-pointer">
               <input type="checkbox" value="" class="sr-only peer" />
-              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-slate-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
               <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
                 Office Tour
               </span>
             </label>
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  text-sm font-medium">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  text-sm font-medium">
               100%
             </div>
           </div>
 
-          <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex-container pt-3 pb-3  border-b">
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex-container pt-3 pb-3  border-b">
             <label class="relative inline-flex items-center cursor-pointer">
               <input type="checkbox" value="" class="sr-only peer" />
-              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-slate-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
               <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
                 Work Tools
               </span>
             </label>
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  text-sm font-medium">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  text-sm font-medium">
               20%
             </div>
           </div>
 
-          <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex-container pt-3 pb-3  border-b">
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex-container pt-3 pb-3  border-b">
             <label class="relative inline-flex  cursor-pointer">
               <input type="checkbox" value="" class="sr-only peer" />
-              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-slate-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
               <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
                 Duties Journal
               </span>
             </label>
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  text-sm font-medium">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  text-sm font-medium">
               0%
             </div>
           </div>
 
-          <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex-container pt-3 pb-3  border-b">
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex-container pt-3 pb-3  border-b">
             <label class="relative inline-flex  cursor-pointer">
               <input type="checkbox" value="" class="sr-only peer" />
-              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-slate-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
               <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
                 Requests Handling
               </span>
             </label>
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  text-sm font-medium">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  text-sm font-medium">
               0%
             </div>
           </div>
-          <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex-container pt-3 pb-3  border-b">
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex-container pt-3 pb-3  border-b">
             <label class="relative inline-flex  cursor-pointer">
               <input type="checkbox" value="" class="sr-only peer" />
-              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-slate-800 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+              <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-slate-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
               <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">
                 Activity Tracking
               </span>
             </label>
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  text-sm font-medium">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  text-sm font-medium">
               0%
             </div>
           </div>
         </div>
       </div>
-      {/* <div className="dark:bg-slate-700 dark:text-white dark:border-white  pl-[35%] p-2">
-                <button onClick={onSubmitHandler} className="dark:bg-slate-700 dark:text-white dark:border-white  rounded-[10px] bg-black text-white text-base font-bold w-[20%] pt-2 pb-2">SAVE</button>
-                <button onClick={() => { navigate("/candidates") }} className="dark:bg-slate-700 dark:text-white dark:border-white  w-[20%] rounded-[10px] ml-[5%] bg-slate-100 text-black text-base font-bold pt-2 pb-2">CANCEL</button>
+      {/* <div className="dark:bg-slate-800 dark:text-white dark:border-white  pl-[35%] p-2">
+                <button onClick={onSubmitHandler} className="dark:bg-slate-800 dark:text-white dark:border-white  rounded-[10px] bg-black text-white text-base font-bold w-[20%] pt-2 pb-2">SAVE</button>
+                <button onClick={() => { navigate("/candidates") }} className="dark:bg-slate-800 dark:text-white dark:border-white  w-[20%] rounded-[10px] ml-[5%] bg-slate-100 text-black text-base font-bold pt-2 pb-2">CANCEL</button>
             </div> */}
     </div>
   );

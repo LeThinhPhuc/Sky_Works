@@ -42,10 +42,10 @@ const EmployItem = (props) => {
   let fullName = personal?.lastName + " " + personal?.firstName;
 
   return (
-    <tr className="dark:bg-slate-700 dark:text-white dark:border-white  border-b-[1px] border-sky-200 dark:bg-gray-200 dark:border-gray-700 hover:bg-sky-50 dark:hover:bg-gray-600">
+    <tr className=" dark:bg-slate-800 dark:text-white dark:border-white  border-b-[1px] border-sky-200  hover:bg-sky-50 dark:hover:bg-gray-600">
       <td
         scope="row"
-        className="dark:bg-slate-700 dark:text-white dark:border-white  flex items-center px-4 py-2 text-gray-900 whitespace-nowrap dark:text-white"
+        className=" dark:text-white dark:border-white  flex items-center px-4 py-2 text-gray-900 whitespace-nowrap "
       >
         <div
           className={`w-12 h-12 flex justify-center items-center rounded-full text-xl text-white uppercase`}
@@ -61,34 +61,34 @@ const EmployItem = (props) => {
         </div>
         {/* cho-nay-chua-hieu-tai-sao-sai */}
 
-        <div className="dark:bg-slate-700 dark:text-white dark:border-white  w-3/8 text-xs font-semibold pl-3">
+        <div className=" dark:text-white dark:border-white  w-3/8 text-xs font-semibold pl-3">
           {personal?.lastName + " " + personal?.firstName}
         </div>
       </td>
-      <td className="dark:bg-slate-700 dark:text-white dark:border-white  w-1/8 px-4 py-2 text-xs">
+      <td className=" dark:text-white dark:border-white  w-1/8 px-4 py-2 text-xs">
         {personal ? personal.headline : "Non title"}
       </td>
-      <td className="dark:bg-slate-700 dark:text-white dark:border-white  w-1/8 px-4 py-2">
-        <div className="dark:bg-slate-700 dark:text-white dark:border-white  text-xs ">
+      <td className=" dark:text-white dark:border-white  w-1/8 px-4 py-2">
+        <div className=" dark:text-white dark:border-white  text-xs ">
           {teamLead ? teamLead : "None TeamLead"}
         </div>
       </td>
-      <td className="dark:bg-slate-700 dark:text-white dark:border-white  w-1/8 px-6 py-4">
-        <div className="dark:bg-slate-700 dark:text-white dark:border-white  text-xs ">
+      <td className=" dark:text-white dark:border-white  w-1/8 px-6 py-4">
+        <div className=" dark:text-white dark:border-white  text-xs ">
           {localeSalary}
         </div>
       </td>
-      <td className="dark:bg-slate-700 dark:text-white dark:border-white  text-xs w-1/8 px-2 py-4">
+      <td className=" dark:text-white dark:border-white  text-xs w-1/8 px-2 py-4">
         <StatusBadge
           status={isReject ? statusList[8] : statusList[timeLine.length - 1]}
         />
       </td>
-      <td className="dark:bg-slate-700 dark:text-white dark:border-white  flex w-1/8 px-3 py-3 justify-center items-center gap-2">
+      <td className=" dark:text-white dark:border-white  flex w-1/8 px-3 py-3 justify-center items-center gap-2">
         <Tooltip message="View Detail">
           <FontAwesomeIcon
             icon={faEye}
             size="md"
-            className="dark:bg-slate-700 dark:text-white dark:border-white  cursor-pointer text-sky-400 hover:text-sky-600"
+            className=" dark:text-white dark:border-white  cursor-pointer text-sky-400 hover:text-sky-600"
             onClick={() => onViewDetail()}
           />
         </Tooltip>
@@ -97,7 +97,7 @@ const EmployItem = (props) => {
             <FontAwesomeIcon
               icon={faFilePdf}
               size="md"
-              className="dark:bg-slate-700 dark:text-white dark:border-white  cursor-pointer text-sky-400 hover:text-sky-600"
+              className=" dark:text-white dark:border-white  cursor-pointer text-sky-400 hover:text-sky-600"
               // onClick={() => onViewResume()}
             />
           </a>

@@ -53,7 +53,7 @@ const StatusBadge = (props) => {
           {status}
         </mark>
       ) : (
-        <p className="dark:bg-slate-700 dark:text-white dark:border-white  text-slate-400">
+        <p className="dark:bg-slate-800 dark:text-white dark:border-white  text-slate-400">
           please check status
         </p>
       )}

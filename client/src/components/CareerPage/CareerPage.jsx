@@ -7,13 +7,13 @@ import { motion } from "framer-motion";
 const CareerPage = () => {
   return (
     <motion.div
-      className="dark:bg-slate-700 dark:text-white dark:border-white  min-h-screen flex flex-col ml-0"
+      className="dark:bg-slate-800 dark:text-white dark:border-white  min-h-screen flex flex-col ml-0"
       initial={{ scaleX: 0 }}
       animate={{ scaleX: 1 }}
       exit={{ scaleX: 0 }}
       transition={{ delay: 0.15, duration: 0.5 }}
     >
-      <main className="dark:bg-slate-700 dark:text-white dark:border-white  flex-1 w-full">
+      <main className="dark:bg-slate-800 dark:text-white dark:border-white  flex-1 w-full">
         <Header />
         <Content />
       </main>

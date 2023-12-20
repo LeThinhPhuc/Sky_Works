@@ -62,10 +62,10 @@ const CardItemDetails = () => {
 
   return (
     <Link to={`/item/${param.id}/apply`}>
-      <div className="dark:bg-slate-700 dark:text-white dark:border-white  min-h-screen flex flex-col ml-0">
+      <div className="dark:bg-slate-800 dark:text-white dark:border-white  min-h-screen flex flex-col ml-0">
         <CareerHeader />
         <div>{joblist2.title}</div>
-        <a className="dark:bg-slate-700 dark:text-white dark:border-white  bg-[#4C98FF] rounded-[31px] p-[12px_54px] text-white text-center text-base font-semibold hover:bg-light-blue">
+        <a className="dark:bg-slate-800 dark:text-white dark:border-white  bg-[#4C98FF] rounded-[31px] p-[12px_54px] text-white text-center text-base font-semibold hover:bg-light-blue">
           Apply Now
         </a>
         <CareerFooter />

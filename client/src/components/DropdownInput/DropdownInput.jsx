@@ -18,16 +18,16 @@ const DropdownInput = (props) => {
   };
 
   return (
-    <div className="dark:bg-slate-700 dark:text-white dark:border-white  w-full relative flex flex-row">
+    <div className="dark:bg-slate-800 dark:text-white dark:border-white  w-full relative flex flex-row">
       <label
         forhtml={inputName}
-        className="dark:bg-slate-700 dark:text-white dark:border-white  mb-2 text-sm font-medium text-gray-900 sr-only"
+        className="dark:bg-slate-800 dark:text-white dark:border-white  mb-2 text-sm font-medium text-gray-900 sr-only"
       >
         Phone list
       </label>
       <Select getCountryCode={getCountryCode} />
 
-      <div className="dark:bg-slate-700 dark:text-white dark:border-white  relative w-full font-light text-xs md:text-sm">
+      <div className="dark:bg-slate-800 dark:text-white dark:border-white  relative w-full font-light text-xs md:text-sm">
         <input
           type={type}
           id={inputName}

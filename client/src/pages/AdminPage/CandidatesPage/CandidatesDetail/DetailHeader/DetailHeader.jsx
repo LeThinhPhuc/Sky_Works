@@ -7,11 +7,11 @@ const DetailHeader = (props) => {
 
   var randomColor = Math.floor(Math.random() * 16777215).toString(16);
   return (
-    <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex justify-between items-center text-sm border-b pb-3">
-      <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex items-center">
+    <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex justify-between items-center text-sm border-b pb-3">
+      <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex items-center">
         <FontAwesomeIcon
           icon={faArrowLeft}
-          className="dark:bg-slate-700 dark:text-white dark:border-white  p-2"
+          className="dark:bg-slate-800 dark:text-white dark:border-white  p-2"
         />
         <div
           style={{ backgroundColor: `#${randomColor}` }}
@@ -21,14 +21,14 @@ const DetailHeader = (props) => {
             .split(" ")
             .reduce((acc, cur) => (acc += cur[0]), "")}
         </div>
-        <h3 className="dark:bg-slate-700 dark:text-white dark:border-white  p-2 font-medium">
+        <h3 className="dark:bg-slate-800 dark:text-white dark:border-white  p-2 font-medium">
           {lname + " " + fname}
         </h3>
       </div>
       <div>
         <button
           onClick={() => handleDelete(id)}
-          className="dark:bg-slate-700 dark:text-white dark:border-white  text-[#b91c1c] font-medium bg-[#fff1f2] p-3 rounded-[10px]"
+          className="dark:bg-slate-800 dark:text-white dark:border-white  text-[#b91c1c] font-medium bg-[#fff1f2] p-3 rounded-[10px]"
         >
           <FontAwesomeIcon icon={faTrash} /> {/* Sử dụng icon */}
           Delete

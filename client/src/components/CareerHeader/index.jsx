@@ -2,12 +2,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 function CareerHeader() {
   return (
-    <header className="dark:bg-slate-700 dark:text-white dark:border-white  w-full h-[70px] md:h-[80px] sticky top-0 z-[90] flex items-center border border-solid border-[#eef3fb] bg-white">
-      <div className="dark:bg-slate-700 dark:text-white dark:border-white  w-full md:container flex justify-between items-center mx-auto px-[24px]">
+    <header className="dark:bg-slate-800 dark:text-white dark:border-white  w-full h-[70px] md:h-[80px] sticky top-0 z-[90] flex items-center border border-solid border-[#eef3fb] bg-white">
+      <div className="dark:bg-slate-800 dark:text-white dark:border-white  w-full md:container flex justify-between items-center mx-auto px-[24px]">
         <Link to={"/careers"}>
           {" "}
           <a
-            className="dark:bg-slate-700 dark:text-white dark:border-white  cursor-pointer"
+            className="dark:bg-slate-800 dark:text-white dark:border-white  cursor-pointer"
             href="/"
             rel="noreferrer"
           >
@@ -18,28 +18,28 @@ function CareerHeader() {
             />
           </a>
         </Link>
-        <ul className="dark:bg-slate-700 dark:text-white dark:border-white  h-full hidden md:flex">
-          <li className="dark:bg-slate-700 dark:text-white dark:border-white  cursor-pointer h-full grid place-items-center font-semibold hover:text-blue-500 transition-all svelte-15jlsr3">
+        <ul className="dark:bg-slate-800 dark:text-white dark:border-white  h-full hidden md:flex">
+          <li className="dark:bg-slate-800 dark:text-white dark:border-white  cursor-pointer h-full grid place-items-center font-semibold hover:text-blue-500 transition-all svelte-15jlsr3">
             <a
-              className="dark:bg-slate-700 dark:text-white dark:border-white  p-[20px]"
+              className="dark:bg-slate-800 dark:text-white dark:border-white  p-[20px]"
               href="/products"
               rel="noreferrer"
             >
               Products
             </a>
           </li>
-          <li className="dark:bg-slate-700 dark:text-white dark:border-white  cursor-pointer h-full grid place-items-center font-semibold hover:text-blue-500 transition-all svelte-15jlsr3">
+          <li className="dark:bg-slate-800 dark:text-white dark:border-white  cursor-pointer h-full grid place-items-center font-semibold hover:text-blue-500 transition-all svelte-15jlsr3">
             <a
-              className="dark:bg-slate-700 dark:text-white dark:border-white  p-[20px]"
+              className="dark:bg-slate-800 dark:text-white dark:border-white  p-[20px]"
               href="/team"
               rel="noreferrer"
             >
               Team
             </a>
           </li>
-          <li className="dark:bg-slate-700 dark:text-white dark:border-white  cursor-pointer h-full grid place-items-center font-semibold hover:text-blue-500 transition-all svelte-15jlsr3">
+          <li className="dark:bg-slate-800 dark:text-white dark:border-white  cursor-pointer h-full grid place-items-center font-semibold hover:text-blue-500 transition-all svelte-15jlsr3">
             <a
-              className="dark:bg-slate-700 dark:text-white dark:border-white  p-[20px]"
+              className="dark:bg-slate-800 dark:text-white dark:border-white  p-[20px]"
               href="https://axie.substack.com/"
               target="_blank"
               rel="noreferrer"
@@ -49,9 +49,9 @@ function CareerHeader() {
           </li>
           <Link to="/careers">
             {" "}
-            <li className="dark:bg-slate-700 dark:text-white dark:border-white  cursor-pointer h-full grid place-items-center font-semibold hover:text-blue-500 transition-all svelte-15jlsr3 active">
+            <li className="dark:bg-slate-800 dark:text-white dark:border-white  cursor-pointer h-full grid place-items-center font-semibold hover:text-blue-500 transition-all svelte-15jlsr3 active">
               <a
-                className="dark:bg-slate-700 dark:text-white dark:border-white  p-[20px]"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  p-[20px]"
                 href="/careers"
                 rel="noreferrer"
               >
@@ -61,7 +61,7 @@ function CareerHeader() {
           </Link>
         </ul>
         <button
-          className="dark:bg-slate-700 dark:text-white dark:border-white  md:hidden"
+          className="dark:bg-slate-800 dark:text-white dark:border-white  md:hidden"
           title="Open Drawer"
         >
           <svg

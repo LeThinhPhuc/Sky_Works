@@ -118,26 +118,26 @@ const ApplyForm = (props) => {
   return (
     <>
       <form
-        className="dark:bg-slate-700 dark:text-white dark:border-white  pt-6 w-full"
+        className="dark:bg-slate-800 dark:text-white dark:border-white  pt-6 w-full"
         onSubmit={handleSubmit}
       >
-        <div className="dark:bg-slate-700 dark:text-white dark:border-white  w-full flex flex-col gap-6">
-          <div className="dark:bg-slate-700 dark:text-white dark:border-white  w-full px-4 flex flex-col">
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex flex-row">
-              <h4 className="dark:bg-slate-700 dark:text-white dark:border-white  text-base md:text-2xl font-bold text-left grow">
+        <div className="dark:bg-slate-800 dark:text-white dark:border-white  w-full flex flex-col gap-6">
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white  w-full px-4 flex flex-col">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex flex-row">
+              <h4 className="dark:bg-slate-800 dark:text-white dark:border-white  text-base md:text-2xl font-bold text-left grow">
                 Personal Info
               </h4>
               <button
                 type="button"
-                className="dark:bg-slate-700 dark:text-white dark:border-white  clear-btn w-[6rem] md:w-[10rem] inline-block text-right font-normal text-sky-400 transition duration-150 ease-in-out hover:text-sky-700 focus:text-gray-500 focus:outline-none focus:ring-0 active:text-primary-700"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  clear-btn w-[6rem] md:w-[10rem] inline-block text-right font-normal text-sky-400 transition duration-150 ease-in-out hover:text-sky-700 focus:text-gray-500 focus:outline-none focus:ring-0 active:text-primary-700"
                 onClick={(e) => onHandleClearInfo(e)}
               >
                 Clear
               </button>
             </div>
-            <hr className="dark:bg-slate-700 dark:text-white dark:border-white  w-full h-px mt-4 mb-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  w-full flex flex-wrap gap-6 sm:gap-9">
-              <div className="dark:bg-slate-700 dark:text-white dark:border-white  w-full flex flex-col sm:flex-row gap-6">
+            <hr className="dark:bg-slate-800 dark:text-white dark:border-white  w-full h-px mt-4 mb-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  w-full flex flex-wrap gap-6 sm:gap-9">
+              <div className="dark:bg-slate-800 dark:text-white dark:border-white  w-full flex flex-col sm:flex-row gap-6">
                 <Input
                   type="text"
                   text="First Name"
@@ -155,7 +155,7 @@ const ApplyForm = (props) => {
                   onHandleInfo={onHandleInfo}
                 />
               </div>
-              <div className="dark:bg-slate-700 dark:text-white dark:border-white  w-full flex flex-col sm:flex-row gap-6">
+              <div className="dark:bg-slate-800 dark:text-white dark:border-white  w-full flex flex-col sm:flex-row gap-6">
                 <Input
                   type="email"
                   text="Email"
@@ -196,38 +196,38 @@ const ApplyForm = (props) => {
           </div>
 
           {/* Profile */}
-          <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex flex-col px-4 pt-8">
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex flex-row">
-              <h4 className="dark:bg-slate-700 dark:text-white dark:border-white  text-base md:text-2xl font-bold text-left grow">
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex flex-col px-4 pt-8">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex flex-row">
+              <h4 className="dark:bg-slate-800 dark:text-white dark:border-white  text-base md:text-2xl font-bold text-left grow">
                 Profile
               </h4>
               <button
                 type="button"
-                className="dark:bg-slate-700 dark:text-white dark:border-white  clear-btn w-[6rem] md:w-[10rem] inline-block text-right font-normal text-sky-400 transition duration-150 ease-in-out hover:text-sky-700 focus:text-gray-500 focus:outline-none focus:ring-0 active:text-primary-700"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  clear-btn w-[6rem] md:w-[10rem] inline-block text-right font-normal text-sky-400 transition duration-150 ease-in-out hover:text-sky-700 focus:text-gray-500 focus:outline-none focus:ring-0 active:text-primary-700"
                 onClick={(e) => onHandleClearProfile(e)}
               >
                 Clear
               </button>
             </div>
-            <hr className="dark:bg-slate-700 dark:text-white dark:border-white  w-full h-px mt-4 mb-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex flex-wrap justify-between items-center py-4">
-              <p className="dark:bg-slate-700 dark:text-white dark:border-white  uppercase text-[0.65rem] font-extrabold text-gray-900 dark:text-white">
+            <hr className="dark:bg-slate-800 dark:text-white dark:border-white  w-full h-px mt-4 mb-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex flex-wrap justify-between items-center py-4">
+              <p className="dark:bg-slate-800 dark:text-white dark:border-white  uppercase text-[0.65rem] font-extrabold text-gray-900 dark:text-white">
                 Education
-                <span className="dark:bg-slate-700 dark:text-white dark:border-white  text-gray-400 font-semibold">
+                <span className="dark:bg-slate-800 dark:text-white dark:border-white  text-gray-400 font-semibold">
                   &nbsp;(Option)
                 </span>
               </p>
               <button
                 type="button"
-                className="dark:bg-slate-700 dark:text-white dark:border-white  text-white bg-sky-500 hover:bg-sky-600 focus:bg-gray-400 focus:outline-none focus:ring-transparent font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-sky-300 dark:hover:bg-sky-500 transition duration-150"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  text-white bg-sky-500 hover:bg-sky-600 focus:bg-gray-400 focus:outline-none focus:ring-transparent font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-sky-300 dark:hover:bg-sky-500 transition duration-150"
                 onClick={() => onShowEducation()}
               >
                 + Add
               </button>
             </div>
           </div>
-          <div className="dark:bg-slate-700 dark:text-white dark:border-white  w-full -mt-3">
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex flex-col gap-6">
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white  w-full -mt-3">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex flex-col gap-6">
               <div
                 className={`${
                   !showEducation ? "hidden" : "block"
@@ -262,17 +262,17 @@ const ApplyForm = (props) => {
                 />
               </div>
             </div>
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex flex-col px-4 justify-center">
-              <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex flex-wrap justify-between items-center py-4">
-                <p className="dark:bg-slate-700 dark:text-white dark:border-white  uppercase text-[0.65rem] font-extrabold text-gray-900 dark:text-white">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex flex-col px-4 justify-center">
+              <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex flex-wrap justify-between items-center py-4">
+                <p className="dark:bg-slate-800 dark:text-white dark:border-white  uppercase text-[0.65rem] font-extrabold text-gray-900 dark:text-white">
                   Experiences
-                  <span className="dark:bg-slate-700 dark:text-white dark:border-white  text-gray-400 font-semibold">
+                  <span className="dark:bg-slate-800 dark:text-white dark:border-white  text-gray-400 font-semibold">
                     &nbsp;(Option)
                   </span>
                 </p>
                 <button
                   type="button"
-                  className="dark:bg-slate-700 dark:text-white dark:border-white  text-white bg-sky-500 hover:bg-sky-600 focus:bg-gray-400 focus:outline-none focus:ring-transparent font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-sky-300 dark:hover:bg-sky-500 transition duration-150"
+                  className="dark:bg-slate-800 dark:text-white dark:border-white  text-white bg-sky-500 hover:bg-sky-600 focus:bg-gray-400 focus:outline-none focus:ring-transparent font-medium rounded-full text-sm px-5 py-2.5 text-center dark:bg-sky-300 dark:hover:bg-sky-500 transition duration-150"
                   onClick={() => onShowExperience()}
                 >
                   + Add
@@ -280,7 +280,7 @@ const ApplyForm = (props) => {
               </div>
             </div>
 
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex flex-col gap-6">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex flex-col gap-6">
               <div
                 className={`${
                   !showExp ? "hidden" : "block"
@@ -314,20 +314,20 @@ const ApplyForm = (props) => {
                   option={true}
                 />
 
-                <div className="dark:bg-slate-700 dark:text-white dark:border-white  relative font-light text-sm">
+                <div className="dark:bg-slate-800 dark:text-white dark:border-white  relative font-light text-sm">
                   <textarea
                     name="summary"
                     id="summary"
                     rows="6"
-                    className="dark:bg-slate-700 dark:text-white dark:border-white  peer p-3 w-full text-sm text-gray-900 font-light bg-slate-100 focus:placeholder-transparent placeholder:text-sm rounded-2xl border-[1px] border-gray-500  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white focus:ring-transparent dark:focus:ring-transparent dark:focus:border-sky-300 focus:border-sky-300"
+                    className="dark:bg-slate-800 dark:text-white dark:border-white  peer p-3 w-full text-sm text-gray-900 font-light bg-slate-100 focus:placeholder-transparent placeholder:text-sm rounded-2xl border-[1px] border-gray-500  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white focus:ring-transparent dark:focus:ring-transparent dark:focus:border-sky-300 focus:border-sky-300"
                     placeholder="Summary"
                   ></textarea>
                   <label
                     forhtml="sumary"
-                    className="dark:bg-slate-700 dark:text-white dark:border-white  opacity-0 peer-focus:opacity-100 absolute h-auto top-0 left-2 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.65rem] px-3 leading-[1.6] text-gray-900 dark:peer-focus:text-sky-500 dark:text-neutral-300 peer-focus:text-sky-500 transition-all duration-200 ease-out peer-focus:bg-slate-100 peer-focus:-translate-y-[1.25rem] peer-focus:left-4 peer-focus:scale-[0.9]"
+                    className="dark:bg-slate-800 dark:text-white dark:border-white  opacity-0 peer-focus:opacity-100 absolute h-auto top-0 left-2 mb-0 max-w-[90%] origin-[0_0] truncate pt-[0.65rem] px-3 leading-[1.6] text-gray-900 dark:peer-focus:text-sky-500 dark:text-neutral-300 peer-focus:text-sky-500 transition-all duration-200 ease-out peer-focus:bg-slate-100 peer-focus:-translate-y-[1.25rem] peer-focus:left-4 peer-focus:scale-[0.9]"
                   >
                     Summary
-                    <span className="dark:bg-slate-700 dark:text-white dark:border-white  uppercase">
+                    <span className="dark:bg-slate-800 dark:text-white dark:border-white  uppercase">
                       &nbsp;(Option)
                     </span>
                   </label>
@@ -335,10 +335,10 @@ const ApplyForm = (props) => {
               </div>
             </div>
 
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex flex-col py-6 px-4 gap-4">
-              <p className="dark:bg-slate-700 dark:text-white dark:border-white  uppercase text-[0.65rem] font-extrabold text-gray-900 dark:text-white">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex flex-col py-6 px-4 gap-4">
+              <p className="dark:bg-slate-800 dark:text-white dark:border-white  uppercase text-[0.65rem] font-extrabold text-gray-900 dark:text-white">
                 resume
-                <span className="dark:bg-slate-700 dark:text-white dark:border-white  text-red-400 font-semibold">
+                <span className="dark:bg-slate-800 dark:text-white dark:border-white  text-red-400 font-semibold">
                   &nbsp;(Required)
                 </span>
               </p>
@@ -352,27 +352,27 @@ const ApplyForm = (props) => {
           </div>
 
           {/* Detail */}
-          <div className="dark:bg-slate-700 dark:text-white dark:border-white  w-full relative px-4">
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  flex flex-row">
-              <h4 className="dark:bg-slate-700 dark:text-white dark:border-white  text-base md:text-2xl font-bold text-left grow">
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white  w-full relative px-4">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex flex-row">
+              <h4 className="dark:bg-slate-800 dark:text-white dark:border-white  text-base md:text-2xl font-bold text-left grow">
                 Detail
               </h4>
               <button
                 type="button"
                 onClick={(e) => onHandleClearDetail(e)}
-                className="dark:bg-slate-700 dark:text-white dark:border-white  clear-btn w-[6rem] md:w-[10rem] inline-block text-right font-normal text-sky-400 transition duration-150 ease-in-out hover:text-sky-700 focus:text-gray-500 focus:outline-none focus:ring-0 active:text-primary-700"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  clear-btn w-[6rem] md:w-[10rem] inline-block text-right font-normal text-sky-400 transition duration-150 ease-in-out hover:text-sky-700 focus:text-gray-500 focus:outline-none focus:ring-0 active:text-primary-700"
               >
                 Clear
               </button>
             </div>
-            <hr className="dark:bg-slate-700 dark:text-white dark:border-white  w-full h-px mt-4 mb-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
+            <hr className="dark:bg-slate-800 dark:text-white dark:border-white  w-full h-px mt-4 mb-8 bg-gray-200 border-0 dark:bg-gray-700"></hr>
 
             <label
               forhtml="coverLetter"
-              className="dark:bg-slate-700 dark:text-white dark:border-white  block uppercase mb-2 text-[0.65rem] font-extrabold text-gray-900 dark:text-white"
+              className="dark:bg-slate-800 dark:text-white dark:border-white  block uppercase mb-2 text-[0.65rem] font-extrabold text-gray-900 dark:text-white"
             >
               Cover letter
-              <span className="dark:bg-slate-700 dark:text-white dark:border-white  text-gray-400 font-semibold">
+              <span className="dark:bg-slate-800 dark:text-white dark:border-white  text-gray-400 font-semibold">
                 &nbsp;(Option)
               </span>
             </label>
@@ -381,17 +381,17 @@ const ApplyForm = (props) => {
               rows="6"
               value={coverLetter}
               onChange={onHandleTextChange}
-              className="dark:bg-slate-700 dark:text-white dark:border-white  block p-3 w-full text-sm text-gray-900 font-light bg-white rounded-2xl border-[1px] border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white focus:ring-transparent dark:focus:ring-transparent dark:focus:border-sky-300 focus:border-sky-300"
+              className="dark:bg-slate-800 dark:text-white dark:border-white  block p-3 w-full text-sm text-gray-900 font-light bg-white rounded-2xl border-[1px] border-gray-300 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white focus:ring-transparent dark:focus:ring-transparent dark:focus:border-sky-300 focus:border-sky-300"
               placeholder="Write something about you here..."
             ></textarea>
-            <div className="dark:bg-slate-700 dark:text-white dark:border-white  absolute z-[-5] max-w-[13.5rem] w-[13.5rem] top-[14.5rem] -left-[3.5rem] md:max-w-[16rem] md:w-[16rem] md:top-[12.5rem] md:-left-[8.5rem] lg:max-w-[18rem] lg:w-[18rem] lg:top-[11.5rem] lg:-left-[12.5rem] ">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  absolute z-[-5] max-w-[13.5rem] w-[13.5rem] top-[14.5rem] -left-[3.5rem] md:max-w-[16rem] md:w-[16rem] md:top-[12.5rem] md:-left-[8.5rem] lg:max-w-[18rem] lg:w-[18rem] lg:top-[11.5rem] lg:-left-[12.5rem] ">
               <img src="/MessyDoodle.png" />
             </div>
           </div>
 
           <button
             type="submit"
-            className="dark:bg-slate-700 dark:text-white dark:border-white  min-w-fit z-10 w-fit mx-auto mt-8 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-3xl text-base px-5 py-3 text-center"
+            className="dark:bg-slate-800 dark:text-white dark:border-white  min-w-fit z-10 w-fit mx-auto mt-8 text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-3xl text-base px-5 py-3 text-center"
           >
             Submit application
           </button>

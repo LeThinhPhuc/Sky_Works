@@ -3,7 +3,7 @@ const Field = (props) => {
   const { text, money } = props;
   const { onChangeHandler } = props;
   return (
-    <div className="dark:bg-slate-700 dark:text-white dark:border-white  relative grow font-light text-xs md:text-sm pb-5">
+    <div className="dark:bg-slate-800 dark:text-white dark:border-white  relative grow font-light text-xs md:text-sm pb-5">
       <input
         className={`peer font-medium text-sky border-sky-300 w-full min-h-[auto] text-xs md:text-sm rounded-lg border bg-white py-4 px-3 leading-[1.6] placeholder-gray-500 focus:placeholder-transparent placeholder:text-xs md:placeholder:text-sm outline-none transition-all duration-200 ease-linear motion-reduce:transition-none focus:outline-none focus:shadow-none focus:ring-transparent ${"dark:focus:border-sky-300 focus:border-sky-300"}`}
         placeholder={text}
