@@ -59,7 +59,7 @@ const SearchAndInforAdmin = () => {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="dark:bg-slate-800 dark:text-white dark:border-white  w-6 h-6 "
+          className="dark:bg-slate-800 dark:text-white dark:border-white text-slate-500 w-6 h-6 "
         >
           <path
             strokeLinecap="round"
