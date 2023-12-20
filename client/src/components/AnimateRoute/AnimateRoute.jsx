@@ -17,7 +17,7 @@ import LoginRegisterPage from "../../pages/AdminPage/AdminLoginPage/LoginRegiste
 import WarningPage from "../../pages/AdminPage/WarningPage/WarningPage";
 import Employee from "../../pages/AdminPage/Employee/Employee";
 import EmployeeDetail from "../../pages/AdminPage/Employee/EmployeeDetail/EmployeeDetail";
-import AboutUs from "../../pages/AboutUs";
+import AboutUs from "../../pages/AboutUsPage";
 // Check Role
 import PrivateRoute from "../../PrivateRoute/PrivateRoute";
 import RoleContentJob from "../../PrivateRoute/RoleContentJob";
