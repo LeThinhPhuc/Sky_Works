@@ -7,7 +7,7 @@ const StatusBadge = (props) => {
     case "RECEIVED CV":
       textColor = "text-amber-500";
       bgColor = "bg-amber-100";
-      break;      
+      break;
     case "APPROVED":
       textColor = "text-emerald-500";
       bgColor = "bg-green-100";
@@ -39,7 +39,7 @@ const StatusBadge = (props) => {
     case "ONBOARDING":
       textColor = "text-sky-500";
       bgColor = "bg-sky-100";
-      break;      
+      break;
     default:
       break;
   }
@@ -53,7 +53,9 @@ const StatusBadge = (props) => {
           {status}
         </mark>
       ) : (
-        <p className="text-slate-400">please check status</p>
+        <p className="dark:bg-slate-800 dark:text-white dark:border-white  text-slate-400">
+          please check status
+        </p>
       )}
     </>
   );

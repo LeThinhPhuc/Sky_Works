@@ -16,14 +16,12 @@ const Select = (props) => {
   const [isOpen, setIsOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const btnRef = useRef();
-  const prevState= useRef(true);
+  const prevState = useRef(true);
 
   /* fetch all countries */
   const fetchData = async () => {
     setLoading(true);
-    const res = await dataService.getData(
-      "https://restcountries.com/v3.1/all"
-    );
+    const res = await dataService.getData("https://restcountries.com/v3.1/all");
     setCountries(res);
     // get VN as default
     const init = res.find((country) => country.ccn3 == "704");
@@ -44,20 +42,22 @@ const Select = (props) => {
         <img
           src={png}
           alt={alt}
-          className="w-[1.8rem] h-[1.15rem] rounded-[0.2rem] drop-shadow-md"
+          className="dark:bg-slate-800 dark:text-white dark:border-white  w-[1.8rem] h-[1.15rem] rounded-[0.2rem] drop-shadow-md"
         ></img>
       );
       return (
         <li
           key={idx}
-          className="w-full flex flex-row gap-5 justify-between text-xs md:text-sm py-4 px-6 hover:bg-sky-200 hover:cursor-pointer focus:bg-slate-300"
+          className="dark:bg-slate-800 dark:text-white dark:border-white  w-full flex flex-row gap-5 justify-between text-xs md:text-sm py-4 px-6 hover:bg-sky-200 hover:cursor-pointer focus:bg-slate-300"
           onClick={() => onHandleItemClick(idx)}
         >
-          <div className="flex flex-row justify-items-stretch gap-3 w-2/3">
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex flex-row justify-items-stretch gap-3 w-2/3">
             {flagIcon}
-            <p className="truncate">{countryData.name.common}</p>
+            <p className="dark:bg-slate-800 dark:text-white dark:border-white  truncate">
+              {countryData.name.common}
+            </p>
           </div>
-          <p className="">
+          <p className="dark:bg-slate-800 dark:text-white dark:border-white  ">
             {root}
             {suffixes && suffixes.length > 0 ? suffixes[0] : "N/A"}
           </p>
@@ -80,12 +80,12 @@ const Select = (props) => {
     if (prevState.current) {
       prevState.current = false;
       fetchData();
-    }    
+    }
   }, []);
 
   useEffect(() => {
     const closeClickOutside = (e) => {
-      if (btnRef.current && !btnRef.current.contains(e.target)) { 
+      if (btnRef.current && !btnRef.current.contains(e.target)) {
         setIsOpen(false);
       }
     };
@@ -101,35 +101,38 @@ const Select = (props) => {
       <button
         id="dropdown-button"
         // data-dropdown-toggle="dropdown-states"
-        className="flex-shrink-0 max-w-[45%] w-[45%] lg:max-w-[40%] lg:w-[40%] z-10 relative flex items-center gap-2 py-1.5 md:py-2.5 px-3 xs:px-4 font-medium text-center text-gray-800 bg-gray-100 border border-gray-300 dark:border-gray-700 dark:text-white rounded-l-lg hover:bg-sky-200 focus:outline-none focus:ring-transparent dark:focus:ring-transparent dark:bg-gray-600 dark:hover:bg-gray-700"
-        type="button" ref={btnRef}
+        className="dark:bg-slate-800 dark:text-white dark:border-white  flex-shrink-0 max-w-[45%] w-[45%] lg:max-w-[40%] lg:w-[40%] z-10 relative flex items-center gap-2 py-1.5 md:py-2.5 px-3 xs:px-4 font-medium text-center text-gray-800 bg-gray-100 border border-gray-300 dark:border-gray-700 dark:text-white rounded-l-lg hover:bg-sky-200 focus:outline-none focus:ring-transparent dark:focus:ring-transparent dark:bg-gray-600 dark:hover:bg-gray-700"
+        type="button"
+        ref={btnRef}
         onClick={() => setIsOpen((prev) => !prev)}
       >
         {loading ? (
-          <div className="w-full flex flex-row justify-center"><BeatLoader color="#0ea5e9" size={8} /></div>
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white  w-full flex flex-row justify-center">
+            <BeatLoader color="#0ea5e9" size={8} />
+          </div>
         ) : (
           <>
-            <div className="phone-code w-full flex flex-row items-center md:justify-between gap-0 xs:gap-3 lg:gap-5 text-xs md:text-sm">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  phone-code w-full flex flex-row items-center md:justify-between gap-0 xs:gap-3 lg:gap-5 text-xs md:text-sm">
               <img
                 src={flagURL}
                 alt={flagAlt}
-                className="flag w-[2rem] xs:w-[2.4rem] sm:w-[1.8rem] md:w-[2.5rem] rounded-[0.2rem] basis-1/3 xs:basis-1/4 sm:basis-1/6 md:basis-0"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  flag w-[2rem] xs:w-[2.4rem] sm:w-[1.8rem] md:w-[2.5rem] rounded-[0.2rem] basis-1/3 xs:basis-1/4 sm:basis-1/6 md:basis-0"
               ></img>
-              <p className="text-left truncate hidden sm:block xs:basis-0 sm:basis-3/6">
+              <p className="dark:bg-slate-800 dark:text-white dark:border-white  text-left truncate hidden sm:block xs:basis-0 sm:basis-3/6">
                 {countryName}
               </p>
-              <p className="text-left sm:text-center hidden xs:block text-xs md:text-sm xs:basis-2/4 sm:basis-1/6">
+              <p className="dark:bg-slate-800 dark:text-white dark:border-white  text-left sm:text-center hidden xs:block text-xs md:text-sm xs:basis-2/4 sm:basis-1/6">
                 {code}
               </p>
               <FontAwesomeIcon
                 icon={faAngleDown}
                 rotation={isOpen ? 180 : 0}
                 size="lg"
-                className="transition duration-300"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  transition duration-300"
               />
               {/* <svg
                 aria-hidden="true"
-                className="h-6 sm:min-w-[2rem] ml-1 basis-1/2 xs:basis-1/4 sm:basis-1/6"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  h-6 sm:min-w-[2rem] ml-1 basis-1/2 xs:basis-1/4 sm:basis-1/6"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -151,7 +154,7 @@ const Select = (props) => {
         }`}
       >
         <ul
-          className="py-0 text-sm font-light text-gray-700 dark:text-gray-200"
+          className="dark:bg-slate-800 dark:text-white dark:border-white  py-0 text-sm font-light text-gray-700 dark:text-gray-200"
           aria-labelledby="states-button"
         >
           {phoneCodes}

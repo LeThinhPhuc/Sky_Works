@@ -11,14 +11,12 @@ const ModalEmail = (props) => {
   const [fromEmail, setFromEmail] = useState("");
   const [message, setMessage] = useState("");
   const [file, setFile] = useState("");
-  const [link, setLink] = useState('');
+  const [link, setLink] = useState("");
   const [field, setField] = useState(true);
 
   const { isShowModalSendTest, isShow, isNextStep, dataMail } = props;
-  
- 
-    const { email, lastName } = dataMail?.personal??{};
-   
+
+  const { email, lastName } = dataMail?.personal ?? {};
 
   // Xử lý submit form
   const handleSubmit = (event) => {
@@ -28,7 +26,7 @@ const ModalEmail = (props) => {
       link != "" &&
       email != "" &&
       fromName != "" &&
-      message   != "" &&
+      message != "" &&
       lastName != ""
     ) {
       setField(true);
@@ -89,19 +87,19 @@ const ModalEmail = (props) => {
       const storageRef = ref(storage, `fileTest/${file[0].name}`);
       uploadBytes(storageRef, file[0], metadata).then((snapshot) => {
         getDownloadURL(ref(storage, `fileTest/${file[0].name}`)).then((url) => {
-          console.log("url la : ", url)
+          console.log("url la : ", url);
           setLink(url);
         });
       });
-      
+
       setFile({});
     }
   }, [file]);
-  
+
   useEffect(() => {
     console.log("Link la : ", link);
   }, [link]);
-  
+
   return (
     <div
       id="small-modal"
@@ -192,14 +190,14 @@ const ModalEmail = (props) => {
             {field ? (
               ""
             ) : (
-              <div className="flex justify-center">
-                <p className="mb-2 m- text-sm font-medium text-red-500 dark:text-white">
+              <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex justify-center">
+                <p className="dark:bg-slate-800 dark:text-white dark:border-white  mb-2 m- text-sm font-medium text-red-500 dark:text-white">
                   Please fill out all fields{" "}
                 </p>
               </div>
             )}
 
-            <div class="flex justify-between">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex   justify-between">
               <button
                 onClick={handleSubmit}
                 type="submit"

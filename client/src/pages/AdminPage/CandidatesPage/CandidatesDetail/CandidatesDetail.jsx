@@ -21,7 +21,7 @@ const CandidatesDetail = () => {
   const param = useParams();
   const { id } = param;
   const { employee, setEmploysData } = useContext(CareersContext);
-  const {emailAdmin} = useContext(AuthContext)
+  const { emailAdmin } = useContext(AuthContext);
   const [employForm, setEmployForm] = useState(initialValues);
   const employData = employee.find((item) => item._id == id);
   const [select1, setSelect1] = useState(employData?.teamLead);
@@ -33,8 +33,8 @@ const CandidatesDetail = () => {
   );
   const [sal, setSal] = useState(f.format(employData?.salary));
   console.log(employData);
-  console.log("email Candidate : ",employData.personal.email);
-  console.log("email Admin : ", emailAdmin)
+  console.log("email Candidate : ", employData.personal.email);
+  console.log("email Admin : ", emailAdmin);
   var randomColor = Math.floor(Math.random() * 16777215).toString(16);
   const handleDelete = async (id) => {
     try {
@@ -123,17 +123,17 @@ const CandidatesDetail = () => {
     employData?.personal?.lastName + " " + employData?.personal?.firstName;
 
   return (
-    <div className=" ">
+    <div className="dark:bg-slate-800 dark:text-white dark:border-white   ">
       {/* <DetailHeader fname={employData?.personal.firstName} lname={employData?.personal.lastName} handleDelete={handleDelete(id)} id={id} /> */}
-      <div className=" mb-10">
-        <div className="flex justify-between items-center text-sm border-b py-3 mx-10">
-          <div className="flex items-center ">
+      <div className="dark:bg-slate-800 dark:text-white dark:border-white   mb-10">
+        <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex justify-between items-center text-sm border-b py-3 mx-10">
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex items-center ">
             <FontAwesomeIcon
               onClick={() => {
                 navigate("/admin/candidates");
               }}
               icon={faArrowLeft}
-              className="p-2 fa-xl"
+              className="dark:bg-slate-800 dark:text-white dark:border-white  p-2 fa-xl"
             />
             <div
               style={{ backgroundColor: `#${randomColor}` }}
@@ -145,7 +145,7 @@ const CandidatesDetail = () => {
                 else return (acc += cur[0]);
               }, "")}
             </div>
-            <h3 className="p-2 font-medium">
+            <h3 className="dark:bg-slate-800 dark:text-white dark:border-white  p-2 font-medium">
               {employData?.personal?.lastName +
                 " " +
                 employData?.personal?.firstName}
@@ -154,7 +154,7 @@ const CandidatesDetail = () => {
           <div>
             <button
               onClick={() => handleDelete(id)}
-              className="text-[#b91c1c] font-medium bg-[#fff1f2] p-3 rounded-[10px]"
+              className="dark:bg-slate-800 dark:text-white dark:border-white  text-[#b91c1c] font-medium bg-[#fff1f2] p-3 rounded-[10px]"
             >
               <FontAwesomeIcon icon={faBoxArchive} /> {/* Sử dụng icon */}
               Archive
@@ -162,47 +162,59 @@ const CandidatesDetail = () => {
           </div>
         </div>
 
-        <div className=" text-xs flex justify-around ">
-          <div className=" w-[45%]">
-            <div className=" text-base font-medium text-gray-400 pb-4 pt-2 ">
+        <div className="dark:bg-slate-800 dark:text-white dark:border-white   text-xs flex justify-around ">
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white   w-[45%]">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white   text-base font-medium text-gray-400 pb-4 pt-2 ">
               EMPLOYEE DETAILS
             </div>
-            <div className="pl-3 pr-3 pt-2 pb-2 bg-slate-100  rounded-[10px] mb-4 ">
-              <div className="text-gray-400 pb-1">FIRST NAME</div>
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  pl-3 pr-3 pt-2 pb-2 bg-slate-100  rounded-[10px] mb-4 ">
+              <div className="dark:bg-slate-800 dark:text-white dark:border-white  text-gray-400 pb-1">
+                FIRST NAME
+              </div>
               <div>{employData?.personal?.firstName}</div>
             </div>
-            <div className="pl-3 pr-3 pt-2 pb-2 bg-slate-100  rounded-[10px] mb-4 ">
-              <div className="text-gray-400 pb-1">LAST NAME</div>
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  pl-3 pr-3 pt-2 pb-2 bg-slate-100  rounded-[10px] mb-4 ">
+              <div className="dark:bg-slate-800 dark:text-white dark:border-white  text-gray-400 pb-1">
+                LAST NAME
+              </div>
               <div>{employData?.personal?.lastName}</div>
             </div>
-            <div className="pl-3 pr-3 pt-2 pb-2 bg-slate-100  rounded-[10px] mb-4 ">
-              <div className="text-gray-400 pb-1">EMAIL</div>
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  pl-3 pr-3 pt-2 pb-2 bg-slate-100  rounded-[10px] mb-4 ">
+              <div className="dark:bg-slate-800 dark:text-white dark:border-white  text-gray-400 pb-1">
+                EMAIL
+              </div>
               <div>{employData?.personal?.email}</div>
             </div>
-            <div className="pl-3 pr-3 pt-2 pb-2 bg-slate-100  rounded-[10px] mb-4 ">
-              <div className="text-gray-400 pb-1">PHONE</div>
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  pl-3 pr-3 pt-2 pb-2 bg-slate-100  rounded-[10px] mb-4 ">
+              <div className="dark:bg-slate-800 dark:text-white dark:border-white  text-gray-400 pb-1">
+                PHONE
+              </div>
               <div>{employData?.personal?.phone}</div>
             </div>
-            <div className="pl-3 pr-3 pt-2 pb-2 bg-slate-100  rounded-[10px] mb-4 ">
-              <div className="text-gray-400 pb-1">SCHOOL</div>
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  pl-3 pr-3 pt-2 pb-2 bg-slate-100  rounded-[10px] mb-4 ">
+              <div className="dark:bg-slate-800 dark:text-white dark:border-white  text-gray-400 pb-1">
+                SCHOOL
+              </div>
               <div>
                 {employData?.education?.school
                   ? employData?.education?.school
                   : "MINDX"}
               </div>
             </div>
-            <div className="relative  pr-3 pt-2 pb-2 bg-slate-100  rounded-[10px] mb-4 ">
-              <div className="text-gray-400 pb-1 pl-3">EXPERIENCES</div>
-              <div className="pl-3">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  relative  pr-3 pt-2 pb-2 bg-slate-100  rounded-[10px] mb-4 ">
+              <div className="dark:bg-slate-800 dark:text-white dark:border-white  text-gray-400 pb-1 pl-3">
+                EXPERIENCES
+              </div>
+              <div className="dark:bg-slate-800 dark:text-white dark:border-white  pl-3">
                 {employData?.experience?.title
                   ? employData?.experience?.title
                   : "1 year"}
               </div>
             </div>
-            <div className="flex gap-3 mt-10">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex gap-3 mt-10">
               <button
                 onClick={onSubmitHandler}
-                className="p-2 pl-10 pr-10 mr-3 rounded-[10px] bg-black text-white text-base font-bold  "
+                className="dark:bg-slate-800 dark:text-white dark:border-white  p-2 pl-10 pr-10 mr-3 rounded-[10px] bg-black text-white text-base font-bold  "
               >
                 SAVE
               </button>
@@ -210,16 +222,16 @@ const CandidatesDetail = () => {
                 onClick={() => {
                   navigate("/admin/candidates");
                 }}
-                className="button-can p-2 pl-7 pr-7 rounded-[10px]  bg-slate-100 text-black text-base font-bold "
+                className="dark:bg-slate-800 dark:text-white dark:border-white  button-can p-2 pl-7 pr-7 rounded-[10px]  bg-slate-100 text-black text-base font-bold "
               >
                 CANCEL
               </button>
             </div>
           </div>
 
-          {/* <div className="text-center">hai</div> */}
-          <div className=" w-[45%]">
-            <div className=" text-base font-medium text-gray-400 pb-4 pt-2 ">
+          {/* <div className="dark:bg-slate-800 dark:text-white dark:border-white  text-center">hai</div> */}
+          <div className="dark:bg-slate-800 dark:text-white dark:border-white   w-[45%]">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white   text-base font-medium text-gray-400 pb-4 pt-2 ">
               DEPARTMENT
             </div>
 
@@ -227,7 +239,7 @@ const CandidatesDetail = () => {
               value={select1}
               onChange={handleChangeSelect1}
               id="countries"
-              className="bg-white-50 font-medium border-sky-300 w-full mr-[10%] mb-5  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 py-4 px-3"
+              className="dark:bg-slate-800 dark:text-white dark:border-white  bg-white-50 font-medium border-sky-300 w-full mr-[10%] mb-5  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 py-4 px-3"
             >
               <option selected value="">
                 Department
@@ -242,21 +254,21 @@ const CandidatesDetail = () => {
               <option value="Product">Product</option>
             </select>
 
-            <div className="flex text-base font-medium text-gray-400 pb-4 pt-2 ">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex text-base font-medium text-gray-400 pb-4 pt-2 ">
               SALARY
             </div>
-            <div className="flex">
+            <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex">
               <select
                 value={select2}
                 onChange={handleChangeSelect2}
-                className="bg-white-50 mr-1 border-sky-300 border-none text-red-600 mb-5  font-bold text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 py-4 px-3"
+                className="dark:bg-slate-800 dark:text-white dark:border-white  bg-white-50 mr-1 border-sky-300 border-none text-red-600 mb-5  font-bold text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 py-4 px-3"
               >
                 <option>USD</option>
                 <option>VND</option>
                 <option>EUR</option>
                 <option>GBP</option>
               </select>
-              <div className="relative grow font-light text-xs md:text-sm pb-5">
+              <div className="dark:bg-slate-800 dark:text-white dark:border-white  relative grow font-light text-xs md:text-sm pb-5">
                 <input
                   className={`peer font-medium text-sky border-sky-300 w-full min-h-[auto] text-xs md:text-sm rounded-lg border bg-white py-4 px-3 leading-[1.6] placeholder-gray-500 focus:placeholder-transparent placeholder:text-xs md:placeholder:text-sm outline-none transition-all duration-200 ease-linear motion-reduce:transition-none focus:outline-none focus:shadow-none focus:ring-transparent ${"dark:focus:border-sky-300 focus:border-sky-300"}`}
                   placeholder={"Salary"}
@@ -281,10 +293,10 @@ const CandidatesDetail = () => {
           </div>
         </div>
       </div>
-      <StatusProcess   id={id}/>
-      {/* <div className="pl-[35%] p-2">
-                <button onClick={onSubmitHandler} className="rounded-[10px] bg-black text-white text-base font-bold w-[20%] pt-2 pb-2">SAVE</button>
-                <button onClick={() => { navigate("/candidates") }} className="w-[20%] rounded-[10px] ml-[5%] bg-slate-100 text-black text-base font-bold pt-2 pb-2">CANCEL</button>
+      <StatusProcess id={id} />
+      {/* <div className="dark:bg-slate-800 dark:text-white dark:border-white  pl-[35%] p-2">
+                <button onClick={onSubmitHandler} className="dark:bg-slate-800 dark:text-white dark:border-white  rounded-[10px] bg-black text-white text-base font-bold w-[20%] pt-2 pb-2">SAVE</button>
+                <button onClick={() => { navigate("/candidates") }} className="dark:bg-slate-800 dark:text-white dark:border-white  w-[20%] rounded-[10px] ml-[5%] bg-slate-100 text-black text-base font-bold pt-2 pb-2">CANCEL</button>
 
             </div> */}
     </div>
