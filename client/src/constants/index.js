@@ -14,6 +14,7 @@ export const jobTags = [
   {label: "Tester", value: "Tester" },
   {label: "Art", value: "Art" },
   {label: "Legal", value: "Legal" },
+  {label: "Finance", value: "Finance" },
   {label: "HR & Admin", value: "HR & Admin" },
 ];
 export const workingTypes = [

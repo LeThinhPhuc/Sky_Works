@@ -37,6 +37,8 @@ const AnimateRoute = () => {
         <Route exact path="/careers" element={<CareerPage />} />
         <Route exact path="/careers/:id" element={<JobDetail />} />
         <Route exact path="/careers/:id/apply" element={<ApplyPage />} />
+        <Route exact path="/about" element={<AboutUs />} />
+
         <Route path="*" element={<PageNotFound />} />
         <Route exact path="/admin/login" element={<LoginRegisterPage />} />
         <Route exact path="/about" element={<AboutUs />} />
