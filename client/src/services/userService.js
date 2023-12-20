@@ -31,6 +31,10 @@ const userService = {
         ...(localStorage.getItem("accessToken") && {"Authorization" : `Bearer ${localStorage.getItem("accessToken")}`}),
       },
   }).get(`${ADMIN_ENDPOINT}/users/${id}`),
+  getByEmail: (email) =>axios.create({
+    baseURL: "http://localhost:8001/",
+    timeout: 5000
+  }).get(`${ADMIN_ENDPOINT}/users/${email}`),
 
   UpdateById: (id,user) => axios.create({
     baseURL: "http://localhost:8001/",
@@ -39,7 +43,7 @@ const userService = {
         "Content-Type": "application/json",
         "Access-Control-Allow-Headers": "*",
         Accept: "application/x-www-form-urlencoded, text/plain",
-        ...(localStorage.getItem("accessToken") && {"Authorization" : `Bearer ${localStorage.getItem("accessToken")}`}),
+        // ...(localStorage.getItem("accessToken") && {"Authorization" : `Bearer ${localStorage.getItem("accessToken")}`}),
       },
   }).put(`${ADMIN_ENDPOINT}/users/${id}`,user),
 

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
+import ForgetPasswordForm from './ForgetPasswordForm';
 
 const initialValues = {
   username: "",
@@ -7,7 +8,10 @@ const initialValues = {
 
 const LoginForm = (props) => {
   const [inForUser, setInForUser] = useState(initialValues);
-
+  const [showForgetPasswordModal, setIsShowForgetPasswordModal] = useState(false);
+  const handleForgetPasswordModal = (data) => {
+    setIsShowForgetPasswordModal(data);
+  };
   const onChangeHandler = (event) => {
     const { name, value } = event.target;
     setInForUser({
@@ -82,10 +86,14 @@ const LoginForm = (props) => {
           place-content-center place-items-center place-self-center 
           font-semibold text-white bg-gradient-to-r from-[#72afd3] to-[#37ecba] rounded-full
           focus:opacity-75 focus:text-sm focus:font-bold"
-        type="submit"
-      >
-        LOG IN
-      </button>
+        type="submit">LOG IN</button>
+              <button className="text-sky-500 hover:underline" onClick={()=>setIsShowForgetPasswordModal(true)}>Forget Password ?</button>
+
+          <ForgetPasswordForm
+          isShowForgetPasswordModal={handleForgetPasswordModal}
+          isShow={showForgetPasswordModal}
+          />
+
     </form>
   );
 };

@@ -24,7 +24,7 @@ function JobDetail() {
       {jobsData ? (
         <main className="dark:bg-slate-800 dark:text-white dark:border-white  flex-1 flex justify-center flex-col w-full items-center relative">
           <header
-            className="dark:bg-slate-800 dark:text-white dark:border-white  md:bg-[url('https://skymavis.com/_app/immutable/assets/axie-concept-f5e52a79.png')] 
+            className="tmp md:bg-[url('https://skymavis.com/_app/immutable/assets/axie-concept-f5e52a79.png')] 
           max-md:bg-[url('https://skymavis.com/_app/immutable/assets/ImageBackgroundJobDetailMobile-2dbabf27.png')]          
           page-header flex flex-col items-center text-center p-[34px_28px_60px] md:p-[55px_28px_75px] xl:p-[55px_28px_75px] bg-no-repeat bg-cover bg-center transition-all w-full"
           >
