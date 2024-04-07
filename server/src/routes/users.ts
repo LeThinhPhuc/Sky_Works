@@ -20,6 +20,8 @@ router.get("/:id",authMdw.authMdw, authMdw.adminMdw, userAdminController.fetchUs
 //API Update Information User
 router.put("/:id", userAdminController.updateIn4User);
 
+router.put("/updaterole/:id",userAdminController.updateInforUser)
+
 //API Delete User Admin
 router.delete("/:id",authMdw.authMdw, authMdw.adminMdw, userAdminController.deleteUser);
 

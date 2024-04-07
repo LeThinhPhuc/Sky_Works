@@ -47,10 +47,6 @@ export const options = {
     }
   },
 };
-// var today = new Date();
-// var month = today.getMonth()+1
-// console.log(month)
-// const labels = ['January', 'February', 'March', 'April', 'May', 'June', 'July'];
 const monthInd=[]
 
 const getMonthLabels = () => {
@@ -67,22 +63,12 @@ const getMonthLabels = () => {
   return monthLabels;
 };
 
-
-
-
 let labels=getMonthLabels();
-console.log("Lanels : ", labels , monthInd)
-
-
-
-
-
 const BarChart =()=> {
   // const { employee } = useFetchAllEmploy();
   const {employee} =useContext(CareersContext)
-  console.log(employee)
   const getValueData = () =>{
-const array = Array(12).fill(0);
+  const array = Array(12).fill(0);
 
     for(let i=0;i<employee?.length;i++){
       let tmp=employee[i].dob.slice(5,7)
@@ -117,7 +103,6 @@ const array = Array(12).fill(0);
     for (var i = 0; i < monthInd.length; i++) {
       main.push(array[monthInd[i]]);
   }
-    console.log("arrr main : ", main)
     return main
   }
   
@@ -127,7 +112,6 @@ const array = Array(12).fill(0);
     datasets: [
       {
         label: 'Job Applied',
-        // data: [34,34,56,78,32,67,2],
         data: getValueData(),
   
         backgroundColor: 'rgba(53, 162, 235, 0.5)',

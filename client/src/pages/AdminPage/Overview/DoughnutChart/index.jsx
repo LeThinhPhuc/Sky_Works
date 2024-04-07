@@ -16,12 +16,6 @@ export const options = {
 
 };
 
-
-
-// export default function DoughnutChart() {
-//   return <Doughnut options={options} data={data} />;
-// }
-
 const DoughnutChart = () =>{
   const {employee}=useContext(CareersContext)
 const array = Array(8).fill(0);

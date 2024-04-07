@@ -14,11 +14,13 @@ const EmployItem = (props) => {
     employee;
 
   const { resumeLink } = profile;
-  const currency = salary ? salary?.replace(/\d/g, "")?.trim() : "VND";
-  const localeSalary = appService?.convertCurrency(
-    Number(salary ? salary?.replace(currency, "") : ""),
-    currency
-  );
+  const currency = salary ? salary?.split(" ")[1] : "VND";
+console.log("gia tri",currency); // In giá trị currency ra console để kiểm tra
+const localeSalary = appService?.convertCurrency(
+  Number(salary ? salary?.replace(currency, "") : ""),
+  currency
+);
+
   const statusList = [
     "RECEIVED CV",
     "APPROVED",
@@ -34,11 +36,6 @@ const EmployItem = (props) => {
   const onViewDetail = () => {
     navigate(`/admin/candidates/${_id}/edit`);
   };
-
-  /* const onViewResume = () => {
-    console.log({ firstName, resumeLink });
-  }; */
-
   let fullName = personal?.lastName + " " + personal?.firstName;
 
   return (

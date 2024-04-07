@@ -45,7 +45,7 @@ const EmployeeDetail = () => {
         userForm.role = userData.role;
         console.log("eL: ", userForm.role);
       }
-      const updateResponse = await userService.UpdateById(id, userForm);
+      const updateResponse = await userService.UpdateRoleById(id, userForm);
       setUserData(updateResponse.data.newData);
       console.log("user sau khi cap nhat role :", updateResponse);
       navigate("/admin/employee");

@@ -198,7 +198,7 @@ const CandidatesDetail = () => {
               <div>
                 {employData?.education?.school
                   ? employData?.education?.school
-                  : "MINDX"}
+                  : "No School"}
               </div>
             </div>
             <div className="dark:bg-slate-800 dark:text-white dark:border-white  relative  pr-3 pt-2 pb-2 bg-slate-100  rounded-[10px] mb-4 ">
@@ -208,7 +208,7 @@ const CandidatesDetail = () => {
               <div className="dark:bg-slate-800 dark:text-white dark:border-white  pl-3">
                 {employData?.experience?.title
                   ? employData?.experience?.title
-                  : "1 year"}
+                  : "No Experience"}
               </div>
             </div>
             <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex gap-3 mt-10">

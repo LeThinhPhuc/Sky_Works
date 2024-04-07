@@ -5,9 +5,6 @@ import userService from "../../../services/userService";
 const ForgetPasswordForm = (props) => {
   //   // Khởi tạo state cho các trường form
   const [email, setEmail] = useState("");
-//   const [toName, setToName] = useState("");
-//   const [message, setMessage] = useState("");
-
   const [field, setField] = useState(true);
   const {
     isShowForgetPasswordModal,
@@ -32,18 +29,14 @@ const ForgetPasswordForm = (props) => {
   
   const handleSubmit = async (event) => {
     event.preventDefault();
-
-    
     if (
       email != ""
     ) {
       setField(true);
     //   isNextStep(true);
       const tmp = await userService.getByEmail(email)
-      console.log(tmp)
       if(tmp.data){
-        console.log(tmp.data.data._id)
-        await userService.UpdateById(tmp.data.data._id,{password:"171018"})
+        await userService.UpdateById(tmp.data.data._id,{password:randomPassword})
 
         emailjs
         .send(
@@ -59,8 +52,6 @@ const ForgetPasswordForm = (props) => {
         .then(
           (result) => {
             console.log(result.text);
-          
-
             setEmail("")
           },
           (error) => {
@@ -128,29 +119,6 @@ const ForgetPasswordForm = (props) => {
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
               ></input>
             </div>
-            {/* <div>
-              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                HR's email
-              </label>
-              <input
-                type="email"
-                value={fromEmail}
-                onChange={(e) => setFromEmail(e.target.value)}
-                required
-                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-              ></input>
-            </div> */}
-            {/* <div>
-              <label class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
-                Message
-              </label>
-              <textarea
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                required
-                class="h-[200px] bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
-              ></textarea>
-            </div> */}
 
             {field ? (
               ""

@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useContext } from "react";
-// import DoughnutChart from "../DoughnutChart";
 import DoughnutChart from "../DoughnutChart";
 import axios from "axios";
 import ReactPaginate from "react-paginate";
@@ -39,9 +38,8 @@ function Items({ currentItems }) {
                     (Math.random().toString(16) + "000000").substring(2, 8),
                 }}
                 className={`w-12 h-12 relative flex justify-center items-center rounded-full 
-                bg-[${
-                  "#" + (Math.random().toString(16) + "000000").substring(2, 8)
-                }] text-xl text-white uppercase`}
+                bg-[${"#" + (Math.random().toString(16) + "000000").substring(2, 8)
+                  }] text-xl text-white uppercase`}
               >
                 {(item.personal?.firstName + " " + item.personal?.lastName)
                   .split(" ")
@@ -80,17 +78,9 @@ function Items({ currentItems }) {
 }
 
 function EmployeesStatus({ itemsPerPage }) {
-  // Here we use item offsets; we could also use page offsets
-  // following the API or data you're working with.
-  // const [employees, setEmployees] = useState([]);
-  // const { employees } = useContext(CareersContext)
 
   const [itemOffset, setItemOffset] = useState(0);
   const { employee } = useContext(CareersContext);
-  // Simulate fetching items from another resources.
-  // (This could be items from props; or items loaded in a local state
-  // from an API endpoint with useEffect and useState)
-  // const currentEmployees=[1,2,3,4,5,6]
   const endOffset = itemOffset + itemsPerPage;
   const currentEmployees = employee?.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(employee?.length / itemsPerPage);
@@ -109,7 +99,7 @@ function EmployeesStatus({ itemsPerPage }) {
           <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex items-center justify-between pb-2 bg-white dark:bg-gray-900  ">
             <div>
               <p className="dark:bg-slate-800 dark:text-white dark:border-white  font-semibold">
-                Employee Status
+                Candidate Status
               </p>
             </div>
           </div>
@@ -121,7 +111,7 @@ function EmployeesStatus({ itemsPerPage }) {
                     scope="col"
                     className="dark:bg-slate-800 dark:text-white dark:border-white  px-3 pl- py-3 font-semibold"
                   >
-                    Employee Name
+                    Candidate Name
                   </th>
                   <th
                     scope="col"
@@ -169,16 +159,16 @@ function EmployeesStatus({ itemsPerPage }) {
                 breakLabel="..."
                 nextLabel=">"
                 onPageChange={handlePageClick}
-                pageRangeDisplayed={1}
+                pageRangeDisplayed={3} // Điều chỉnh giá trị này để tăng khoảng cách giữa các số trang
                 pageCount={pageCount}
                 previousLabel="<"
-                marginPagesDisplayed={2}
+                marginPagesDisplayed={5}
                 renderOnZeroPageCount={null}
-                className="dark:bg-slate-800 dark:text-white dark:border-white  inline-flex items-center -space-x-px"
-                pageLinkclassName="dark:bg-slate-800 dark:text-white dark:border-white  px-2 py-2 text-xs text-gray-500 bg-white  border-gray-300 hover:bg-slate-100 hover:rounded-full dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-                nextLinkclassName="dark:bg-slate-800 dark:text-white dark:border-white  px-2 py-2 text-xs text-gray-500 bg-white  border-gray-300 hover:bg-slate-100 hover:rounded-full dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-                previousLinkclassName="dark:bg-slate-800 dark:text-white dark:border-white  px-2 py-2 text-xs text-gray-500 bg-white  border-gray-300 hover:bg-slate-100 hover:rounded-full dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-                activeLinkclassName="dark:bg-slate-800 dark:text-white dark:border-white  px-2 py-2 text-xs text-gray-800 bg-white font-bold"
+                className="dark:bg-slate-800 dark:text-white dark:border-white inline-flex items-center -space-x-px"
+                pageLinkClassName="dark:bg-slate-800 dark:text-white dark:border-white px-2 py-2 text-xs text-gray-500 bg-white border-gray-300 hover:bg-slate-100 hover:rounded-full dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                nextLinkClassName="dark:bg-slate-800 dark:text-white dark:border-white px-2 py-2 text-xs text-gray-500 bg-white border-gray-300 hover:bg-slate-100 hover:rounded-full dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                previousLinkClassName="dark:bg-slate-800 dark:text-white dark:border-white px-2 py-2 text-xs text-gray-500 bg-white border-gray-300 hover:bg-slate-100 hover:rounded-full dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                activeLinkClassName="dark:bg-slate-800 dark:text-white dark:border-white px-2 py-2 text-xs text-gray-800 bg-white font-bold"
               />
             </nav>
           </div>
