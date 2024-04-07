@@ -8,7 +8,7 @@ const Header = () => {
                 style={{backgroundImage: `url(/bg3.png)`}}>
 
         <div className="mb-[12px] md:mb-[16px]  font-bold text-[32px] md:text-[36px] leading-[40px] md:leading-[54px] text-center transition-all px-12 sm:px-0 svelte-1jp7mce">Careers at Sky Works</div>
-        <div className="text-[20px] md:text-[24px] leading-[28px] md:leading-[36px] text-center transition-all svelte-1jp7mce">We're looking for adventurers, thinkers, &amp; builders to help usher in a paradigm shift in how games treat their users</div>
+        <div className="text-[20px] md:text-[24px] leading-[28px] md:leading-[36px] text-center transition-all svelte-1jp7mce">We're looking for adventurers, thinkers, &amp; builders to help usher in a paradigm shift in how apps treat their users</div>
       </header>
     </div>
   );

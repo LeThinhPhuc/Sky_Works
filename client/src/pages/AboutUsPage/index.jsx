@@ -49,9 +49,9 @@ const AboutUs = () => {
             alt="Joseph Avatar"
           />
           <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            <a href="#">Joseph Mcfall</a>
+            <a href="#">Lưu Thành Đạt </a>
           </h3>
-          <p>Sales</p>
+          <p>47.01.104.062</p>
         </div>
         <div class="text-center text-gray-500 dark:text-gray-400 pb-8">
           <img
@@ -60,9 +60,9 @@ const AboutUs = () => {
             alt="Joseph Avatar"
           />
           <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            <a href="#">Joseph Mcfall</a>
+            <a href="#">Nguyễn Thị Thu Hằng</a>
           </h3>
-          <p>Sales</p>
+          <p>47.01.104.086</p>
         </div>
       </div>
     </section>

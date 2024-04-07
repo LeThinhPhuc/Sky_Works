@@ -50,7 +50,11 @@ function JobDetail() {
             {joblist2?.location}
           </header>
           <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex flex-col text-left  max-w-[856px] p-5 xl:p-0">
+         
             <div className="dark:bg-slate-800 dark:text-white dark:border-white  text-[#1D273D] detail-job pt-10 xl:pt-[79px] ">
+            <h3 className="dark:bg-slate-800 dark:text-white dark:border-white  font-medium mb-3">
+                Requirements
+              </h3>
               {parse(joblist2?.content || "")}
             </div>
             {/* Benefits */}

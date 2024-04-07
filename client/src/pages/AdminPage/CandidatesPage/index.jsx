@@ -30,20 +30,6 @@ const CandidatesPage = () => {
     "REJECT",
   ];
 
-  // const [sortedArray, setSortedArray] = useState([...employee]);
-
-  // const [sortedArray, setSortedArray] = useState(employee.slice());
-
-  // const handleSort = () => {
-  //   const newArray = [...employee];
-  //   newArray.sort((a, b) => b.localeCompare(a));
-  //   setSortedArray(newArray);
-  // };
-
-  // const handleReverse = () => {
-  //   setSortedArray([...sortedArray].reverse());
-  // };
-
   const handleChangeVal = (e) => {
     setVal(e.target.value);
   };
@@ -55,15 +41,12 @@ const CandidatesPage = () => {
   };
   const handleChangeSelect1 = (e) => {
     setSelect1(e.target.value);
-    console.log(select1);
   };
   const handleChangeSelect2 = (e) => {
     setSelect2(e.target.value);
-    // console.log(select2);
   };
 
   const endOffset = itemOffset + itemsPerPage;
-  // console.log(`Loading items from ${itemOffset} to ${endOffset}`);
   const currentEmployeess = sortedArray?.slice(itemOffset, endOffset);
   const pageCount = Math.ceil(sortedArray?.length / itemsPerPage);
 
@@ -72,13 +55,11 @@ const CandidatesPage = () => {
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
     const newOffset = (event.selected * itemsPerPage) % employee.length;
-    // console.log(`DA FIX User requested page number ${event.selected}, which is offset ${newOffset}`);
     setItemOffset(newOffset);
   };
 
   useEffect(() => {
     const newArray = [...(employee ? employee : "")];
-    // console.log(newArray)
     newArray.sort((a, b) =>
       b?.personal?.lastName.localeCompare(a?.personal?.lastName)
     );
@@ -86,10 +67,8 @@ const CandidatesPage = () => {
 
     if (sort2 == "Z - A") {
       setSortedArray(newArray);
-      console.log(sortedArray);
     } else if (sort2 == "A - Z") {
       setSortedArray(newArray.reverse());
-      console.log(sortedArray);
     } else if (sort2 == "Sort Name") {
       setSortedArray([...employee]);
     }
@@ -172,11 +151,6 @@ const CandidatesPage = () => {
                     required
                   />
                 </div>
-                {/* <select value={sort1} onChange={handleSort1} id="countries" className="dark:bg-slate-800 dark:text-white dark:border-white  bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 ">
-                      <option selected value="">Sort Salary</option>
-                      <option value="High - Low">High - Low</option>
-                      <option value="Low - High">Low - High</option>
-                    </select> */}
                 <select
                   value={select1}
                   onChange={handleChangeSelect1}
@@ -273,11 +247,8 @@ const CandidatesPage = () => {
               </thead>
               <tbody className=" dark:bg-slate-800 dark:text-white dark:border-white  border-[1.5px] border-t-0 border-sky-200">
                 {
-                  // sort2==="A - Z"||sort2==="Z - A"?sortedArray:employee
-                  // sortedArray
-                  // employee
                   currentEmployeess
-                    .filter((item) => {
+                    ?.filter((item) => {
                       return (
                         item?.personal?.lastName +
                         " " +
@@ -288,7 +259,7 @@ const CandidatesPage = () => {
                         &&
                         (select1 === "" || item?.teamLead?.toLowerCase().includes(select1?.toLowerCase()))
                         &&
-                        (select2 === "" || item?.isReject?statusList[8]:statusList[item?.timeLine.length-1].toLowerCase().includes(select2?.toLowerCase()))
+                        (select2 === "" || item?.isReject ? statusList[8] : statusList[item?.timeLine.length - 1].toLowerCase().includes(select2?.toLowerCase()))
 
                     })
                     ?.map((item) => {
@@ -319,17 +290,20 @@ const CandidatesPage = () => {
                 breakLabel="..."
                 nextLabel=">"
                 onPageChange={handlePageClick}
-                pageRangeDisplayed={1}
+                pageRangeDisplayed={3} // Điều chỉnh giá trị này để tăng khoảng cách giữa các số trang
                 pageCount={pageCount}
                 previousLabel="<"
                 marginPagesDisplayed={5}
                 renderOnZeroPageCount={null}
-                className="dark:bg-slate-800 dark:text-white dark:border-white  inline-flex items-center -space-x-px"
-                pageLinkclassName="dark:bg-slate-800 dark:text-white dark:border-white  px-2 py-2 text-xs text-gray-500 bg-white  border-gray-300 hover:bg-slate-100 hover:rounded-full dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-                nextLinkclassName="dark:bg-slate-800 dark:text-white dark:border-white  px-2 py-2 text-xs text-gray-500 bg-white  border-gray-300 hover:bg-slate-100 hover:rounded-full dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-                previousLinkclassName="dark:bg-slate-800 dark:text-white dark:border-white  px-2 py-2 text-xs text-gray-500 bg-white  border-gray-300 hover:bg-slate-100 hover:rounded-full dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
-                activeLinkclassName="dark:bg-slate-800 dark:text-white dark:border-white  px-2 py-2 text-xs text-gray-800 bg-white font-bold"
+                className="dark:bg-slate-800 dark:text-white dark:border-white inline-flex items-center -space-x-px"
+                pageLinkClassName="dark:bg-slate-800 dark:text-white dark:border-white px-2 py-2 text-xs text-gray-500 bg-white border-gray-300 hover:bg-slate-100 hover:rounded-full dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                nextLinkClassName="dark:bg-slate-800 dark:text-white dark:border-white px-2 py-2 text-xs text-gray-500 bg-white border-gray-300 hover:bg-slate-100 hover:rounded-full dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                previousLinkClassName="dark:bg-slate-800 dark:text-white dark:border-white px-2 py-2 text-xs text-gray-500 bg-white border-gray-300 hover:bg-slate-100 hover:rounded-full dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white"
+                activeLinkClassName="dark:bg-slate-800 dark:text-white dark:border-white px-2 py-2 text-xs text-gray-800 bg-white font-bold"
               />
+
+
+
             </nav>
           </div>
         </div>

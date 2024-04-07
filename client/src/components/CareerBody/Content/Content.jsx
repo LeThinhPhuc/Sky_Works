@@ -50,7 +50,7 @@ const Content = () => {
 
   return (
     <div>
-      {newArr.length > 0 ? (
+      {newArr.length >= 0 ? (
         <div className="mx-auto mt-20 mb-8 px-8 md:px-12 lg:w-3/4 xl:w-2/3">
           <div className="">
             <div className="flex text-xs sm:text-sm md:text-base flex-col sm:flex-row justify-center gap-4 lg:gap-8">

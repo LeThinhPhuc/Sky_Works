@@ -170,6 +170,50 @@ const updateIn4User = async (req: any, res: any) => {
   }
 };
 
+
+const updateInforUser = async (req: any, res: any) => {
+  try {
+    const { id } = req.params;
+
+    const isValid = validationMongoId(id);
+
+    if (!isValid) {
+      res.status(404).json({
+        message: 'User not valid',
+      });
+    }
+    const existingUser = await UserAdmin.findById(id);
+
+    if (!existingUser) {
+      return res.status(400).json({
+        message: 'User not exists',
+      });
+    }
+    // Mã hoá password
+    const { username, email, role, password } = req.body
+    const user = {
+      username,
+      // password: hashedPassword,
+      email,
+      role,
+      
+    };
+
+    await UserAdmin.findByIdAndUpdate(id, user);
+    const newDataUpdate:any = await UserAdmin.find().select('-password');
+
+
+    res.json({
+      message: 'Success Update Information User',
+      newData:newDataUpdate,
+    });
+  } catch (error: any) {
+    res.status(400).json({
+      message: error.toString(),
+    });
+  }
+};
+
 const deleteUser = async (req: any, res: any) => {
   try {
     const { id } = req.params;
@@ -194,4 +238,4 @@ const deleteUser = async (req: any, res: any) => {
   }
 };
 
-export default { fetchAllUser, fetchUser, fetchUserByEmail, registerUser, updateIn4User, deleteUser };
+export default { fetchAllUser, fetchUser, fetchUserByEmail, registerUser, updateIn4User,updateInforUser, deleteUser };

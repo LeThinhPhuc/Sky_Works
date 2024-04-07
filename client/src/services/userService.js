@@ -47,6 +47,17 @@ const userService = {
       },
   }).put(`${ADMIN_ENDPOINT}/users/${id}`,user),
 
+  UpdateRoleById: (id,user) => axios.create({
+    baseURL: "http://localhost:8001/",
+    timeout: 5000,
+    headers: {
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Headers": "*",
+        Accept: "application/x-www-form-urlencoded, text/plain",
+        // ...(localStorage.getItem("accessToken") && {"Authorization" : `Bearer ${localStorage.getItem("accessToken")}`}),
+      },
+  }).put(`${ADMIN_ENDPOINT}/users/updaterole/${id}`,user),
+
   DeleteById: (id) => axios.create({
     baseURL: "http://localhost:8001/",
     timeout: 5000,

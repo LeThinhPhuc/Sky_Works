@@ -147,6 +147,7 @@ const Jobs = () => {
                 show.slice(0, visibleCount).map((item, idx) => {
                   return (
                     // <Link to={`/careers/${item._id}`} key={idx} className="dark:bg-slate-700 dark:text-white dark:border-white  cursor-pointer flex p-6 drop-shadow-[0px_8px_30px_#DEE6F1] border-t first:border-b-[#C5CEE0] last:border-b hover:border-transparent hover:border-0 hover:rounded-2xl hover:shadow-[0px_8px_30px_#DEE6F1] transition-all duration-200">
+                    <div className="grid grid-cols-2">
                     <Link
                       to={`/admin/update-job/${item._id}`}
                       key={idx}
@@ -159,6 +160,9 @@ const Jobs = () => {
                         tags={item.tags}
                       />
                     </Link>
+                    <span className="fontsize-[100px]">📉</span>
+                    </div>
+                    
                   );
                 })
               )}
