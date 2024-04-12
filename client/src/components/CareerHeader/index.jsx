@@ -13,7 +13,7 @@ function CareerHeader() {
           >
             <img
               width="178"
-              src="https://drive.google.com/u/0/uc?id=1JaIDwaSWsJ8oVqt0iufGk1PQAyIgMp16&export=download"
+              src="/logo.png"
               alt="sky-mavis-branding"
             />
           </a>
