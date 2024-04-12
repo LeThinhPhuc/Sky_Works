@@ -78,6 +78,7 @@ const applicantSchema: Schema = new mongoose.Schema({
     created_at: { type: Date },
   }],
   isReject: { type: Boolean , default: false },
+  isAccepted: {type: Boolean, default: false},
 });
 
 const Applicant = mongoose.model<IApplicant>("Applicant", applicantSchema);

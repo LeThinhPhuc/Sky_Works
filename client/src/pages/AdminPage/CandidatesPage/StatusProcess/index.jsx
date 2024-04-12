@@ -17,6 +17,7 @@ const StatusProcess = (props) => {
   const { employee, setEmploysData } = useContext(CareersContext);
   const { id } = props;
   const [isReject, setIsReject] = useState(false || false);
+  const [isAccepted, setIsAccepted] = useState(false);
   const stepStatusInit = [{ nameStep: 0, created_at: Date.now() }];
   const [stepStatus, setStepStatus] = useState(stepStatusInit);
   const [isLoadingNext, setIsLoadingNext] = useState(false);
@@ -93,6 +94,19 @@ const StatusProcess = (props) => {
     );
   };
 
+  const updateAccept = async () => {
+    const dataUpdate = {
+      ...data,
+      isAccepted: true,
+    };
+    const updateResponse = await EmployService.UpdateById(data._id, dataUpdate);
+    setEmploysData(updateResponse.data.newData);
+    console.log(updateResponse.data.newData);
+    setIsAccepted(
+      updateResponse.data.newData.find((item) => item._id == data._id).isAccepted
+    );
+  }
+
   // console.log(data.timeLine);
   const nextStepSendTest = (data) => {
     if (data) {
@@ -131,6 +145,9 @@ const StatusProcess = (props) => {
         } else {
           updateDataForward();
         }
+      } 
+      if (stepStatus.length == 7){
+        updateAccept();
       }
     }
   };

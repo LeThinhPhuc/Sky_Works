@@ -24,7 +24,9 @@ import RoleContentJob from "../../PrivateRoute/RoleContentJob";
 import RoleCandidate from "../../PrivateRoute/RoleCandidate";
 import RoleAdmin from "../../PrivateRoute/RoleAdmin";
 
+
 import { AnimatePresence } from "framer-motion";
+import AcceptedPage from "../../pages/AdminPage/AcceptedList/AcceptedList";
 
 // create the motion transition page for Route
 const AnimateRoute = () => {
@@ -52,6 +54,11 @@ const AnimateRoute = () => {
             exact
             path="/admin/candidates"
             element={<RoleCandidate component={CandidatesPage} />}
+          />
+          <Route
+            exact
+            path="/admin/accepted"
+            element={<RoleCandidate component={AcceptedPage} />}
           />
           <Route
             exact
@@ -83,6 +90,7 @@ const AnimateRoute = () => {
             path="/admin/update-job/:id"
             element={<UpdateJobPage />}
           />
+      
           <Route exact path="/admin/warning" element={<WarningPage />} />
         </Route>
       </Routes>
