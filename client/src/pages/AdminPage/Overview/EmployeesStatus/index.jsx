@@ -134,7 +134,7 @@ function EmployeesStatus({ itemsPerPage }) {
                 </tr>
               </thead>
               <tbody>
-                <Items currentItems={currentEmployees} />
+                <Items currentItems={currentEmployees?.filter((item)=>{ return item?.isAccepted==false})} />
               </tbody>
             </table>
 

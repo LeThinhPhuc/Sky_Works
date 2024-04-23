@@ -248,13 +248,13 @@ const AcceptedPage = () => {
               <span className="dark:bg-slate-800 dark:text-white dark:border-white  text-xs font-normal text-gray-500 dark:text-gray-400">
                 Showing{" "}
                 <span className="dark:bg-slate-800 dark:text-white dark:border-white  font-semibold text-gray-900 dark:text-white">
-                  {endOffset >= employee?.length
-                    ? `${itemOffset + 1}-${employee?.length}`
+                  {endOffset >= employee?.filter((item)=>{return item.isAccepted==true})?.length
+                    ? `${itemOffset + 1}-${employee?.filter((item)=>{return item.isAccepted==true})?.length}`
                     : `${itemOffset + 1}-${endOffset}`}
                 </span>{" "}
                 of{" "}
                 <span className="dark:bg-slate-800 dark:text-white dark:border-white  font-semibold text-gray-900 dark:text-white">
-                  {employee?.length}
+                  {employee?.filter((item)=>{return item.isAccepted==true})?.length}
                 </span>
               </span>
 

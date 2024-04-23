@@ -125,7 +125,7 @@ const StatusProcess = (props) => {
       updateReject();
       console.log(isReject);
     } else {
-      if (stepStatus.length > 1) {
+      if (stepStatus.length > 1&&stepStatus.length!=8) {
         updateDataBack();
       }
     }

@@ -16,7 +16,8 @@ import CandidatesDetail from "./CandidatesPage/CandidatesDetail/CandidatesDetail
 const AdminPage = () => {
   return (
     <main className="dark:bg-slate-800 dark:text-white dark:border-white  flex  justify-center w-[100%]">
-      <Sidebar class="w=[25%]" />
+      <Sidebar className="w-[25%] overflow-auto sticky top-0" />
+
       <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex  flex-col w-[100%]">
         <SearchAndInforAdmin />
         <Outlet />

@@ -154,7 +154,9 @@ const CandidatesPage = () => {
                 </tr>
               </thead>
               <tbody>
-                {currentuserss?.map((item) => {
+                {currentuserss?.filter((item)=>{
+                  return item.username.includes(val)
+                }).map((item) => {
                   return <UserItem key={item._id} employee={item} />;
                 })}
               </tbody>
