@@ -8,13 +8,13 @@ const CareerFooter = () => {
           <a href="/">
             <img
               width="230"
-              src="https://drive.google.com/u/0/uc?id=1JaIDwaSWsJ8oVqt0iufGk1PQAyIgMp16&export=download"
+              src="/logo.png"
               className="dark:bg-slate-800 dark:text-white dark:border-white  h-10 mr-4"
               alt="branding-white"
             />
           </a>
           <div className="dark:bg-slate-800 dark:text-white dark:border-white  text-sm ml-9 mt-4 text-white dark:text-white-400">
-            © 2023 SKY WORK
+            © 2024 SKY WORK
           </div>
         </div>
         <div className="dark:bg-slate-800 dark:text-white dark:border-white  text-white ml-20">

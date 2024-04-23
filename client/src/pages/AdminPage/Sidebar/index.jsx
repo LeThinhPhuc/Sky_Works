@@ -27,7 +27,7 @@ const Sidebar = () => {
         <div className="dark:bg-slate-800  dark:text-white dark:border-white  flex justify-between items-center border-b-[1.5px] h-[70px]">
           <img
             width="130"
-            src="https://drive.google.com/u/0/uc?id=1JaIDwaSWsJ8oVqt0iufGk1PQAyIgMp16&export=download"
+            src="/logo.png"
           ></img>
         </div>
 

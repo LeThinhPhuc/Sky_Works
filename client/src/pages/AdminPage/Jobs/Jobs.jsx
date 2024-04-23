@@ -4,13 +4,18 @@ import CardItem from "../../../components/CareerBody/Components/CardItem/CardIte
 import { Link } from "react-router-dom";
 import Loading from "../../../components/Loading/Loading";
 import { motion } from "framer-motion";
+import ModalStatisticJob from "./ModalStatisticJob/ModalStatisticJob";
 
 const Jobs = () => {
   const [key, setKey] = useState("");
   const [select1, setSelect1] = useState("");
   const [select2, setSelect2] = useState("");
   const { jobsData } = useContext(CareersContext);
-
+  const [isShowModalSendTest, setIsShowModalSendTest] = useState(false);
+  const [modalJobName, setModalJobName] = useState("");
+  const handleModalSendTest = (data) => {
+    setIsShowModalSendTest(data);
+  };
   // console.log(jobsData);
   const handleChangeKey = (e) => {
     setKey(e.target.value);
@@ -28,7 +33,10 @@ const Jobs = () => {
     setSelect2(e.target.value);
     console.log(select2);
   };
-
+  const handleOpenModal = (name) => { // Hàm để mở modal và thiết lập giá trị của tên công việc
+    setModalJobName(name);
+    setIsShowModalSendTest(true);
+  };
   const [visibleCount, setVisibleCount] = useState(4); // Số lượng phần tử hiển thị ban đầu
 
   const showMore = () => {
@@ -47,7 +55,7 @@ const Jobs = () => {
           (item?.tags[1] && typeof item.tags[1] === 'string' && item?.tags[1].toLowerCase().includes(select1.toLowerCase()))) &&
         (select2 === "" ||
           (item?.tags[0] && typeof item.tags[0] === 'string' && item?.tags[0].toLowerCase().includes(select2.toLowerCase()))
-    ));
+        ));
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -146,23 +154,29 @@ const Jobs = () => {
               ) : (
                 show.slice(0, visibleCount).map((item, idx) => {
                   return (
-                    // <Link to={`/careers/${item._id}`} key={idx} className="dark:bg-slate-700 dark:text-white dark:border-white  cursor-pointer flex p-6 drop-shadow-[0px_8px_30px_#DEE6F1] border-t first:border-b-[#C5CEE0] last:border-b hover:border-transparent hover:border-0 hover:rounded-2xl hover:shadow-[0px_8px_30px_#DEE6F1] transition-all duration-200">
-                    <div className="grid grid-cols-2">
-                    <Link
-                      to={`/admin/update-job/${item._id}`}
-                      key={idx}
-                      className="dark:bg-slate-800 dark:text-white  dark:border-none dark:rounded-lg dark:my-5 cursor-pointer flex p-6 dark:drop-shadow-[0px_8px_15px_#334155] drop-shadow-[0px_8px_30px_#DEE6F1] border-t hover:border-none first:border-b-[#C5CEE0] last:border-b hover:border-transparent hover:border-0 hover:rounded-2xl hover:shadow-[0px_8px_30px_#DEE6F1]  transition-all duration-200"
-                    >
-                      <CardItem
-                        id={item._id}
-                        title={item.title}
-                        location={item.location}
-                        tags={item.tags}
-                      />
-                    </Link>
-                    <span className="fontsize-[100px]">📉</span>
+                    <div className="flex">
+
+                      <Link
+                        to={`/admin/update-job/${item._id}`}
+                        key={idx}
+                        className="w-full dark:bg-slate-800 dark:text-white  dark:border-none dark:rounded-lg dark:my-5 cursor-pointer flex p-6 dark:drop-shadow-[0px_8px_15px_#334155] drop-shadow-[0px_8px_30px_#DEE6F1] border-t hover:border-none first:border-b-[#C5CEE0] last:border-b hover:border-transparent hover:border-0 hover:rounded-2xl hover:shadow-[0px_8px_30px_#DEE6F1]  transition-all duration-200"
+                      >
+                        <CardItem
+                          id={item._id}
+                          title={item.title}
+                          location={item.location}
+                          tags={item.tags}
+                        />
+
+
+                      </Link>
+                      <div onClick={() => { handleOpenModal(item.title)}} className="flex items-center justify-center pl-2 cursor-pointer">
+                        📉
+                      </div>
+
                     </div>
-                    
+
+
                   );
                 })
               )}
@@ -178,6 +192,13 @@ const Jobs = () => {
               </button>
             </div>
           )}
+
+          <ModalStatisticJob
+            nameJob={modalJobName}
+            isShow={isShowModalSendTest}
+            isShowModalSendTest={handleModalSendTest}
+          />
+
         </div>
       ) : (
         <Loading />
