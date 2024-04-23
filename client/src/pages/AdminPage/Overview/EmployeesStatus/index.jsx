@@ -82,12 +82,12 @@ function EmployeesStatus({ itemsPerPage }) {
   const [itemOffset, setItemOffset] = useState(0);
   const { employee } = useContext(CareersContext);
   const endOffset = itemOffset + itemsPerPage;
-  const currentEmployees = employee?.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(employee?.length / itemsPerPage);
+  const currentEmployees = employee?.filter((item)=>{ return item?.isAccepted==false}).slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(employee?.filter((item)=>{ return item?.isAccepted==false}).length / itemsPerPage);
 
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % employee?.length;
+    const newOffset = (event.selected * itemsPerPage) % employee?.filter((item)=>{ return item?.isAccepted==false}).length;
 
     setItemOffset(newOffset);
   };
@@ -145,13 +145,13 @@ function EmployeesStatus({ itemsPerPage }) {
               <span className="dark:bg-slate-800 dark:text-white dark:border-white  text-xs font-normal text-gray-500 dark:text-gray-400">
                 Showing{" "}
                 <span className="dark:bg-slate-800 dark:text-white dark:border-white  font-semibold text-gray-900 dark:text-white">
-                  {endOffset >= employee?.length
-                    ? `${itemOffset + 1}-${employee?.length}`
+                  {endOffset >= employee?.filter((item)=>{ return item?.isAccepted==false}).length
+                    ? `${itemOffset + 1}-${employee?.filter((item)=>{ return item?.isAccepted==false}).length}`
                     : `${itemOffset + 1}-${endOffset}`}
                 </span>{" "}
                 of{" "}
                 <span className="dark:bg-slate-800 dark:text-white dark:border-white  font-semibold text-gray-900 dark:text-white">
-                  {employee?.length}
+                  {employee?.filter((item)=>{ return item?.isAccepted==false}).length}
                 </span>
               </span>
 

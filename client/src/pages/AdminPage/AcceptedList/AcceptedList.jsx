@@ -13,7 +13,7 @@ const AcceptedPage = () => {
   const [val, setVal] = useState("");
   const [sort1, setSort1] = useState("");
   const [sort2, setSort2] = useState("");
-  const [sortedArray, setSortedArray] = useState(employee?.slice());
+  const [sortedArray, setSortedArray] = useState(employee?.filter((item)=>{return item.isAccepted==true}).slice());
 
   const [select1, setSelect1] = useState("");
   const [select2, setSelect2] = useState("");
@@ -37,14 +37,14 @@ const AcceptedPage = () => {
   };
 
   const endOffset = itemOffset + itemsPerPage;
-  const currentEmployeess = sortedArray?.slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(sortedArray?.length / itemsPerPage);
+  const currentEmployeess = sortedArray?.filter((item)=>{return item.isAccepted==true}).slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(sortedArray?.filter((item)=>{return item.isAccepted==true}).length / itemsPerPage);
 
   console.log(currentEmployeess);
 
   // Invoke when user click to request another page.
   const handlePageClick = (event) => {
-    const newOffset = (event.selected * itemsPerPage) % employee.length;
+    const newOffset = (event.selected * itemsPerPage) % employee.filter((item)=>{return item.isAccepted==true}).length;
     setItemOffset(newOffset);
   };
 

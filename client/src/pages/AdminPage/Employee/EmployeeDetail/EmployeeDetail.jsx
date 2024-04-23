@@ -71,7 +71,7 @@ const EmployeeDetail = () => {
         <div className="dark:bg-slate-800 dark:text-white dark:border-white  flex items-center">
           <FontAwesomeIcon
             onClick={() => {
-              navigate("/admin/candidates");
+              navigate("/admin/employee");
             }}
             icon={faArrowLeft}
             className="dark:bg-slate-800 dark:text-white dark:border-white  p-2"

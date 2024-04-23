@@ -28,9 +28,9 @@ const AboutUs = () => {
             src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/helene-engels.png"
           />
           <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            <a href="#">Nguyễn Hoàng Nam</a>
+            <a href="#">Ngọc </a>
           </h3>
-          <p>47.01.104.136</p>
+          <p>46.01.104.***</p>
         </div>
         <div class="text-center text-gray-500 dark:text-gray-400 pb-8">
           <img
@@ -38,9 +38,9 @@ const AboutUs = () => {
             src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/jese-leos.png"
           />
           <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            <a href="#">Võ Khắc Kiệt</a>
+            <a href="#">Đặng Minh Nhật</a>
           </h3>
-          <p>47.01.104.118</p>
+          <p>47.01.104.***</p>
         </div>
         <div class="text-center text-gray-500 dark:text-gray-400 pb-8">
           <img
@@ -48,12 +48,13 @@ const AboutUs = () => {
             src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png"
             alt="Joseph Avatar"
           />
+
           <h3 class="mb-1 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-            <a href="#">Lưu Thành Đạt </a>
+            <a href="#">Nguyễn Hoàng Nam</a>
           </h3>
-          <p>47.01.104.062</p>
+          <p>47.01.104.136</p>
         </div>
-        <div class="text-center text-gray-500 dark:text-gray-400 pb-8">
+        {/* <div class="text-center text-gray-500 dark:text-gray-400 pb-8">
           <img
             class="mx-auto mb-4 w-36 h-36 rounded-full"
             src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/joseph-mcfall.png"
@@ -63,7 +64,7 @@ const AboutUs = () => {
             <a href="#">Nguyễn Thị Thu Hằng</a>
           </h3>
           <p>47.01.104.086</p>
-        </div>
+        </div> */}
       </div>
     </section>
   );
