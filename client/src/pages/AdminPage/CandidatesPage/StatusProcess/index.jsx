@@ -84,7 +84,7 @@ const StatusProcess = (props) => {
   const updateReject = async () => {
     const dataUpdate = {
       ...data,
-      isReject: !isReject,
+      isReject: true,
     };
     const updateResponse = await EmployService.UpdateById(data._id, dataUpdate);
     setEmploysData(updateResponse.data.newData);
@@ -125,7 +125,7 @@ const StatusProcess = (props) => {
       updateReject();
       console.log(isReject);
     } else {
-      if (stepStatus.length > 1&&stepStatus.length!=8) {
+      if (stepStatus.length > 1) {
         updateDataBack();
       }
     }
@@ -147,6 +147,7 @@ const StatusProcess = (props) => {
         }
       } 
       if (stepStatus.length == 7){
+        console.log("buoc cuoi ne")
         updateAccept();
       }
     }

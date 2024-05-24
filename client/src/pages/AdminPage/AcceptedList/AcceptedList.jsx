@@ -36,9 +36,10 @@ const AcceptedPage = () => {
     setSelect2(e.target.value);
   };
 
+  console.log("ban dau : ", sortedArray)
   const endOffset = itemOffset + itemsPerPage;
-  const currentEmployeess = sortedArray?.filter((item)=>{return item.isAccepted==true}).slice(itemOffset, endOffset);
-  const pageCount = Math.ceil(sortedArray?.filter((item)=>{return item.isAccepted==true}).length / itemsPerPage);
+  const currentEmployeess = sortedArray?.filter((item)=>{return item.isAccepted===true}).slice(itemOffset, endOffset);
+  const pageCount = Math.ceil(sortedArray?.filter((item)=>{return item.isAccepted===true}).length / itemsPerPage);
 
   console.log(currentEmployeess);
 
